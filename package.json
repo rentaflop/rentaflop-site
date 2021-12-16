@@ -30,7 +30,7 @@
   "homepage": "https://rentaflop.com",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    "build": "react-scripts build && gulp licenses && cp CNAME build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
