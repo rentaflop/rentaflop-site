@@ -19,7 +19,7 @@ import React from "react";
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
-import logo_white from './../../assets/img/brand/white.png';
+import logo_white from './../../assets/img/brand/logo_white.svg';
 
 
 class Hero extends React.Component {
