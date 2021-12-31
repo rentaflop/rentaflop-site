@@ -36,7 +36,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp CNAME build",
+    "build": "react-scripts build && cp CNAME build && cp 404.html build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
