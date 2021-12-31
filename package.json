@@ -17,6 +17,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "browserslist": "^4.16.5",
+    "gh-pages": "^3.2.3",
     "is-svg": "4.3.1",
     "material-ui": "^1.0.0-beta.47",
     "material-ui-popup-state": "^2.0.0",
