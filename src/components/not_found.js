@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Paper, Typography, CssBaseline, Container, Box } from '@material-ui/core';
 import Image from './../static/flip_flops.jpg';
-import { Link } from 'react-router-dom';
 import theme from '../theme';
 import { makeStyles } from '@material-ui/styles';
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Typography, Toolbar, AppBar, Box, Button } from '@material-ui/core';
 import theme from '../theme';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { ReactComponent as RentaflopLogo } from './../static/rentaflop_logo.svg';
 import { withStyles } from '@material-ui/styles';
 
@@ -62,7 +62,7 @@ class Header extends Component {
 	  </Box>
 	  <Box marginRight='10px'>
 	    <Button href={portal_url+"/register"} className={classes.cta_button} variant="outlined">
-	      Train an AI free
+	      Train an AI now
 	    </Button>
 	  </Box>
         </Toolbar>
