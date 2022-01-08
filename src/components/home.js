@@ -14,13 +14,14 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 function make_graphic_styles(is_large_screen) {
-  const url = is_large_screen ?`url(${Graphic})` : `url(${GraphicMobile})`
+  const url = is_large_screen ? `url(${Graphic})` : `url(${GraphicMobile})`
+  const height = is_large_screen ? "100vh" : "85vh"
   const styles = {
     paperContainer: {
       backgroundImage: url,
       backgroundRepeat: 'no-repeat',
       backgroundSize: "100%",
-      height: "100vh",
+      height: height,
       borderRadius: 0,
       boxShadow: "none",
       backgroundColor: "rgb(251,251,251)"
@@ -150,7 +151,7 @@ export default function Home() {
 	  </HashLink>
 	  }
 	</Paper>
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container sx={{ pt: 4 }} maxWidth="md">
           <Grid container spacing={4} id="learn">
             {cards.map((card) => (
               <Grid item key={card.id} xs={12} sm={6} md={4}>
