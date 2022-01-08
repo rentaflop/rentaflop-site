@@ -15,8 +15,9 @@ const styles = {
   paperContainer: {
     backgroundImage: `url(${Graphic})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: "cover",
-    height: "93.5vh",
+    backgroundSize: "100%",
+    // height: "93.5vh",
+    height: "100vh",
     borderRadius: 0,
     boxShadow: "none",
   }
@@ -122,7 +123,7 @@ export default function Home() {
 		Don't camp overnight to buy an overpriced GPU.
               </Typography>
               <Typography variant="h4" align="left" color="text.primary" paragraph>
-		Save thousands training Deep Learning models with rentaflop, the crowdsourced cloud provider.
+		Launch your Deep Learning projects with rentaflop and save thousands.
               </Typography>
             </Container>
           </Box>
