@@ -9,19 +9,26 @@ import UntetheredSpacewalk from './../static/untethered_spacewalk.jpg';
 import MoneyPile from './../static/money_pile.jpg';
 import Pie from './../static/pie.jpg';
 import Graphic from './../static/rocket_graphic.svg';
+import GraphicMobile from './../static/rocket_graphic_mobile.svg';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
-const styles = {
-  paperContainer: {
-    backgroundImage: `url(${Graphic})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: "100%",
-    // height: "93.5vh",
-    height: "100vh",
-    borderRadius: 0,
-    boxShadow: "none",
-  }
-};
+function make_graphic_styles(is_large_screen) {
+  const url = is_large_screen ?`url(${Graphic})` : `url(${GraphicMobile})`
+  const styles = {
+    paperContainer: {
+      backgroundImage: url,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: "100%",
+      height: "100vh",
+      borderRadius: 0,
+      boxShadow: "none",
+      backgroundColor: "rgb(251,251,251)"
+    }
+  };
+
+  return styles;
+}
 
 
 const cards = [
@@ -94,12 +101,22 @@ const useStyles = makeStyles((theme) => ({
 export default function Home() {
   const classes = useStyles();
   const portal_url = "https://portal.rentaflop.com";
+  const is_large_screen = useMediaQuery('(min-width:600px)');
+  const params_large = {
+    "primary": "h1",
+    "secondary": "h4"
+  }
+  const params_small = {
+    "primary": "h3",
+    "secondary": "h6"
+  }
+  const params = is_large_screen ? params_large : params_small;
   
   return (
     <>
       <CssBaseline />
       <main>
-	<Paper style={styles["paperContainer"]}>
+	<Paper style={make_graphic_styles(is_large_screen)["paperContainer"]}>
           <Box
             sx={{
               pt: "7%", // 12
@@ -112,24 +129,26 @@ export default function Home() {
             <Container maxWidth="xl">
               <Typography
 		component="h1"
-		variant="h1"
+		variant={params.primary}
 		align="left"
 		color="text.primary"
 		gutterBottom
               >
 		Fast and affordable GPU rentals
               </Typography>
-              <Typography variant="h4" align="left" color="text.primary">
+              <Typography variant={params.secondary} align="left" color="text.primary">
 		Don't camp overnight to buy an overpriced GPU.
               </Typography>
-              <Typography variant="h4" align="left" color="text.primary" paragraph>
+              <Typography variant={params.secondary} align="left" color="text.primary">
 		Launch your Deep Learning projects with rentaflop and save thousands.
               </Typography>
             </Container>
           </Box>
+	  { is_large_screen &&
 	  <HashLink to="/#learn" smooth>
-	    <ArrowDownwardIcon style={{ color: textColorDark, fontSize: 225 }} />
+	    <ArrowDownwardIcon style={{ color: textColorDark, fontSize: 225, marginTop: "-35px" }} />
 	  </HashLink>
+	  }
 	</Paper>
         <Container sx={{ py: 8 }} maxWidth="md">
           <Grid container spacing={4} id="learn">
