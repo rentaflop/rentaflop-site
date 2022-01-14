@@ -15,7 +15,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 function make_graphic_styles(is_large_screen) {
   const url = is_large_screen ? `url(${Graphic})` : `url(${GraphicMobile})`
-  const height = is_large_screen ? "100vh" : "85vh"
+  const height = is_large_screen ? "100vh" : "90vh"
   const styles = {
     paperContainer: {
       backgroundImage: url,
@@ -141,7 +141,7 @@ export default function Home() {
 		Don't camp overnight to buy an overpriced GPU.
               </Typography>
               <Typography variant={params.secondary} align="left" color="text.primary">
-		Launch your Deep Learning projects with rentaflop and save thousands.
+		Launch your Deep Learning projects with rentaflop cloud and save thousands.
               </Typography>
             </Container>
           </Box>
