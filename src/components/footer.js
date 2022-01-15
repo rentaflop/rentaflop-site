@@ -30,12 +30,12 @@ const footers = [
   {
     title: 'Company',
     description: ['Home', 'About', "Blog", 'Contact'],
-    route: [home_url, home_url+'/about', '/', '/contact'],
+    route: [home_url, home_url+'/about', '/', portal_url+'/contact'],
   },
   {
     title: 'Product',
     description: ['Pricing', 'Tutorial', 'FAQ', 'Support'],
-    route: [portal_url+'/launchpad', '/', home_url+'/faq', portal_url+'/support'],
+    route: [portal_url+'/launchpad', '/', portal_url+'/faq', portal_url+'/support'],
   },
   {
     title: 'Legal',
