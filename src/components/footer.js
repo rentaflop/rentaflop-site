@@ -24,13 +24,12 @@ function Copyright(props) {
 }
 
 
-const home_url = "https://rentaflop.com"
 const portal_url = "https://portal.rentaflop.com"
 const footers = [
   {
     title: 'Company',
     description: ['Home', 'About', "Blog", 'Contact'],
-    route: [home_url, home_url+'/about', '/', portal_url+'/contact'],
+    route: ['/', '/about', '/', portal_url+'/contact'],
   },
   {
     title: 'Product',
