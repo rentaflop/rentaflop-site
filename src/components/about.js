@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
-
+import { Box, Typography, Link } from '@material-ui/core';
+import { styled } from '@mui/system';
 
 const FooterLink = styled(Link)({
   textDecoration: "none",
@@ -16,6 +16,7 @@ export default function About() {
       <Typography align="left" paragraph variant="h6">
 	Rentaflop is a startup that connects AI hobbyists with affordable GPU rentals supplied by crypto miners.
 	Crypto miners get higher returns on their hardware, and AI hobbyists avoid breaking the bank on their Deep Learning projects.
+      </Typography>
       <Typography align="left" paragraph variant="h6">
 	Existing hardware solutions for training Deep Learning models are prohibitively expensive for many.
 	Building a GPU-powered AI computer costs thousands and often involves camping overnight at Best Buy.
