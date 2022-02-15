@@ -19,10 +19,7 @@ If you keep yarn running, it will automatically update the local site with any n
 
 **Deployment**
 
-After you've made your desired changes, you're ready to deploy to the live production site (no testing hehe).
-The first step to deploying is to create a production build via the command ```yarn build```. This will
-create/update the ```build/``` folder.
-
-Next, push the changes to the live site with ```yarn deploy```. This will push the contents of ```build/```
+After you've made your desired changes, you're ready to deploy to the live production site.
+Simply run ```yarn deploy```. This will build the js code and push the contents of ```build/```
 to the repo under the gh-pages branch. This branch is configured to hold the live site contents by
 github pages, so any changes will go into production.

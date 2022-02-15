@@ -29,7 +29,7 @@ const footers = [
   {
     title: 'Company',
     description: ['Home', 'About', "Blog", 'Contact'],
-    route: ['/', '/about', '/', portal_url+'/contact'],
+    route: ['/', '/about', portal_url+'/blog', portal_url+'/contact'],
   },
   {
     title: 'Product',
