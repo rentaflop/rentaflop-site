@@ -34,12 +34,12 @@ const footers = [
   {
     title: 'Product',
     description: ['Pricing', 'Tutorial', 'FAQ', 'Support'],
-    route: [portal_url+'/launchpad', '/', portal_url+'/faq', portal_url+'/support'],
+    route: [portal_url+'/launchpad', portal_url+'/blog/tutorial', portal_url+'/faq', portal_url+'/support'],
   },
   {
     title: 'Legal',
     description: ['Privacy policy', 'Terms of use'],
-    route: ['/', '/'],
+    route: [portal_url+'/privacy', portal_url+'/terms'],
   },
 ];
 
