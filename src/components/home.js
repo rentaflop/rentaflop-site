@@ -11,6 +11,7 @@ import Pie from './../static/pie.jpg';
 import Graphic from './../static/rocket_graphic.svg';
 import GraphicMobile from './../static/rocket_graphic_mobile.svg';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { https_log } from './utils';
 
 
 function make_graphic_styles(is_large_screen) {
@@ -100,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Home() {
+  https_log("User hit home page", "INFO")
   const classes = useStyles();
   const portal_url = "https://portal.rentaflop.com";
   const is_large_screen = useMediaQuery('(min-width:600px)');

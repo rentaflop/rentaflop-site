@@ -3,6 +3,7 @@ import { Button, Paper, Typography, CssBaseline, Container, Box } from '@materia
 import Image from './../static/flip_flops.jpg';
 import theme from '../theme';
 import { makeStyles } from '@material-ui/styles';
+import { https_log } from './utils';
 
 
 const styles = {
@@ -29,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function NotFound() {
+  https_log("User hit not found page with URL"+window.location.href, "INFO")
   const classes = useStyles();
   const portal_url = "https://portal.rentaflop.com";
 

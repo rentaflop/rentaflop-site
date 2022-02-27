@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Typography, Link } from '@material-ui/core';
 import { styled } from '@mui/system';
+import { https_log } from './utils';
+
 
 const FooterLink = styled(Link)({
   textDecoration: "none",
@@ -11,6 +13,8 @@ const FooterLink = styled(Link)({
 
 
 export default function About() {
+  https_log("User hit about page", "INFO")
+  
   return (
     <Box display="flex" flexDirection="column" alignItems="stretch" padding={3}>
       <Typography align="left" paragraph variant="h6">
