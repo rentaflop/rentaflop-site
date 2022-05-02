@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 import { ReactComponent as RentaflopLogo } from './../static/rentaflop_logo.svg';
 import { withStyles } from '@material-ui/styles';
 
-
 // get theme colors
 const textColor = theme.palette.text.light;
 const primaryColor = theme.palette.primary.main; // #424242
@@ -21,6 +20,13 @@ const styles = theme => ({
     },
     textTransform: 'none!important',
     borderRadius: "50px!important",
+  },
+  secondary_button_style: {
+    color: textColor + "!important",
+    '&:hover': {
+      color: "rgba(251, 251, 251, .7)!important",
+    },
+    textTransform: 'none!important',
   },
   cta_button: {
     background: gradient,
@@ -56,13 +62,18 @@ class Header extends Component {
             </a>
           </Box>
 	  <Box marginRight='10px'>
+	    <Button href={portal_url+"/blog/hosting"} className={classes.secondary_button_style} variant="text">
+	      Become a host
+	    </Button>
+	  </Box>
+	  <Box marginRight='10px'>
 	    <Button href={portal_url+"/login"} className={classes.button_style} variant="outlined">
 	      Sign in
 	    </Button>
 	  </Box>
 	  <Box marginRight='10px'>
 	    <Button href={portal_url+"/register"} className={classes.cta_button} variant="outlined">
-	      Train an AI now
+	      Start rendering now
 	    </Button>
 	  </Box>
         </Toolbar>

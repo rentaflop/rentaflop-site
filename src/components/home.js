@@ -41,7 +41,7 @@ const cards = [
     </Typography>,
     "secondary":
     <Typography>
-      You'll never need to look up hardware specs again; rentaflop gives you a Jupyter notebook or SSH connection to a GPU that corresponds to your model's size
+      You'll never need to look up graphics card specs again; rentaflop renders your Blender creations quickly and without hassle, or your money back
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/1/1e/Pie_day_apple_pie.jpg
     "img": Pie,
@@ -50,11 +50,11 @@ const cards = [
     "id": 2,
     "primary":
     <Typography gutterBottom variant="h5" component="h2">
-      Harness the power of AI without breaking the bank
+      Harness the power of 3D creation without breaking the bank
     </Typography>,
     "secondary":
     <Typography>
-      We match low opportunity cost hardware with your high value compute jobs to save you money
+      We match low opportunity cost hardware with your high value rendering workloads to save you money
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/9/9b/Money_-_Flickr_-_Tracy_O.jpg
     "img": MoneyPile,
@@ -63,11 +63,11 @@ const cards = [
     "id": 3,
     "primary":
     <Typography gutterBottom variant="h5" component="h2">
-      Take your AI project to new heights
+      Take your Blender project to new heights
     </Typography>,
     "secondary":
     <Typography>
-      Rentaflop managed GPUs make it easy to experiment, train, and tune your models
+      Rentaflop render farm makes it easy to experiment with and tweak your 3D creations
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/9/91/Bruce_McCandless_II_during_EVA_in_1984.jpg
     "img": UntetheredSpacewalk,
@@ -135,13 +135,13 @@ export default function Home() {
 		color="text.primary"
 		gutterBottom
               >
-		Fast and affordable GPU rentals
+		Fast and affordable 3D rendering
               </Typography>
               <Typography variant={params.secondary} align="left" color="text.primary">
-		Don't camp overnight to buy an overpriced GPU.
+		Don't settle for lower quality creations because of high rendering costs.
               </Typography>
               <Typography variant={params.secondary} align="left" color="text.primary">
-		Launch your Deep Learning projects with rentaflop cloud and save thousands.
+		Launch your Blender projects with rentaflop farm and save thousands.
               </Typography>
             </Container>
           </Box>
@@ -179,7 +179,7 @@ export default function Home() {
             spacing={2}
             justifyContent="center"
           >
-            <Button href={portal_url+"/launchpad"} className={classes.cta_button} variant="contained">Launch a GPU now</Button>
+            <Button href={portal_url+"/launchpad"} className={classes.cta_button} variant="contained">Render your project now</Button>
             <Button component={Link} to="/about" className={classes.button_style} variant="contained">Learn more</Button>
           </Stack>
         </Container>

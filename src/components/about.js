@@ -17,13 +17,13 @@ export default function About() {
   const body = (
     <>
       <Typography align="left" paragraph paddingTop="24px">
-	Rentaflop is a crowdsourced cloud provider offering AI practitioners fast and affordable GPU rentals from hardware owners across the globe.
-	Build your Deep Learning models without waiting in line to buy a GPU or overpaying on traditional cloud services.
+	Rentaflop is a crowdsourced render farm offering Blender artists fast and affordable rendering from hardware owners across the globe.
+	Build your 3D creations without compromising on quality or overpaying on traditional render services.
       </Typography>
       <Typography align="left" paragraph>
-	You get a Virtual Machine with a GPU tier of your choosing, connected by SSH and Jupyter. It comes packaged with Tensorflow, Keras, and PyTorch
-	out of the box. Our <FooterLink href="https://portal.rentaflop.com/faq">tutorial</FooterLink> explains how to get
-	started by training your first rentaflop Deep Learning model.
+	Simply submit your Blender file, along with any assets. We quickly and affordably render your file, giving you the ability to rapidly
+	improve your 3D creations without high expenses. Our <FooterLink href="https://portal.rentaflop.com/faq">tutorial</FooterLink> explains how to get
+	started by rendering your first Blender project on rentaflop.
       </Typography>
       <Typography align="left" paragraph>
 	For the latest rentaflop news, or to read a variety of things about software development and startups, check out
