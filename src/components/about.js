@@ -26,8 +26,8 @@ export default function About() {
 	started by rendering your first Blender project on rentaflop.
       </Typography>
       <Typography align="left" paragraph>
-	If you have an Nvidia graphics card and would like to make money without lifting a finger, please read about 
-	<FooterLink href="https://portal.rentaflop.com/blog/hosting">becoming a host</FooterLink>.
+	If you have an Nvidia graphics card and would like to make money without lifting a finger, please read
+	about <FooterLink href="https://portal.rentaflop.com/blog/hosting">becoming a host</FooterLink>.
 	Your hardware can pay for itself while helping 3D artists render their projects.
       </Typography>
       <Typography align="left" paragraph>
