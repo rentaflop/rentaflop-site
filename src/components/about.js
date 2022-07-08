@@ -22,12 +22,17 @@ export default function About() {
       </Typography>
       <Typography align="left" paragraph>
 	Simply submit your Blender file, along with any assets. We quickly and affordably render your file, giving you the ability to rapidly
-	improve your 3D creations without high expenses. Our <FooterLink href="https://portal.rentaflop.com/faq">tutorial</FooterLink> explains how to get
+	improve your 3D creations without high expenses. Our <FooterLink href="https://portal.rentaflop.com/blog/tutorial">tutorial</FooterLink> explains how to get
 	started by rendering your first Blender project on rentaflop.
       </Typography>
       <Typography align="left" paragraph>
+	If you have an Nvidia graphics card and would like to make money without lifting a finger, please read about 
+	<FooterLink href="https://portal.rentaflop.com/blog/hosting">becoming a host</FooterLink>.
+	Your hardware can pay for itself while helping 3D artists render their projects.
+      </Typography>
+      <Typography align="left" paragraph>
 	For the latest rentaflop news, or to read a variety of things about software development and startups, check out
-	our <FooterLink href="/blog">blog</FooterLink>.
+	our <FooterLink href="https://portal.rentaflop.com/blog">blog</FooterLink>.
       </Typography>
       <Typography align="left" paragraph>
 	What are your questions? Please see the <FooterLink href="https://portal.rentaflop.com/faq">faq</FooterLink>.
