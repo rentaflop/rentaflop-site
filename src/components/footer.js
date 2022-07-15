@@ -33,8 +33,8 @@ const footers = [
   },
   {
     title: 'Product',
-    description: ['Pricing', 'Tutorial', 'FAQ', 'Support'],
-    route: [portal_url+'/launchpad', portal_url+'/blog/tutorial', portal_url+'/faq', portal_url+'/support'],
+    description: ['Pricing', 'Rentaflop Miner', 'FAQ', 'Support'],
+    route: [portal_url+'/pricing', portal_url+'/blog/hosting', portal_url+'/faq', portal_url+'/support'],
   },
   {
     title: 'Legal',
