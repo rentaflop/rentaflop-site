@@ -4,6 +4,7 @@ import theme from '../theme';
 import { withRouter } from 'react-router-dom';
 import { ReactComponent as RentaflopLogo } from './../static/rentaflop_logo.svg';
 import { withStyles } from '@material-ui/styles';
+import { https_log } from './utils.js';
 
 // get theme colors
 const textColor = theme.palette.text.light;
@@ -49,6 +50,14 @@ class Header extends Component {
   render() {
     const { classes } = this.props;
     const portal_url = "https://portal.rentaflop.com"
+    const is_large_screen = window.innerWidth > 768;
+    var button_text = {"hosting": "Become a host", "login": "Sign in", "register": "Start rendering now"};
+    if (!is_large_screen) {
+      var log = 'User visited from mobile device';
+      https_log(log, "DEBUG");
+      button_text["hosting"] = "Hosting";
+      button_text["register"] = "Register";
+    }
     
     return (
       <AppBar style={{ backgroundColor: primaryColor, borderBottom: '1px solid', borderColor: lightPrimaryColor }} position='static'>
@@ -63,17 +72,17 @@ class Header extends Component {
           </Box>
 	  <Box marginRight='10px'>
 	    <Button href={portal_url+"/blog/hosting"} className={classes.secondary_button_style} variant="text">
-	      Become a host
+	      {button_text["hosting"]}
 	    </Button>
 	  </Box>
 	  <Box marginRight='10px'>
 	    <Button href={portal_url+"/login"} className={classes.button_style} variant="outlined">
-	      Sign in
+	      {button_text["login"]}
 	    </Button>
 	  </Box>
 	  <Box marginRight='10px'>
 	    <Button href={portal_url+"/register"} className={classes.cta_button} variant="outlined">
-	      Start rendering now
+	      {button_text["register"]}
 	    </Button>
 	  </Box>
         </Toolbar>
