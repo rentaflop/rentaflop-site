@@ -22,8 +22,7 @@ export default function About() {
       </Typography>
       <Typography align="left" paragraph>
 	Simply submit your Blender file, along with any assets. We quickly and affordably render your file, giving you the ability to rapidly
-	improve your 3D creations without high expenses. Our <FooterLink href="https://portal.rentaflop.com/blog/tutorial">tutorial</FooterLink> explains how to get
-	started by rendering your first Blender project on rentaflop.
+	improve your 3D creations without high expenses. For our prices, please see <FooterLink href="https://portal.rentaflop.com/pricing">pricing</FooterLink>.
       </Typography>
       <Typography align="left" paragraph>
 	If you have an Nvidia graphics card and would like to make money without lifting a finger, please read

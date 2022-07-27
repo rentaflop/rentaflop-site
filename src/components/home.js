@@ -54,7 +54,7 @@ const cards = [
     </Typography>,
     "secondary":
     <Typography>
-      We match low opportunity cost hardware with your high value rendering workloads to save you money
+      We match low opportunity cost crowdsourced hardware with your high value rendering workloads to save you money
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/9/9b/Money_-_Flickr_-_Tracy_O.jpg
     "img": MoneyPile,

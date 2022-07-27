@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Grid, Container, Link } from '@material-ui/core';
 import { styled } from '@mui/system';
+import { ReactComponent as YCombinatorLogo } from './../static/ycombinator.svg';
 
 
 const FooterLink = styled(Link)({
@@ -33,7 +34,7 @@ const footers = [
   },
   {
     title: 'Product',
-    description: ['Pricing', 'Rentaflop Miner', 'FAQ', 'Support'],
+    description: ['Pricing', 'Rentaflop miner', 'FAQ', 'Support'],
     route: [portal_url+'/pricing', portal_url+'/blog/hosting', portal_url+'/faq', portal_url+'/support'],
   },
   {
@@ -73,7 +74,10 @@ export default function Footer() {
           </Grid>
 	))}
       </Grid>
-      <Copyright sx={{ mt: 5 }} />
+      <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 4 }}>
+	Part of <YCombinatorLogo style={{ width: "63.63px", height: "20.18px", 'paddingTop': "8px" }}/> Startup School
+      </Typography>
+      <Copyright sx={{ mt: 1 }} />
     </Container>
   );
 }

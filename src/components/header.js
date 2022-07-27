@@ -51,7 +51,7 @@ class Header extends Component {
     const { classes } = this.props;
     const portal_url = "https://portal.rentaflop.com"
     const is_large_screen = window.innerWidth > 768;
-    var button_text = {"hosting": "Become a host", "login": "Sign in", "register": "Start rendering now"};
+    var button_text = {"hosting": "Become a host", "pricing": "Pricing", "login": "Sign in", "register": "Start rendering now"};
     if (!is_large_screen) {
       var log = 'User visited from mobile device';
       https_log(log, "DEBUG");
@@ -75,6 +75,13 @@ class Header extends Component {
 	      {button_text["hosting"]}
 	    </Button>
 	  </Box>
+	  { is_large_screen &&
+	    <Box marginRight='10px'>
+	      <Button href={portal_url+"/pricing"} className={classes.secondary_button_style} variant="text">
+		{button_text["pricing"]}
+	      </Button>
+	    </Box>
+	  }
 	  <Box marginRight='10px'>
 	    <Button href={portal_url+"/login"} className={classes.button_style} variant="outlined">
 	      {button_text["login"]}
