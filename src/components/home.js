@@ -117,6 +117,8 @@ export default function Home() {
   const params = is_large_screen ? params_large : params_small;
   const title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Meet rentaflop</Typography>
   const body = <Typography align="left" paragraph paddingTop="24px" />
+  // don't autofocus if they've clicked arrow since it brings screen back up on chrome
+  const autofocus = !window.location.href.includes("learn");
   
   return (
     <>
@@ -150,14 +152,14 @@ export default function Home() {
               </Typography>
 	      <form onSubmit={(e) => {
 		      e.preventDefault();
-		      window.location.href=portal_url+"/waitlist?"+e.target.email1.value;
+		      window.location.href=portal_url+"/waitlist?email="+e.target.email1.value;
 		    }}>
 		<Grid container paddingTop="12px">
 		  <Grid item>
-		    <TextField variant="outlined" autoFocus label="Email address" name="email1" size="small" type="email" sx={{ width: { sm: 100, md: 150 } }}/>
+		    <TextField variant="outlined" autoFocus={autofocus} label="Email address" name="email1" size="small" type="email" sx={{ width: { sm: 100, md: 150 } }}/>
 		  </Grid>
 		  <Grid item alignItems="stretch" style={{ display: "flex", paddingLeft: 15 }}>
-		    <Button type="submit" className={classes.cta_button} variant="contained">Join the waitlist</Button>
+		    <Button type="submit" className={classes.cta_button} variant="contained">Get early access</Button>
 		  </Grid>
 		</Grid>
 	      </form>
@@ -197,7 +199,7 @@ export default function Home() {
             spacing={2}
             justifyContent="center"
           >
-            <Button href={portal_url+"/launchpad"} className={classes.cta_button} variant="contained">Render your project</Button>
+            <Button href={portal_url+"/waitlist"} className={classes.cta_button} variant="contained">Join the waitlist</Button>
             <Button component={Link} to="/about" className={classes.button_style} variant="contained">Learn more</Button>
           </Stack>
 	     
@@ -216,7 +218,7 @@ export default function Home() {
 		    </Typography>
 		    <form onSubmit={(e) => {
 			    e.preventDefault();
-			    window.location.href=portal_url+"/waitlist?"+e.target.email2.value;
+			    window.location.href=portal_url+"/waitlist?email="+e.target.email2.value;
 			  }}>
 		      <Grid container paddingTop="12px">
 			<Grid item>
