@@ -148,18 +148,18 @@ export default function Home() {
 		Don't settle for lower quality creations because of high rendering costs.
               </Typography>
               <Typography variant={params.secondary} align="left" color="text.primary">
-		Launch your Blender projects with rentaflop farm and save thousands.
+		Render your Blender projects with rentaflop farm and save thousands.
               </Typography>
 	      <form onSubmit={(e) => {
 		      e.preventDefault();
-		      window.location.href=portal_url+"/waitlist?email="+e.target.email1.value;
+		      window.location.href=portal_url+"/register?email="+e.target.email1.value;
 		    }}>
 		<Grid container paddingTop="12px">
 		  <Grid item>
 		    <TextField variant="outlined" autoFocus={autofocus} label="Email address" name="email1" size="small" type="email" sx={{ width: { sm: 100, md: 150 } }}/>
 		  </Grid>
 		  <Grid item alignItems="stretch" style={{ display: "flex", paddingLeft: 15 }}>
-		    <Button type="submit" className={classes.cta_button} variant="contained">Get early access</Button>
+		    <Button type="submit" className={classes.cta_button} variant="contained">Start rendering</Button>
 		  </Grid>
 		</Grid>
 	      </form>
@@ -199,7 +199,7 @@ export default function Home() {
             spacing={2}
             justifyContent="center"
           >
-            <Button href={portal_url+"/waitlist"} className={classes.cta_button} variant="contained">Join the waitlist</Button>
+            <Button href={portal_url+"/register"} className={classes.cta_button} variant="contained">Render your project</Button>
             <Button component={Link} to="/about" className={classes.button_style} variant="contained">Learn more</Button>
           </Stack>
 	     
@@ -214,11 +214,11 @@ export default function Home() {
 		      Rentaflop is a crowdsourced render farm offering Blender artists fast and affordable rendering from hardware owners across the globe.
 		    </Typography>
 		    <Typography align="left" paddingTop="12px">
-		      Join our waitlist and be one of the first to try us!
+		      Join and be one of the first to try us!
 		    </Typography>
 		    <form onSubmit={(e) => {
 			    e.preventDefault();
-			    window.location.href=portal_url+"/waitlist?email="+e.target.email2.value;
+			    window.location.href=portal_url+"/register?email="+e.target.email2.value;
 			  }}>
 		      <Grid container paddingTop="12px">
 			<Grid item>
