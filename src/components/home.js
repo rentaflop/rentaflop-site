@@ -18,7 +18,7 @@ import TextField from '@mui/material/TextField';
 
 function make_graphic_styles(is_large_screen) {
   const url = is_large_screen ? `url(${Graphic})` : `url(${GraphicMobile})`
-  const height = is_large_screen ? "100vh" : "90vh"
+  const height = is_large_screen ? "110vh" : "90vh"
   const styles = {
     paperContainer: {
       backgroundImage: url,
