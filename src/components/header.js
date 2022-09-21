@@ -51,11 +51,10 @@ class Header extends Component {
     const { classes } = this.props;
     const portal_url = "https://portal.rentaflop.com"
     const is_large_screen = window.innerWidth > 768;
-    var button_text = {"hosting": "Become a host", "pricing": "Pricing", "login": "Sign in", "register": "Start rendering"};
+    var button_text = {"rendering": "Rendering", "hosting": "Become a host", "pricing": "Pricing", "login": "Sign in", "register": "Start rendering"};
     if (!is_large_screen) {
       var log = 'User visited from mobile device';
       https_log(log, "DEBUG");
-      button_text["hosting"] = "Hosting";
       button_text["register"] = "Register";
     }
     
@@ -71,16 +70,23 @@ class Header extends Component {
             </a>
           </Box>
 	  <Box marginRight='10px'>
-	    <Button href={portal_url+"/blog/hosting"} className={classes.secondary_button_style} variant="text">
-	      {button_text["hosting"]}
+	    <Button href={portal_url+"/rendering"} className={classes.secondary_button_style} variant="text">
+	      {button_text["rendering"]}
 	    </Button>
 	  </Box>
 	  { is_large_screen &&
-	    <Box marginRight='10px'>
-	      <Button href={portal_url+"/pricing"} className={classes.secondary_button_style} variant="text">
-		{button_text["pricing"]}
-	      </Button>
-	    </Box>
+	    <>
+	      <Box marginRight='10px'>
+		<Button href={portal_url+"/blog/hosting"} className={classes.secondary_button_style} variant="text">
+		  {button_text["hosting"]}
+		</Button>
+	      </Box>
+	      <Box marginRight='10px'>
+		<Button href={portal_url+"/pricing"} className={classes.secondary_button_style} variant="text">
+		  {button_text["pricing"]}
+		</Button>
+	      </Box>
+	    </>
 	  }
 	  <Box marginRight='10px'>
 	    <Button href={portal_url+"/login"} className={classes.button_style} variant="outlined">
