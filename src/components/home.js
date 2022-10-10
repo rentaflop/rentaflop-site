@@ -253,16 +253,20 @@ export default function Home() {
              </Grid>
 	</Container>
 	
-	<RentaflopTable title={table_title} cols={table_cols} body={table_body} footer={table_footer} />
-        <Stack
-          sx={{ pt: 0, pb: 4 }}
-          direction="row"
-          spacing={2}
-          justifyContent="center"
-        >
-          <Button href={portal_url+"/register"} className={classes.cta_button} variant="contained">Render now</Button>
-          <Button component={Link} to="/about" className={classes.button_style} variant="contained">Learn more</Button>
-        </Stack>
+	{ is_large_screen &&
+	  <>
+	    <RentaflopTable title={table_title} cols={table_cols} body={table_body} footer={table_footer} />
+            <Stack
+              sx={{ pt: 0, pb: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+              <Button href={portal_url+"/register"} className={classes.cta_button} variant="contained">Render now</Button>
+              <Button component={Link} to="/about" className={classes.button_style} variant="contained">Learn more</Button>
+            </Stack>
+	  </>
+	}
 	
         <Container sx={{ pt: 4 }} maxWidth="md">
           <Grid container spacing={4} id="intro-cards">
