@@ -12,6 +12,7 @@ import Pie from './../static/pie.jpg';
 import Graphic from './../static/rocket_graphic.svg';
 import GraphicMobile from './../static/rocket_graphic_mobile.svg';
 import { ReactComponent as EpilogLogo } from './../static/epilog_logo.svg';
+import { ReactComponent as CGCLogo } from './../static/cgc_logo.svg';
 import BlenderApplication from './../static/blender_application.png';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { RentaflopText, RentaflopTable } from './utils';
@@ -87,6 +88,11 @@ const social_cards = [
     "id": 0,
     "img": <EpilogLogo style={{ width: "250px", height: "100px" }}/>,
     "url": "https://www.epiloglaser.com/?ref=rentaflop",
+  },
+  {
+    "id": 1,
+    "img": <CGCLogo style={{ width: "250px", height: "100px" }}/>,
+    "url": "https://www.cgcookie.com/?ref=rentaflop",
   },
 ];
       
