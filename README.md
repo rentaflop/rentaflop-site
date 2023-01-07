@@ -13,7 +13,7 @@ yarn install
 **Coding**
 
 Make changes to the repo on the master branch. Most changes will need to happen under ```src/```.
-After you've made a change, you can view the site on localhost by running the command ```yarn start```.
+After you've made a change, you can view the site on localhost by running the command ```yarn dev```.
 If you keep yarn running, it will automatically update the local site with any new changes made to
 ```src/```. As always, don't forget to commit and ```git push``` your code when finished.
 

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Typography, Toolbar, AppBar, Box, Button } from '@material-ui/core';
-import theme from '../theme';
-import { withRouter } from 'react-router-dom';
-import { ReactComponent as RentaflopLogo } from './../static/rentaflop_logo.svg';
+import theme from './theme';
+import Image from 'next/image'
 import { withStyles } from '@material-ui/styles';
 import { https_log } from './utils.js';
 
@@ -50,7 +49,10 @@ class Header extends Component {
   render() {
     const { classes } = this.props;
     const portal_url = "https://portal.rentaflop.com"
-    const is_large_screen = window.innerWidth > 768;
+    // client-side-only code, so must check if window defined first
+    if (typeof window !== "undefined") {
+      const is_large_screen = window.innerWidth > 768;
+    }
     var button_text = {"rendering": "Rendering", "hosting": "Become a host", "pricing": "Pricing", "login": "Sign in", "register": "Start rendering"};
     if (!is_large_screen) {
       var log = 'User visited from mobile device';
@@ -63,7 +65,7 @@ class Header extends Component {
         <Toolbar>
           <Box display='flex' flexGrow={1}>
             <a href='/' style={{ color: textColor, textDecoration: 'none' }}>
-	      <RentaflopLogo style={{ width: "63.63px", height: "20.18px" }}/>
+	      <Image src="/static/rentaflop_logo.svg" height={20.18} width={63.63} alt="Rentaflop logo" />
               <Typography variant='inherit'>
                 rentaflop
               </Typography>
@@ -104,4 +106,4 @@ class Header extends Component {
   }
 }
 
-export default withStyles(styles)(withRouter(Header));
+export default withStyles(styles)(Header);

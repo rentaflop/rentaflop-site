@@ -21,9 +21,10 @@
     "is-svg": "4.3.1",
     "material-ui": "^1.0.0-beta.47",
     "material-ui-popup-state": "^2.0.0",
+    "next": "^13.1.1",
     "postcss": "8.3.11",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-player": "^2.10.1",
     "react-responsive": "^9.0.0-beta.4",
     "react-router": "^5.2.1",
@@ -36,8 +37,9 @@
     "ws": "8.2.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && cp CNAME build && cp 404.html build",
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build && next export -o build/ && cp CNAME build",
     "send": "gh-pages -d build",
     "deploy": "yarn build && yarn send"
   },

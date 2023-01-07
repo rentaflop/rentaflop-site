@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, CssBaseline, createTheme, ThemeProvider, Divider, Box, Grid, Paper,
-	 Typography, Table, TableHead, TableBody, TableRow, TableCell, styled } from '@mui/material';
+	 Typography, Table, TableHead, TableBody, TableRow, TableCell, styled, Button } from '@mui/material';
+import theme from './theme';
+import { Link as ButtonLink } from 'next/link'
+import { makeStyles } from '@material-ui/styles';
 
 
 export function https_log(log, log_level) {
@@ -80,4 +83,73 @@ export function RentaflopTable(props) {
       </Container>
     </Box>
   );
+}
+
+
+export function RentaflopButton(props) {
+  const textColorLight = theme.palette.text.light;
+  const textColorDark = theme.palette.text.dark;
+  const gradient = theme.palette.gradient;
+  const gradient_hover = theme.palette.gradient_hover;
+  const useStyles = makeStyles((theme) => ({
+    button_style: {
+      backgroundColor: "rgba(251, 251, 251, .2)!important",
+      color: textColorDark + "!important",
+      '&:hover': {
+	backgroundColor: "rgba(251, 251, 251, .4)!important",
+      },
+      textTransform: 'none!important',
+      borderRadius: "50px!important",
+    },
+    cta_button: {
+      background: gradient,
+      color: textColorLight + "!important",
+      '&:hover': {
+	background: gradient_hover,
+      },
+      borderRadius: "50px!important",
+      "&:disabled": {
+        backgroundColor: 'red!important'
+      }
+    },
+    disabled_button: {
+      background: textColorDark,
+      color: textColorLight,
+      borderRadius: "50px!important",
+    },
+  }));
+  const classes = useStyles();
+  var button_class = classes[props.button_class]
+  var button_component = ButtonLink;
+  if (props.button_component !== undefined) {
+    button_component = props.button_component;
+  }
+  var disabled = false;
+  if (props.disabled !== undefined) {
+    disabled = props.disabled;
+  }
+  if (disabled) {
+    button_class = classes["disabled_button"];
+  }
+  var button = <Button component="a" linkcomponent={button_component} href={props.dest} className={button_class} variant="contained" disabled={disabled}>{props.text}</Button>
+  if (props.button_click !== undefined) {
+    button = <Button onClick={props.button_click} className={button_class} variant="contained" disabled={disabled}>{props.text}</Button>
+  }
+  if (props.submit !== undefined) {
+    button = (
+      <Button
+        variant="contained"
+        type="submit"
+	className={button_class}
+	style={{ borderRadius: 50, marginBottom: 10 }}
+	disabled={disabled}
+      >
+        <Typography>
+          {props.text}
+        </Typography>
+      </Button>
+    );
+  }
+  
+  return button;
 }
