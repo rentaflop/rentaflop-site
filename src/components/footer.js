@@ -1,26 +1,20 @@
 import React from 'react';
-import { Typography, Grid, Container, Link } from '@material-ui/core';
-import { styled } from '@mui/system';
+import { Typography, Grid, Container } from '@material-ui/core';
+import { RentaflopLink } from "./utils";
 import Image from 'next/image'
-
-
-const FooterLink = styled(Link)({
-  textDecoration: "none",
-  '&:hover': {
-    textDecoration: "underline",
-  },
-});
 
 
 function Copyright(props) {
   return (
-      <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-	<FooterLink color="inherit" href="/">
-      rentaflop
-    </FooterLink>{' '}
-    {new Date().getFullYear()}
-    </Typography>
+    <>
+      <Typography variant="body2" color="textSecondary" align="center" {...props}>
+	{'Copyright © '}
+	<RentaflopLink color="inherit" href ="/">
+	  rentaflop
+	</RentaflopLink>{' '}
+	{new Date().getFullYear()}
+      </Typography>
+    </>
   );
 }
 
@@ -54,27 +48,28 @@ export default function Footer() {
 	borderTop: (theme) => `1px solid ${theme.palette.divider}`,
 	mt: 8,
 	py: [3, 6],
+	textAlign: "center"
       }}
     >
       <Grid container spacing={4} justifyContent="space-evenly">
 	{footers.map((footer) => (
           <Grid item xs={6} sm={3} key={footer.title}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
+            <Typography variant="h6" color="textPrimary" gutterBottom>
               {footer.title}
 	    </Typography>
             <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
               {footer.description.map((item, idx) => (
 		<li key={item}>
-		  <FooterLink href={footer.route[idx]} variant="subtitle1" color="text.secondary">
+		  <RentaflopLink href={footer.route[idx]} variant="subtitle1" color="textSecondary">
 		    {item}
-		  </FooterLink>
+		  </RentaflopLink>
 		</li>
               ))}
 	    </ul>
           </Grid>
 	))}
       </Grid>
-      <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 4 }}>
+      <Typography variant="body2" color="textSecondary" align="center" sx={{ mt: 4 }}>
 	{/* setting height twice because of a css conflict with app.css and index.css */}
 	Part of <Image src="/static/ycombinator.svg" height={20.18} width={63.63} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 20.18 }} alt="YCombinator logo" /> Startup School
       </Typography>

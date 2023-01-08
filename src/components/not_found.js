@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Paper, Typography, CssBaseline, Container, Box } from '@material-ui/core';
 import Image from '../../public/static/flip_flops.jpg';
-import Link from 'next/link'
 import theme from './theme';
 import Page from './page'
 import { RentaflopButton } from './utils';
@@ -35,15 +34,15 @@ export default function NotFound() {
               component="h1"
               variant="h2"
               align="center"
-              color="text.primary"
+              color="textPrimary"
               gutterBottom
 	    >
               404 page not found
 	    </Typography>
-	    <Typography variant="h5" align="center" color="text.primary" paragraph>
+	    <Typography variant="h5" align="center" color="textPrimary" paragraph>
 	      That request was a flop, but while you're here you can sit back and relax.
 	    </Typography>
-	    <Typography variant="h5" align="center" color="text.primary" paragraph>
+	    <Typography variant="h5" align="center" color="textPrimary" paragraph>
 	      Or...
 	    </Typography>
 	    <RentaflopButton button_class="cta_button" text="Rent some flops" dest={"https://portal.rentaflop.com/launchpad"} />

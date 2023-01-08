@@ -15,6 +15,7 @@ const theme = createTheme({
     },
     info: {
       main: blue[300],
+      light: blue[50],
     },
     text: {
       light: "#FBFBFB",

@@ -161,15 +161,15 @@ export default function Home() {
 		component="h1"
 		variant={params.primary}
 		align="left"
-		color="text.primary"
+		color="textPrimary"
 		gutterBottom
               >
 		Fast and affordable 3D rendering
               </Typography>
-              <Typography variant={params.secondary} align="left" color="text.primary">
+              <Typography variant={params.secondary} align="left" color="textPrimary">
 		Don't settle for lower quality work because of high rendering costs.
               </Typography>
-              <Typography variant={params.secondary} align="left" color="text.primary">
+              <Typography variant={params.secondary} align="left" color="textPrimary">
 		Render your Blender creations with rentaflop farm and save thousands.
               </Typography>
 	      <form onSubmit={(e) => {

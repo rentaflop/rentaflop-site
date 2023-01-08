@@ -1,9 +1,17 @@
 import React from 'react';
 import { Container, CssBaseline, createTheme, ThemeProvider, Divider, Box, Grid, Paper,
-	 Typography, Table, TableHead, TableBody, TableRow, TableCell, styled, Button } from '@mui/material';
+	 Typography, Table, TableHead, TableBody, TableRow, TableCell, styled, Button, Link } from '@mui/material';
 import theme from './theme';
 import { Link as ButtonLink } from 'next/link'
 import { makeStyles } from '@material-ui/styles';
+
+
+export const RentaflopLink = styled(Link)({
+  textDecoration: "none",
+  '&:hover': {
+    textDecoration: "underline",
+  },
+});
 
 
 export function https_log(log, log_level) {
