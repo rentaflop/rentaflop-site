@@ -15,6 +15,11 @@ export const RentaflopLink = styled(Link)({
 
 
 export function https_log(log, log_level) {
+  // do nothing if not on client
+  if (typeof window === "undefined") {
+    return;
+  }
+  
   var logApiUrl = 'https://portal.rentaflop.com/api/log'
   fetch(logApiUrl, {
     method: 'POST',

@@ -45,7 +45,7 @@ const intro_cards = [
       Rentaflop render farm renders your Blender creations quickly and without hassle, or your money back.
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/1/1e/Pie_day_apple_pie.jpg
-    "img": <Image src={"/static/pie.jpg"} alt={"Blender 3D rendering as easy as pie"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+    "img": <Image src={"./static/pie.jpg"} alt={"Blender 3D rendering as easy as pie"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
   },
   {
     "id": 2,
@@ -59,7 +59,8 @@ const intro_cards = [
       cheaper than many other rendering services!
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/9/9b/Money_-_Flickr_-_Tracy_O.jpg
-    "img": <Image src={"/static/money_pile.jpg"} alt={"Blender 3D rendering that's affordable"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+    // must use . in front of static otherwise build dir won't use relative imports
+    "img": <Image src={"./static/money_pile.jpg"} alt={"Blender 3D rendering that's affordable"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
   },
   {
     "id": 3,
@@ -73,19 +74,19 @@ const intro_cards = [
       a pro who wants to beat the competition, rentaflop allows you to render without sacrificing quality.
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/9/91/Bruce_McCandless_II_during_EVA_in_1984.jpg
-    "img": <Image src={"/static/untethered_spacewalk.jpg"} alt={"Take your Blender projects to new heights"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+    "img": <Image src={"./static/untethered_spacewalk.jpg"} alt={"Take your Blender projects to new heights"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
   },
 ];
       
 const social_cards = [
   {
     "id": 0,
-    "img": <Image src={"/static/epilog_logo.svg"} alt={"Epilog laser is a happy rentaflop customer"} width={250} height={100} />,
+    "img": <Image src={"./static/epilog_logo.svg"} alt={"Epilog laser is a happy rentaflop customer"} width={250} height={100} />,
     "url": "https://www.epiloglaser.com/?ref=rentaflop",
   },
   {
     "id": 1,
-    "img": <Image src={"/static/cgc_logo.svg"} alt={"Rentaflop partners with CG Cookie"} width={250} height={100} />,
+    "img": <Image src={"./static/cgc_logo.svg"} alt={"Rentaflop partners with CG Cookie"} width={250} height={100} />,
     "url": "https://www.cgcookie.com/?ref=rentaflop",
   },
 ];
@@ -225,7 +226,7 @@ export default function Home() {
 		 >
 		   <CardMedia>
 		     <div style={{ position: 'relative', width: 563, height: 324 }}>
-		       <Image alt="Blender application home screen" src="/static/blender_application.png" fill
+		       <Image alt="Blender application home screen" src="./static/blender_application.png" fill
 			      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 		     </div>
 		   </CardMedia>

@@ -43,8 +43,8 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build && next export -o build/ && cp CNAME build",
-    "send": "gh-pages -d build",
+    "build": "next build && next export -o build/ && cp CNAME build && touch build/.nojekyll",
+    "send": "gh-pages -d build -t true",
     "deploy": "yarn build && yarn send"
   },
   "eslintConfig": {

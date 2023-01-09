@@ -71,7 +71,7 @@ export default function Footer() {
       </Grid>
       <Typography variant="body2" color="textSecondary" align="center" sx={{ mt: 4 }}>
 	{/* setting height twice because of a css conflict with app.css and index.css */}
-	Part of <Image src="/static/ycombinator.svg" height={20.18} width={63.63} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 20.18 }} alt="YCombinator logo" /> Startup School
+	Part of <Image src="./static/ycombinator.svg" height={20.18} width={63.63} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 20.18 }} alt="YCombinator logo" /> Startup School
       </Typography>
       <Copyright sx={{ mt: 1 }} />
     </Container>

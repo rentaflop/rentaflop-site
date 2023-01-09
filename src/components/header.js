@@ -58,8 +58,6 @@ class Header extends Component {
     }
     var button_text = {"rendering": "Rendering", "hosting": "Become a host", "pricing": "Pricing", "login": "Sign in", "register": "Start rendering"};
     if (!is_large_screen) {
-      var log = 'User visited from mobile device';
-      https_log(log, "DEBUG");
       button_text["register"] = "Register";
     }
     
@@ -68,7 +66,7 @@ class Header extends Component {
         <Toolbar>
           <Box display='flex' flexGrow={1}>
             <a href='/' style={{ color: textColor, textDecoration: 'none', "textAlign": "left" }}>
-	      <Image src="/static/rentaflop_logo.svg" height={20.18} width={63.63} alt="Rentaflop logo" />
+	      <Image src="./static/rentaflop_logo.svg" height={20.18} width={63.63} alt="Rentaflop logo" />
               <Typography variant='inherit'>
                 rentaflop
               </Typography>
