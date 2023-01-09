@@ -2,24 +2,19 @@ import React from 'react';
 import { Box, Typography, Card, CardMedia, CardContent, CssBaseline, Grid, Stack, Container, Paper,
 	 TableCell, TableRow } from '@material-ui/core';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import { HashLink } from 'react-router-hash-link';
-// import UntetheredSpacewalk from './../static/untethered_spacewalk.jpg';
-// import MoneyPile from './../static/money_pile.jpg';
-// import Pie from './../static/pie.jpg';
-// import Graphic from '../../public/static/rocket_graphic.svg';
-// import GraphicMobile from '../../public/static/rocket_graphic_mobile.svg';
-// import { ReactComponent as EpilogLogo } from './../static/epilog_logo.svg';
-// import { ReactComponent as CGCLogo } from './../static/cgc_logo.svg';
-// import BlenderApplication from './../static/blender_application.png';
+import Graphic from '../../public/static/rocket_graphic.svg';
+import GraphicMobile from '../../public/static/rocket_graphic_mobile.svg';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { RentaflopText, RentaflopTable, RentaflopButton } from './utils';
+import { RentaflopText, RentaflopTable, RentaflopButton } from '../components/utils';
+import theme from '../components/theme';
 import TextField from '@mui/material/TextField';
 import Page from '../components/page'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 function make_graphic_styles(is_large_screen) {
-  const url = is_large_screen ? `url(${Graphic})` : `url(${GraphicMobile})`
+  const url = is_large_screen ? `url(${Graphic.src})` : `url(${GraphicMobile.src})`
   const height = is_large_screen ? "110vh" : "90vh"
   const styles = {
     paperContainer: {
@@ -50,7 +45,7 @@ const intro_cards = [
       Rentaflop render farm renders your Blender creations quickly and without hassle, or your money back.
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/1/1e/Pie_day_apple_pie.jpg
-    "img": Pie,
+    "img": <Image src={"/static/pie.jpg"} alt={"Blender 3D rendering as easy as pie"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
   },
   {
     "id": 2,
@@ -64,7 +59,7 @@ const intro_cards = [
       cheaper than many other rendering services!
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/9/9b/Money_-_Flickr_-_Tracy_O.jpg
-    "img": MoneyPile,
+    "img": <Image src={"/static/money_pile.jpg"} alt={"Blender 3D rendering that's affordable"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
   },
   {
     "id": 3,
@@ -78,26 +73,25 @@ const intro_cards = [
       a pro who wants to beat the competition, rentaflop allows you to render without sacrificing quality.
     </Typography>,
     // https://upload.wikimedia.org/wikipedia/commons/9/91/Bruce_McCandless_II_during_EVA_in_1984.jpg
-    "img": UntetheredSpacewalk,
+    "img": <Image src={"/static/untethered_spacewalk.jpg"} alt={"Take your Blender projects to new heights"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
   },
 ];
       
 const social_cards = [
   {
     "id": 0,
-    "img": <EpilogLogo style={{ width: "250px", height: "100px" }}/>,
+    "img": <Image src={"/static/epilog_logo.svg"} alt={"Epilog laser is a happy rentaflop customer"} width={250} height={100} />,
     "url": "https://www.epiloglaser.com/?ref=rentaflop",
   },
   {
     "id": 1,
-    "img": <CGCLogo style={{ width: "250px", height: "100px" }}/>,
+    "img": <Image src={"/static/cgc_logo.svg"} alt={"Rentaflop partners with CG Cookie"} width={250} height={100} />,
     "url": "https://www.cgcookie.com/?ref=rentaflop",
   },
 ];
 
 
 export default function Home() {
-  const classes = useStyles();
   const portal_url = "https://portal.rentaflop.com";
   const is_large_screen = useMediaQuery('(min-width:600px)');
   const params_large = {
@@ -111,11 +105,11 @@ export default function Home() {
   const params = is_large_screen ? params_large : params_small;
   const intro_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Meet rentaflop</Typography>
   const intro_body = <Typography align="left" paragraph paddingTop="24px" />
+  let autofocus = true;
   // client-side-only code, so must check if window defined first
   if (typeof window !== "undefined") {
-    is_large_screen = window.innerWidth > 768;
     // don't autofocus if they've clicked arrow since it brings screen back up on chrome
-    const autofocus = !window.location.href.includes("learn");
+    autofocus = !window.location.href.includes("learn");
   }
 
   const table_title_text = <Typography component="h1" variant="h2" align="left" fontWeight="600" gutterBottom>How rentaflop compares</Typography>
@@ -141,6 +135,7 @@ export default function Home() {
   ));
   const table_footer = <Typography component="p" variant="p" align="right" color="rgb(128, 128, 128, .5)" sx={{pt: 2}}>Data from 10/05/22</Typography>
   const social_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Trusted for business by</Typography>
+  const textColorDark = theme.palette.text.dark;
   
   return (
     <Page>
@@ -188,9 +183,9 @@ export default function Home() {
             </Container>
           </Box>
 	  { is_large_screen &&
-	  <HashLink to="/#learn" smooth>
+	  <Link href="/#learn">
 	    <ArrowDownwardIcon style={{ color: textColorDark, fontSize: 225, marginTop: "-35px" }} />
-	  </HashLink>
+	  </Link>
 	  }
 	</Paper>
 	
@@ -228,11 +223,12 @@ export default function Home() {
 		 <Card
                    sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
 		 >
-		   <CardMedia
-		     component="img"
-		     image={BlenderApplication}
-		     alt="random"
-		   />
+		   <CardMedia>
+		     <div style={{ position: 'relative', width: 563, height: 324 }}>
+		       <Image alt="Blender application home screen" src="/static/blender_application.png" fill
+			      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+		     </div>
+		   </CardMedia>
 		 </Card>
                </Grid>
              </Grid>
@@ -260,12 +256,11 @@ export default function Home() {
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
-                  <CardMedia
-                    component="img"
-                    image={card.img}
-                    alt="random"
-		    sx={{ pt: "20%", height: '300px' }} // 394px
-                  />
+                  <CardMedia sx={{ pt: "20%", height: '300px' }}>
+		    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+		      {card.img}
+		    </div>
+		  </CardMedia>
                   <CardContent sx={{ flexGrow: 1 }}>
 		    {card.primary}
 		    {card.secondary}
@@ -280,7 +275,9 @@ export default function Home() {
              <Grid container spacing={4} id="social">
                {social_cards.map((card) => (
 		 <Grid item key={card.id} xs={12} sm={6} md={4}>
-		   <a href={card.url}>{card.img}</a>
+		   <Link href={card.url}>
+		     {card.img}
+		   </Link>
 		 </Grid>
 		     ))}
 		</Grid>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Script from 'next/script';
-import '../index.css'
+// import '../index.css'
 import '../App.css';
 import Head from 'next/head'
 
