@@ -183,7 +183,7 @@ export default function Home() {
             </Container>
           </Box>
 	  { is_large_screen &&
-	  <Link href="/#learn">
+	  <Link href="/#learn" scroll={false}>
 	    <ArrowDownwardIcon style={{ color: textColorDark, fontSize: 225, marginTop: "-35px" }} />
 	  </Link>
 	  }
