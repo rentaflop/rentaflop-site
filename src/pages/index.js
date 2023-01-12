@@ -160,7 +160,7 @@ export default function Home() {
 		color="textPrimary"
 		gutterBottom
               >
-		Fast and affordable 3D rendering
+		Fast and affordable Blender rendering
               </Typography>
               <Typography variant={params.secondary} align="left" color="textPrimary">
 		Don't settle for lower quality work because of high rendering costs.

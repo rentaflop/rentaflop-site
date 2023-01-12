@@ -2,6 +2,21 @@ import React from 'react';
 import { Typography, Grid, Container } from '@material-ui/core';
 import { RentaflopLink } from "./utils";
 import Image from 'next/image'
+import { SocialIcon } from 'react-social-icons';
+import { makeStyles } from '@material-ui/styles';
+
+
+const useStyles = makeStyles((theme) => ({
+  social_class: {
+    height: "35px!important",
+    width: "35px!important",
+    marginRight: "5px",
+    '&:hover': {
+      height: "40px!important",
+      width: "40px!important",
+    },
+  },
+}));
 
 
 function Copyright(props) {
@@ -40,6 +55,8 @@ const footers = [
 
 
 export default function Footer() {
+  const classes = useStyles();
+
   return (
     <Container
       maxWidth="md"
@@ -69,7 +86,15 @@ export default function Footer() {
           </Grid>
 	))}
       </Grid>
-      <Typography variant="body2" color="textSecondary" align="center" sx={{ mt: 4 }}>
+      <div style={{ marginTop: 24 }}>
+	<SocialIcon url="https://dsc.gg/rentaflop" network="discord" className={classes.social_class} />
+	<SocialIcon url="https://twitter.com/rentaflop" className={classes.social_class} />
+	<SocialIcon url="https://www.facebook.com/profile.php?id=100088816761556" className={classes.social_class} />
+	<SocialIcon url="https://www.linkedin.com/company/rentaflop" className={classes.social_class} />
+	{/* NOTE: last icon must override margin-right to 0 */}
+	<SocialIcon url="https://www.reddit.com/r/rentaflop/" className={classes.social_class} style={{ marginRight: 0 }} />
+      </div>
+      <Typography variant="body2" color="textSecondary" align="center" sx={{ mt: 1 }}>
 	{/* setting height twice because of a css conflict with app.css and index.css */}
 	Part of <Image src="./static/ycombinator.svg" height={20.18} width={63.63} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 20.18 }} alt="YCombinator logo" /> Startup School
       </Typography>
