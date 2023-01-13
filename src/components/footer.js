@@ -88,6 +88,7 @@ export default function Footer() {
       </Grid>
       <div style={{ marginTop: 24 }}>
 	<SocialIcon url="https://dsc.gg/rentaflop" network="discord" className={classes.social_class} />
+	<SocialIcon url="https://instagram.com/rentaflop" className={classes.social_class} />
 	<SocialIcon url="https://twitter.com/rentaflop" className={classes.social_class} />
 	<SocialIcon url="https://www.facebook.com/profile.php?id=100088816761556" className={classes.social_class} />
 	<SocialIcon url="https://www.linkedin.com/company/rentaflop" className={classes.social_class} />
