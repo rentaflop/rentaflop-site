@@ -18,7 +18,7 @@ export default function About() {
   const body = (
     <>
       <Typography align="left" paragraph paddingTop="24px">
-	Rentaflop is a crowdsourced render farm offering Blender artists fast and affordable rendering from hardware owners across the globe.
+	Rentaflop helps 3D artists render animations cheaper and faster.
 	Build your 3D creations without compromising on quality or overpaying on traditional render services.
       </Typography>
       <Typography align="left" paragraph>

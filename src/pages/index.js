@@ -199,7 +199,7 @@ export default function Home() {
 		 >
                   <CardContent sx={{ flexGrow: 1 }}>
 		    <Typography align="left" paragraph paddingTop="24px">
-		      Rentaflop is a crowdsourced render farm offering Blender artists fast and affordable rendering from hardware owners across the globe.
+		      Rentaflop helps Blender artists render animations cheaper and faster.
 		    </Typography>
 		    <Typography align="left" paddingTop="12px">
 		      Join now and render your Blender creations!

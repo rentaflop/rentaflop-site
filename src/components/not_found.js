@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button, Paper, Typography, CssBaseline, Container, Box } from '@material-ui/core';
+import { Paper, Typography, CssBaseline, Container, Box } from '@material-ui/core';
 import Image from '../../public/static/flip_flops.jpg';
-import theme from './theme';
 import Page from './page'
 import { RentaflopButton } from './utils';
 

@@ -3,7 +3,6 @@ import { Typography, Toolbar, AppBar, Box, Button } from '@material-ui/core';
 import theme from './theme';
 import Image from 'next/image'
 import { withStyles } from '@material-ui/styles';
-import { https_log } from './utils.js';
 import Link from 'next/link'
 
 
