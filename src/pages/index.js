@@ -199,7 +199,7 @@ export default function Home() {
 		 >
                   <CardContent sx={{ flexGrow: 1 }}>
 		    <Typography align="left" paragraph paddingTop="24px">
-		      Rentaflop helps Blender artists render animations cheaper and faster.
+		      Rentaflop helps Blender artists render animations cheaper and faster. Simply upload your project, get an exact price quote, and launch your render.
 		    </Typography>
 		    <Typography align="left" paddingTop="12px">
 		      Join now and render your Blender creations!

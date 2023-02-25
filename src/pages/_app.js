@@ -25,7 +25,12 @@ export default function MyApp({ Component, pageProps }) {
 	<meta property="og:type" content="website" key="og:type" />
 	<meta property="og:description" content="Fast and affordable Blender 3D rendering" key="og:description" />
 	<meta property="description" content="Fast and affordable Blender 3D rendering" key="description" />
+	{/* NOTE: do not place script tags in next/head, they won't load */}
+      </Head>
 
+      <Component {...pageProps} />
+	{/* hubspot messaging */}
+	<Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/23808232.js" strategy="afterInteractive"></Script>
 	{/*
 	   Google tag (gtag.js)
 	 */}
@@ -42,8 +47,8 @@ export default function MyApp({ Component, pageProps }) {
 	  gtag('config', 'G-FKBK6XSRHB');
         `}
 	</Script>
-      <Script type="text/javascript" strategy="afterInteractive">
-	{`
+	<Script id="gh-pages" type="text/javascript" strategy="afterInteractive">
+	  {`
 	// Single Page Apps for GitHub Pages
 	// MIT License
 	// https://github.com/rafgraph/spa-github-pages
@@ -65,18 +70,13 @@ export default function MyApp({ Component, pageProps }) {
           }
 	}(window.location))
         `}
-      </Script>
-      {/* leadfeeder */}
-      <Script type="text/javascript" strategy="afterInteractive">
-	{`
+	</Script>
+	{/* leadfeeder */}
+	<Script id="ldfdr-script-loader" type="text/javascript" strategy="afterInteractive">
+	  {`
 (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('kn9Eq4Ry2pr7RlvP');
 `}
-    </Script>
-    </Head>
-
-    <Component {...pageProps} />
-    {/* hubspot messaging */}
-    <Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/23808232.js" strategy="afterInteractive"></Script>
-    </>
+	</Script>
+	</>
   );
 }
