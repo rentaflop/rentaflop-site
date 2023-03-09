@@ -18,14 +18,19 @@ export default function About() {
   const body = (
     <>
       <Typography align="left" paragraph paddingTop="24px">
-	Rentaflop helps 3D artists render animations cheaper and faster.
-	Build your 3D creations without compromising on quality or overpaying on traditional render services.
+	Rentaflop helps 3D artists render animations faster and cheaper.
+	Have your ever lowered the samples or resolution to meet a deadline? It's frustrating.
+	Rentaflop puts underutilized hardware to work rendering your projects so you can create animations without sacrificing quality.
       </Typography>
       <Typography align="left" paragraph>
-	Simply submit your Blender file, along with any assets. We quickly and affordably render your file, giving you the ability to rapidly
-	improve your 3D creations without high expenses. To learn about how we render your Blender projects, check out
+	Simply upload your Maya or Blender files, along with any assets. We quickly and affordably render your work, giving you the ability to rapidly
+	improve your 3D creations without high expenses. Whether you're a studio or freelance artist, rentaflop helps you meet deadlines and lower costs
+	to outperform your competitors.
+      </Typography>
+      <Typography align="left" paragraph>
+	To learn more about how we render your work, check out
 	the <FooterLink href="https://portal.rentaflop.com/rendering">rendering</FooterLink> page.	
-	For our prices, please see <FooterLink href="https://portal.rentaflop.com/pricing">pricing</FooterLink>.
+	To read about our pricing tiers and security levels, please see <FooterLink href="https://portal.rentaflop.com/pricing">pricing</FooterLink>.
       </Typography>
       <Typography align="left" paragraph>
 	If you have an Nvidia graphics card and would like to make money without lifting a finger, please read

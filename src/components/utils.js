@@ -35,6 +35,7 @@ const rentaflop_text_theme = createTheme();
 export function RentaflopText(props) {
   const title = props.title;
   const body = props.body;
+  const no_divider = props.no_divider;
   var padding = props.padding;
   padding = padding ? padding : "24px"
 
@@ -44,7 +45,9 @@ export function RentaflopText(props) {
       <Container maxWidth="lg" style={{paddingTop: padding, textAlign: "left"}}>
 	<main>
 	  { title }
-	  <Divider/>
+	  { !no_divider &&
+	    <Divider/>
+	  }
 	  { body }
 	</main>
       </Container>

@@ -11,7 +11,27 @@ import TextField from '@mui/material/TextField';
 import Page from '../components/page'
 import Image from 'next/image'
 import Link from 'next/link'
+import { styled } from "@mui/material/styles";
+import BoltIcon from '@mui/icons-material/Bolt';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import ScheduleIcon from '@mui/icons-material/Schedule';
+import SecurityIcon from '@mui/icons-material/Security';
+import SchoolIcon from '@mui/icons-material/School';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import { yellow } from '@mui/material/colors';
+import { green } from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
+import { orange } from '@mui/material/colors';
 
+
+const CardContentNoPadding = styled(CardContent)(`
+  &:last-child {
+    padding-bottom: 0;
+  }
+`);
 
 function make_graphic_styles(is_large_screen) {
   const url = is_large_screen ? `url(${Graphic.src})` : `url(${GraphicMobile.src})`
@@ -31,54 +51,91 @@ function make_graphic_styles(is_large_screen) {
   return styles;
 }
 
+const portal_url = "https://portal.rentaflop.com";
 
 const intro_cards = [
   {
     "id": 1,
     "primary":
-    <Typography gutterBottom variant="h5" component="h2">
-      As easy as pie
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Blazing fast render speed
     </Typography>,
     "secondary":
     <Typography>
-      You'll never need to look up graphics card specs again, nor will you have to build and manage your own hardware.
-      Rentaflop render farm renders your Blender creations quickly and without hassle, or your money back.
+      Meet all your deadlines with ease. Our many GPU machines across the globe render what would take days in a matter of hours.
     </Typography>,
-    // https://upload.wikimedia.org/wikipedia/commons/1/1e/Pie_day_apple_pie.jpg
-    "img": <Image src={"./static/pie.jpg"} alt={"Blender 3D rendering as easy as pie"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+    "icon":
+    <BoltIcon style={{ color: yellow[300], fontSize: 50 }} />
   },
   {
     "id": 2,
     "primary":
-    <Typography gutterBottom variant="h5" component="h2">
-      Harness the power of 3D creation without breaking the bank
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Satisfaction or your money back
     </Typography>,
     "secondary":
     <Typography>
-      We match low opportunity cost crowdsourced hardware with your high value rendering workloads to save you time and money. Rendering with us is more than 50%
-      cheaper than many other rendering services!
+      We take the risk and uncertainty out of rendering. We think you'll love rentaflop, but If you're not satisfied for any reason, we'll refund you.
     </Typography>,
-    // https://upload.wikimedia.org/wikipedia/commons/9/9b/Money_-_Flickr_-_Tracy_O.jpg
-    // must use . in front of static otherwise build dir won't use relative imports
-    "img": <Image src={"./static/money_pile.jpg"} alt={"Blender 3D rendering that's affordable"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+    "icon":
+    <VolunteerActivismIcon style={{ color: green[300], fontSize: 50 }} />
   },
   {
     "id": 3,
     "primary":
-    <Typography gutterBottom variant="h5" component="h2">
-      Take your Blender works to new heights
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Industry leading prices
     </Typography>,
     "secondary":
     <Typography>
-      Rentaflop makes it easy to experiment with and tweak your 3D creations. Whether you're a hobbyist and want your work to look professional, or
-      a pro who wants to beat the competition, rentaflop allows you to render without sacrificing quality.
+      Underutilized hardware around the world renders your work to save you money. Save up to 60%
+      compared to other render farms!
     </Typography>,
-    // https://upload.wikimedia.org/wikipedia/commons/9/91/Bruce_McCandless_II_during_EVA_in_1984.jpg
-    "img": <Image src={"./static/untethered_spacewalk.jpg"} alt={"Take your Blender projects to new heights"} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+    "icon":
+    <AttachMoneyIcon style={{ color: green[800], fontSize: 50 }} />
+  },
+  {
+    "id": 4,
+    "primary":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      24/7 rendering with fast support
+    </Typography>,
+    "secondary":
+    <Typography>
+      Render any time you want. If you need help, you can email or live chat us and get support typically in minutes, even on weekends and holidays.
+    </Typography>,
+    "icon":
+    <ScheduleIcon style={{ color: blue[300], fontSize: 50 }} />
+  },
+  {
+    "id": 5,
+    "primary":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Data security and privacy
+    </Typography>,
+    "secondary":
+    <Typography>
+      Your work is encrypted upon upload and when placed on rendering machines. Our security tiers provide added options for your privacy needs.
+    </Typography>,
+    "icon":
+    <SecurityIcon style={{ color: blue[800], fontSize: 50 }} />
+  },
+  {
+    "id": 6,
+    "primary":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Smarter rendering transparency
+    </Typography>,
+    "secondary":
+    <Typography>
+      Know everything you need to about your render. Try our free price calculator to get a render time estimate, sample frames, and an exact price quote.
+    </Typography>,
+    "icon":
+    <SchoolIcon style={{ color: orange[800], fontSize: 50 }} />
   },
 ];
       
-const social_cards = [
+const business_cards = [
   {
     "id": 0,
     "img": <Image src={"./static/epilog_logo.svg"} alt={"Epilog laser is a happy rentaflop customer"} width={250} height={100} />,
@@ -91,9 +148,66 @@ const social_cards = [
   },
 ];
 
+const social_cards = [
+  {
+    "id": 0,
+    "author":
+    <Typography gutterBottom variant="h6" component="h2">
+      <span style={{ fontWeight: "bold" }} >Bryan Weathers</span> - 3D Artist with Epilog Laser
+    </Typography>,
+    "quote":
+    <Typography align="left" gutterBottom>
+      "I'm impressed with how well your service has handled some of the larger renders we've sent your way; some of the Epilog Blender files are quite
+      bulky and have really high memory usage that nearly bring my personal computer to a crawl, especially with some at 6k resolution, but you've handled
+      it wonderfully."
+    </Typography>,
+  },
+];
+
+const tutorial_cards = [
+  {
+    "id": 0,
+    "step":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Step 1
+    </Typography>,
+    "instruction":
+    <Typography gutterBottom>
+      Upload your work to our cloud render farm.
+    </Typography>,
+    "icon":
+    <CloudUploadIcon style={{ color: green[500], fontSize: 50 }} />
+  },
+  {
+    "id": 1,
+    "step":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Step 2
+    </Typography>,
+    "instruction":
+    <Typography gutterBottom>
+      Calculate price (optional) and launch your render.
+    </Typography>,
+    "icon":
+    <RocketLaunchIcon style={{ color: orange[500], fontSize: 50 }} />
+  },
+  {
+    "id": 2,
+    "step":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Step 3
+    </Typography>,
+    "instruction":
+    <Typography gutterBottom>
+      Download your result once rendering is complete.
+    </Typography>,
+    "icon":
+    <CloudDownloadIcon style={{ color: blue[500], fontSize: 50 }} />
+  },
+];
+
 
 export default function Home() {
-  const portal_url = "https://portal.rentaflop.com";
   const is_large_screen = useMediaQuery('(min-width:600px)');
   const params_large = {
     "primary": "h1",
@@ -135,7 +249,9 @@ export default function Home() {
     </TableRow>
   ));
   const table_footer = <Typography component="p" variant="p" align="right" color="rgb(128, 128, 128, .5)" sx={{pt: 2}}>Data from 10/05/22</Typography>
-  const social_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Trusted for business by</Typography>
+  const tutorial_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>How it works</Typography>
+  const business_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Trusted for business by</Typography>
+  const social_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>What our customers say</Typography>
   const textColorDark = theme.palette.text.dark;
   
   return (
@@ -152,6 +268,7 @@ export default function Home() {
 	      width: "100%",
             }}
           >
+	    {/* landing screen */}
             <Container maxWidth="xl">
               <Typography
 		component="h1"
@@ -160,13 +277,13 @@ export default function Home() {
 		color="textPrimary"
 		gutterBottom
               >
-		Fast and affordable Blender rendering
+		Fast and affordable 3D rendering
               </Typography>
               <Typography variant={params.secondary} align="left" color="textPrimary">
 		Don't settle for lower quality work because of high rendering costs.
               </Typography>
               <Typography variant={params.secondary} align="left" color="textPrimary">
-		Render your Blender creations with rentaflop farm and save thousands.
+		Render your Maya and Blender creations with rentaflop farm and save thousands.
               </Typography>
 	      <form onSubmit={(e) => {
 		      e.preventDefault();
@@ -190,7 +307,8 @@ export default function Home() {
 	  }
 	</Paper>
 	
-        <Container sx={{ pt: 4 }} maxWidth="md" id="learn">
+	{/* meet rentaflop, what it is */}
+        <Container sx={{ pt: 4, pb: 4 }} maxWidth="md" id="learn">
 	  <RentaflopText title={intro_title} body={intro_body}/>
              <Grid container spacing={2}>
                <Grid item xs={12} sm={6} md={4}>
@@ -199,7 +317,8 @@ export default function Home() {
 		 >
                   <CardContent sx={{ flexGrow: 1 }}>
 		    <Typography align="left" paragraph paddingTop="24px">
-		      Rentaflop helps Blender artists render animations cheaper and faster. Simply upload your project, get an exact price quote, and launch your render.
+		      Rentaflop helps Blender artists render animations faster and cheaper. Simply upload your project, launch your render, and download the completed
+		      result.
 		    </Typography>
 		    <Typography align="left" paddingTop="12px">
 		      Join now and render your Blender creations!
@@ -234,12 +353,40 @@ export default function Home() {
                </Grid>
              </Grid>
 	</Container>
-	
+		
+	{/* primary benefits */}
+        <Container sx={{ pt: 4 }} maxWidth="md">
+          <Grid container spacing={3} id="intro-cards">
+            {intro_cards.map((card) => (
+              <Grid item key={card.id} xs={12} sm={6} md={4}>
+                <Card
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                >
+                  <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		    {card.primary}
+		    {card.secondary}
+		    {card.icon}
+                  </CardContentNoPadding>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+	</Container>
+            <Stack
+              sx={{ pt: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+	      <RentaflopButton button_class="cta_button" text="Try it now" dest={portal_url+"/register"} />
+	      <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
+            </Stack>
+
+	{/* how rentaflop compares to alternatives table */}
 	{ is_large_screen &&
 	  <>
 	    <RentaflopTable title={table_title} cols={table_cols} body={table_body} footer={table_footer} />
             <Stack
-              sx={{ pt: 0, pb: 4 }}
               direction="row"
               spacing={2}
               justifyContent="center"
@@ -249,41 +396,56 @@ export default function Home() {
             </Stack>
 	  </>
 	}
-	
-        <Container sx={{ pt: 4 }} maxWidth="md">
-          <Grid container spacing={4} id="intro-cards">
-            {intro_cards.map((card) => (
-              <Grid item key={card.id} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardMedia sx={{ pt: "20%", height: '300px' }}>
-		    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-		      {card.img}
-		    </div>
-		  </CardMedia>
-                  <CardContent sx={{ flexGrow: 1 }}>
-		    {card.primary}
-		    {card.secondary}
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-	  {/* TODO how it works section? */}
-	     
-	  <RentaflopText title={social_title} padding={"64px"} />
-             <Grid container spacing={4} id="social">
-               {social_cards.map((card) => (
+
+	{/* how it works */}
+        <Container maxWidth="md">
+ 	  <RentaflopText title={tutorial_title} padding={"64px"} />
+             <Grid container spacing={4} id="tutorial">
+               {tutorial_cards.map((card) => (
+		 <Grid item key={card.id} xs={12} sm={6} md={4}>
+                   <Card
+                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                   >
+                     <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		       {card.step}
+		       {card.instruction}
+		       {card.icon}
+		     </CardContentNoPadding>
+		   </Card>
+		 </Grid>
+	       ))}
+	     </Grid>
+        </Container>
+
+	{/* social proof */}
+        <Container maxWidth="md">
+	  <RentaflopText title={business_title} padding={"64px"} />
+             <Grid container spacing={4} id="business">
+               {business_cards.map((card) => (
 		 <Grid item key={card.id} xs={12} sm={6} md={4}>
 		   <Link href={card.url}>
 		     {card.img}
 		   </Link>
 		 </Grid>
-		     ))}
-		</Grid>
+	       ))}
+	     </Grid>
+	  <RentaflopText title={social_title} padding={"64px"} />
+             <Grid container spacing={4} id="social">
+               {social_cards.map((card) => (
+		 <Grid item key={card.id} xs={12} sm={12} md={12}>
+                   <Card
+                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                   >
+                     <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		       {card.author}
+		       {card.quote}
+		     </CardContentNoPadding>
+		   </Card>
+		 </Grid>
+	       ))}
+	     </Grid>
           <Stack
-            sx={{ pt: 0, pb: 3 }}
+            sx={{ pt: 4, pb: 3 }}
             direction="row"
             spacing={2}
             justifyContent="center"
