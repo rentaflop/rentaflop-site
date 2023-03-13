@@ -72,11 +72,11 @@ export default function MyApp({ Component, pageProps }) {
         `}
 	</Script>
 	{/* leadfeeder */}
-	<Script id="ldfdr-script-loader" type="text/javascript" strategy="afterInteractive">
+	{/* <Script id="ldfdr-script-loader" type="text/javascript" strategy="afterInteractive">
 	  {`
 (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('kn9Eq4Ry2pr7RlvP');
 `}
-	</Script>
+</Script> */}
 	</>
   );
 }

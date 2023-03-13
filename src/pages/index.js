@@ -55,7 +55,7 @@ const portal_url = "https://portal.rentaflop.com";
 
 const intro_cards = [
   {
-    "id": 1,
+    "id": 0,
     "primary":
     <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
       Blazing fast render speed
@@ -68,47 +68,21 @@ const intro_cards = [
     <BoltIcon style={{ color: yellow[300], fontSize: 50 }} />
   },
   {
-    "id": 2,
-    "primary":
-    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
-      Satisfaction or your money back
-    </Typography>,
-    "secondary":
-    <Typography>
-      We take the risk and uncertainty out of rendering. We think you'll love rentaflop, but If you're not satisfied for any reason, we'll refund you.
-    </Typography>,
-    "icon":
-    <VolunteerActivismIcon style={{ color: green[300], fontSize: 50 }} />
-  },
-  {
-    "id": 3,
+    "id": 1,
     "primary":
     <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
       Industry leading prices
     </Typography>,
     "secondary":
     <Typography>
-      Underutilized hardware around the world renders your work to save you money. Save up to 60%
+      Underutilized hardware around the world renders your work to save you money. Save up to 90%
       compared to other render farms!
     </Typography>,
     "icon":
     <AttachMoneyIcon style={{ color: green[800], fontSize: 50 }} />
   },
   {
-    "id": 4,
-    "primary":
-    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
-      24/7 rendering with fast support
-    </Typography>,
-    "secondary":
-    <Typography>
-      Render any time you want. If you need help, you can email or live chat us and get support typically in minutes, even on weekends and holidays.
-    </Typography>,
-    "icon":
-    <ScheduleIcon style={{ color: blue[300], fontSize: 50 }} />
-  },
-  {
-    "id": 5,
+    "id": 2,
     "primary":
     <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
       Data security and privacy
@@ -121,7 +95,33 @@ const intro_cards = [
     <SecurityIcon style={{ color: blue[800], fontSize: 50 }} />
   },
   {
-    "id": 6,
+    "id": 3,
+    "primary":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      24/7 rendering with fast support
+    </Typography>,
+    "secondary":
+    <Typography>
+      Render any time you want. If you need help, you can email or live chat us and get support typically in minutes, even on weekends and holidays.
+    </Typography>,
+    "icon":
+    <ScheduleIcon style={{ color: blue[300], fontSize: 50 }} />
+  },
+  {
+    "id": 4,
+    "primary":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Satisfaction or your money back
+    </Typography>,
+    "secondary":
+    <Typography>
+      We take the risk and uncertainty out of rendering. We think you'll love rentaflop, but if you're not satisfied for any reason, we'll refund you.
+    </Typography>,
+    "icon":
+    <VolunteerActivismIcon style={{ color: green[300], fontSize: 50 }} />
+  },
+  {
+    "id": 5,
     "primary":
     <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
       Smarter rendering transparency
@@ -173,7 +173,7 @@ const tutorial_cards = [
     </Typography>,
     "instruction":
     <Typography gutterBottom>
-      Upload your work to our cloud render farm.
+      Register and upload your work to our cloud render farm.
     </Typography>,
     "icon":
     <CloudUploadIcon style={{ color: green[500], fontSize: 50 }} />
@@ -317,11 +317,11 @@ export default function Home() {
 		 >
                   <CardContent sx={{ flexGrow: 1 }}>
 		    <Typography align="left" paragraph paddingTop="24px">
-		      Rentaflop helps Blender artists render animations faster and cheaper. Simply upload your project, launch your render, and download the completed
+		      Rentaflop helps 3D artists render animations faster and cheaper. Simply upload your project, launch your render, and download the completed
 		      result.
 		    </Typography>
 		    <Typography align="left" paddingTop="12px">
-		      Join now and render your Blender creations!
+		      Join now and render your Maya and Blender creations!
 		    </Typography>
 		    <form onSubmit={(e) => {
 			    e.preventDefault();
@@ -354,6 +354,20 @@ export default function Home() {
              </Grid>
 	</Container>
 		
+	{/* supported software */}
+        <Stack
+          sx={{ pt: 3, pb: 3 }}
+          direction="row"
+          spacing={2}
+          justifyContent="center"
+        >
+	  {/* setting height twice because of a css conflict with app.css and index.css */}
+	  <Image src="./static/maya_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									    }} alt="Maya logo" />
+	  <Image src="./static/blender_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									    }} alt="Blender logo" />
+        </Stack>
+
 	{/* primary benefits */}
         <Container sx={{ pt: 4 }} maxWidth="md">
           <Grid container spacing={3} id="intro-cards">
