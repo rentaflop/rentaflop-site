@@ -23,7 +23,7 @@ export default function About() {
 	Rentaflop puts underutilized hardware to work rendering your projects so you can create animations without sacrificing quality.
       </Typography>
       <Typography align="left" paragraph>
-	Simply upload your Maya or Blender files, along with any assets. We quickly and affordably render your work, giving you the ability to rapidly
+	Simply upload your project, along with any assets. We quickly and affordably render your work, giving you the ability to rapidly
 	improve your 3D creations without high expenses. Whether you're a studio or freelance artist, rentaflop helps you meet deadlines and lower costs
 	to outperform your competitors.
       </Typography>

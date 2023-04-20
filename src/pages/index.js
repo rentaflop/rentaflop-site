@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Card, CardMedia, CardContent, CssBaseline, Grid, Stack, Container, Paper,
-	 TableCell, TableRow } from '@material-ui/core';
+	 TableCell, TableRow, Link as MuiLink } from '@material-ui/core';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Graphic from '../../public/static/rocket_graphic.svg';
 import GraphicMobile from '../../public/static/rocket_graphic_mobile.svg';
@@ -21,10 +21,13 @@ import SchoolIcon from '@mui/icons-material/School';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import { yellow } from '@mui/material/colors';
 import { green } from '@mui/material/colors';
 import { blue } from '@mui/material/colors';
 import { orange } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
+import { lightBlue } from '@mui/material/colors'
 
 
 const CardContentNoPadding = styled(CardContent)(`
@@ -52,6 +55,13 @@ function make_graphic_styles(is_large_screen) {
 }
 
 const portal_url = "https://portal.rentaflop.com";
+
+const FooterLink = styled(MuiLink)({
+  textDecoration: "none",
+  '&:hover': {
+    textDecoration: "underline",
+  },
+});
 
 const intro_cards = [
   {
@@ -135,6 +145,110 @@ const intro_cards = [
   },
 ];
       
+const software_cards = [
+  {
+    "id": 0,
+    "name":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      3DS MAX
+    </Typography>,
+    "engines":
+    <>
+      <Typography>
+	Render engines:
+      </Typography>
+      <Typography>
+	V-Ray
+      </Typography>
+      <Typography gutterBottom>
+	Arnold
+      </Typography>
+    </>,
+    "logo":
+    <Image src="./static/max_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									}} alt="3DS Max logo" />
+  },
+  {
+    "id": 1,
+    "name":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      MAYA
+    </Typography>,
+    "engines":
+    <>
+      <Typography>
+	Render engines:
+      </Typography>
+      <Typography>
+	V-Ray
+      </Typography>
+      <Typography gutterBottom>
+	Arnold
+      </Typography>
+    </>,
+    "logo":
+    <Image src="./static/maya_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									}} alt="Maya logo" />
+  },
+  {
+    "id": 2,
+    "name":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      CINEMA 4D
+    </Typography>,
+    "engines":
+    <>
+      <Typography>
+	Render engines:
+      </Typography>
+      <Typography>
+	V-Ray
+      </Typography>
+      <Typography gutterBottom>
+	Arnold
+      </Typography>
+    </>,
+    "logo":
+    <Image src="./static/c4d_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									}} alt="Cinema 4D logo" />
+  },
+  {
+    "id": 3,
+    "name":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      BLENDER
+    </Typography>,
+    "engines":
+    <>
+      <Typography>
+	Render engines:
+      </Typography>
+      <Typography>
+	Cycles
+      </Typography>
+      <Typography gutterBottom>
+	Eevee
+      </Typography>
+    </>,
+    "logo":
+    <Image src="./static/blender_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+									}} alt="Blender logo" />
+  },
+  {
+    "id": 4,
+    "name":
+    <Typography gutterBottom variant="h5" component="h2" style={{ fontWeight: "bold" }}>
+      Missing your software?
+    </Typography>,
+    "engines":
+      <Typography gutterBottom>
+	<FooterLink href="mailto:support@rentaflop.com" color={lightBlue[600]} >Contact us</FooterLink> so we can add it!
+    </Typography>,
+    "logo":
+    <QuestionMarkIcon style={{ color: grey[500], fontSize: 100 }} />
+  },
+]
+
 const business_cards = [
   {
     "id": 0,
@@ -220,6 +334,8 @@ export default function Home() {
   const params = is_large_screen ? params_large : params_small;
   const intro_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Meet rentaflop</Typography>
   const intro_body = <Typography align="left" paragraph paddingTop="24px" />
+  const benefits_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Why render with us?</Typography>
+  const benefits_body = <Typography align="left" paragraph paddingTop="24px" />
   let autofocus = true;
   // client-side-only code, so must check if window defined first
   if (typeof window !== "undefined") {
@@ -283,7 +399,7 @@ export default function Home() {
 		Don't settle for lower quality work because of high rendering costs.
               </Typography>
               <Typography variant={params.secondary} align="left" color="textPrimary">
-		Render your Maya and Blender creations with rentaflop farm and save thousands.
+		Render your animated creations with rentaflop farm and save thousands.
               </Typography>
 	      <form onSubmit={(e) => {
 		      e.preventDefault();
@@ -321,7 +437,7 @@ export default function Home() {
 		      result.
 		    </Typography>
 		    <Typography align="left" paddingTop="12px">
-		      Join now and render your Maya and Blender creations!
+		      Join now and render your work!
 		    </Typography>
 		    <form onSubmit={(e) => {
 			    e.preventDefault();
@@ -355,21 +471,27 @@ export default function Home() {
 	</Container>
 		
 	{/* supported software */}
-        <Stack
-          sx={{ pt: 3, pb: 3 }}
-          direction="row"
-          spacing={2}
-          justifyContent="center"
-        >
-	  {/* setting height twice because of a css conflict with app.css and index.css */}
-	  <Image src="./static/maya_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
-									    }} alt="Maya logo" />
-	  <Image src="./static/blender_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
-									    }} alt="Blender logo" />
-        </Stack>
+        <Container sx={{ pt: 4 }} maxWidth="lg">
+          <Grid container spacing={3} id="software-cards" justifyContent="center">
+            {software_cards.map((card) => (
+              <Grid item key={card.id} xs={12} sm={6} md={2}>
+                <Card
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                >
+                  <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		    {card.logo}
+		    {card.name}
+		    {card.engines}
+                  </CardContentNoPadding>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+	</Container>
 
 	{/* primary benefits */}
         <Container sx={{ pt: 4 }} maxWidth="md">
+	  <RentaflopText title={benefits_title} body={benefits_body}/>
           <Grid container spacing={3} id="intro-cards">
             {intro_cards.map((card) => (
               <Grid item key={card.id} xs={12} sm={6} md={4}>
