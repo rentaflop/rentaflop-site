@@ -182,8 +182,11 @@ const software_cards = [
       <Typography>
 	V-Ray
       </Typography>
-      <Typography gutterBottom>
+      <Typography>
 	Arnold
+      </Typography>
+      <Typography gutterBottom>
+	Redshift
       </Typography>
     </>,
     "logo":
@@ -204,8 +207,11 @@ const software_cards = [
       <Typography>
 	V-Ray
       </Typography>
-      <Typography gutterBottom>
+      <Typography>
 	Arnold
+      </Typography>
+      <Typography gutterBottom>
+	Redshift
       </Typography>
     </>,
     "logo":
