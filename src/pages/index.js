@@ -28,6 +28,7 @@ import { blue } from '@mui/material/colors';
 import { orange } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
 import { lightBlue } from '@mui/material/colors'
+import Carousel from 'react-material-ui-carousel'
 
 
 const CardContentNoPadding = styled(CardContent)(`
@@ -266,6 +267,11 @@ const business_cards = [
     "img": <Image src={"./static/cgc_logo.svg"} alt={"Rentaflop partners with CG Cookie"} width={250} height={100} />,
     "url": "https://www.cgcookie.com/?ref=rentaflop",
   },
+  {
+    "id": 2,
+    "img": <Image src={"./static/vliani_logo.png"} alt={"Vliani had an excellent experience with rentaflop"} width={250} height={100} />,
+    "url": "https://rentaflop.com?https://vliani.com",
+  },
 ];
 
 const social_cards = [
@@ -280,6 +286,17 @@ const social_cards = [
       "I'm impressed with how well your service has handled some of the larger renders we've sent your way; some of the Epilog Blender files are quite
       bulky and have really high memory usage that nearly bring my personal computer to a crawl, especially with some at 6k resolution, but you've handled
       it wonderfully."
+    </Typography>,
+  },
+  {
+    "id": 1,
+    "author":
+    <Typography gutterBottom variant="h6" component="h2">
+      <span style={{ fontWeight: "bold" }} >Dylan-B Tierney</span> - UX Designer at Vliani
+    </Typography>,
+    "quote":
+    <Typography align="left" gutterBottom>
+      "The experience was brilliant. Overall amazing & saved me a bunch of time, definitely will recommend you guys & I'll be using you again in the future."
     </Typography>,
   },
 ];
@@ -572,20 +589,18 @@ export default function Home() {
 	       ))}
 	     </Grid>
 	  <RentaflopText title={social_title} padding={"64px"} />
-             <Grid container spacing={4} id="social">
-               {social_cards.map((card) => (
-		 <Grid item key={card.id} xs={12} sm={12} md={12}>
-                   <Card
-                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                   >
-                     <CardContentNoPadding sx={{ flexGrow: 1 }}>
-		       {card.author}
-		       {card.quote}
-		     </CardContentNoPadding>
-		   </Card>
-		 </Grid>
-	       ))}
-	     </Grid>
+	  <Carousel interval={10000} navButtonsAlwaysInvisible={true}>
+            {social_cards.map((card) => (
+              <Card key={card.id}
+                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+              >
+                <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		  {card.author}
+		  {card.quote}
+		</CardContentNoPadding>
+	      </Card>
+	    ))}
+	  </Carousel>
           <Stack
             sx={{ pt: 4, pb: 3 }}
             direction="row"
