@@ -29,20 +29,20 @@ export default function About() {
       </Typography>
       <Typography align="left" paragraph>
 	To learn more about how we render your work, check out
-	the <FooterLink href="https://portal.rentaflop.com/rendering">rendering</FooterLink> page.	
-	To read about our pricing tiers and security levels, please see <FooterLink href="https://portal.rentaflop.com/pricing">pricing</FooterLink>.
+	the <FooterLink href="/rendering">rendering</FooterLink> page.	
+	To read about our pricing tiers and security levels, please see <FooterLink href="/pricing">pricing</FooterLink>.
       </Typography>
       <Typography align="left" paragraph>
 	If you have an Nvidia graphics card and would like to make money without lifting a finger, please read
-	about <FooterLink href="https://portal.rentaflop.com/blog/hosting">becoming a host</FooterLink>.
+	about <FooterLink href="/blog/hosting">becoming a host</FooterLink>.
 	Your hardware can pay for itself while helping 3D artists render their projects.
       </Typography>
       <Typography align="left" paragraph>
 	For the latest rentaflop news, or to read a variety of things about software development and startups, check out
-	our <FooterLink href="https://portal.rentaflop.com/blog">blog</FooterLink>.
+	our <FooterLink href="/blog">blog</FooterLink>.
       </Typography>
       <Typography align="left" paragraph>
-	What are your questions? Please see the <FooterLink href="https://portal.rentaflop.com/faq">faq</FooterLink>.
+	What are your questions? Please see the <FooterLink href="/faq">faq</FooterLink>.
       </Typography>
     </>
   );

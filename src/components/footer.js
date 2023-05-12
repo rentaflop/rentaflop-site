@@ -39,12 +39,12 @@ const footers = [
   {
     title: 'Company',
     description: ['Home', 'About', "Blog", 'Contact'],
-    route: ['/', '/about', portal_url+'/blog', portal_url+'/contact'],
+    route: ['/', '/about', '/blog', portal_url+'/contact'],
   },
   {
     title: 'Product',
     description: ['Pricing', 'Rentaflop miner', 'FAQ', 'Support'],
-    route: [portal_url+'/pricing', portal_url+'/blog/hosting', portal_url+'/faq', portal_url+'/support'],
+    route: ['/pricing', '/blog/hosting', '/faq', portal_url+'/support'],
   },
   {
     title: 'Legal',

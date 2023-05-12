@@ -72,19 +72,19 @@ class Header extends Component {
             </a>
           </Box>
 	  <Box marginRight='10px'>
-	    <Button href={portal_url+"/rendering"} className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
+	    <Button href="/rendering" className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
 	      {button_text["rendering"]}
 	    </Button>
 	  </Box>
 	  { is_large_screen &&
 	    <>
 	      <Box marginRight='10px'>
-		<Button href={portal_url+"/blog/hosting"} className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
+		<Button href="/blog/hosting" className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
 		  {button_text["hosting"]}
 		</Button>
 	      </Box>
 	      <Box marginRight='10px'>
-		<Button href={portal_url+"/pricing"} className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
+		<Button href="/pricing" className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
 		  {button_text["pricing"]}
 		</Button>
 	      </Box>

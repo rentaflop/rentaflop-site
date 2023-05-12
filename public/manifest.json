@@ -3,7 +3,7 @@
   "name": "rentaflop portal",
   "icons": [
     {
-      "src": "static/rentaflop_logo.svg",
+      "src": "static/rentaflop_logo_single.png",
       "purpose": "maskable any",
       "sizes": "any"
     }
