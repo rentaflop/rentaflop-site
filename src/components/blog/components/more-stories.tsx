@@ -1,11 +1,7 @@
 import PostPreview from './post-preview'
-import type Post from '../interfaces/post'
 
-type Props = {
-  posts: Post[]
-}
 
-const MoreStories = ({ posts }: Props) => {
+const MoreStories = ({ posts }) => {
   return (
     <section>
       <section className="flex-col md:flex-row flex text-left md:justify-between mt-8 mb-16 md:mb-12">

@@ -123,6 +123,7 @@ export function RentaflopButton(props) {
       '&:hover': {
 	background: gradient_hover,
       },
+      textTransform: 'none!important',
       borderRadius: "50px!important",
       "&:disabled": {
         backgroundColor: 'red!important'

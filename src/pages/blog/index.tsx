@@ -5,19 +5,15 @@ import Intro from '../../components/blog/components/intro'
 import Layout from '../../components/blog/components/layout'
 import { getAllPosts } from '../../components/blog/lib/api'
 import Head from 'next/head'
-import Post from '../../components/blog/interfaces/post'
 import Page from '../../components/page'
+import "tailwindcss/tailwind.css";
 
 
-type Props = {
-  allPosts: Post[]
-}
-
-export default function Index({ user, allPosts }) {
+export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
   return (
-    <Page user={user}>
+    <Page>
       <Layout>
         <Head>
           <title>rentaflop blog</title>
@@ -41,12 +37,7 @@ export default function Index({ user, allPosts }) {
 }
 
 
-export async function getServerSideProps(context) {
-  // fetch data from API, passing headers with cookies to endpoint
-  const res = await fetch("http://localhost:5000/api/authenticated", {
-    headers: context.req.headers
-  })
-  const user = await res.json()
+export async function getStaticProps(context) {
   // hide API post from being seen, only via direct link
   const allPosts = getAllPosts([
     'title',
@@ -57,5 +48,5 @@ export async function getServerSideProps(context) {
   ]).filter(post => !(post.title === 'Rentaflop Rendering API'))
 
   // Pass data to the page via props
-  return { props: { user, allPosts } }
+  return { props: { allPosts } }
 }

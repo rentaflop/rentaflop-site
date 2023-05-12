@@ -4,7 +4,7 @@ import { RentaflopText, RentaflopLink } from "../components/utils";
 import Page from '../components/page'
 
 
-export default function Rendering({ user }) {
+export default function Rendering() {
   const portal_url = "https://portal.rentaflop.com"
   const title = <Typography component="h1" variant="h4" align="center" fontWeight="600" gutterBottom>Rendering</Typography>
   const body = (
@@ -77,7 +77,7 @@ export default function Rendering({ user }) {
   );
 
   return (
-    <Page user={user}>
+    <Page>
       <RentaflopText title={title} body={body} />
     </Page>
   );

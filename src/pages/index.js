@@ -582,7 +582,7 @@ export default function Home() {
              <Grid container spacing={4} id="business">
                {business_cards.map((card) => (
 		 <Grid item key={card.id} xs={12} sm={6} md={4}>
-		   <Link href={card.url}>
+		   <Link href={card.url} sx={{pt: 20}}>
 		     {card.img}
 		   </Link>
 		 </Grid>

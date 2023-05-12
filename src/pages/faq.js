@@ -76,9 +76,9 @@ const faqs = [
 ];
 
 
-export default function Faq({ user }) {
+export default function Faq() {
   return (
-    <Page user={user}>
+    <Page>
       <Typography
         component="h1"
         variant="h2"

@@ -1,6 +1,3 @@
-import Alert from './alert'
-import Footer from './footer'
-
 type Props = {
   preview?: boolean
   children: React.ReactNode

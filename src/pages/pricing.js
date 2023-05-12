@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Typography, Card, CardContent, Grid, Stack, Container } from '@material-ui/core';
-import { LoadingBackdrop, to_dollars, RentaflopText, RentaflopLink, RentaflopButton } from "../components/utils";
+import { RentaflopText, RentaflopLink, RentaflopButton } from "../components/utils";
 import Page from '../components/page'
 import SecurityIcon from '@mui/icons-material/Security';
 import GroupsIcon from '@mui/icons-material/Groups';
@@ -8,7 +8,7 @@ import { blue } from '@mui/material/colors';
 import { orange } from '@mui/material/colors';
 
 
-export default function Pricing({ user }) {
+export default function Pricing() {
   const portal_url = "https://portal.rentaflop.com"
   const price_cards = [
     {
@@ -19,7 +19,7 @@ export default function Pricing({ user }) {
       </Typography>,
       "price":
       <Typography variant="h3" component="h1" style={{ fontWeight: "bold" }}>
-	${to_dollars(".19")}
+	$0.0019
       </Typography>,
       "description":
       <Typography sx={{ pt: 2 }}>
@@ -37,7 +37,7 @@ export default function Pricing({ user }) {
       </Typography>,
       "price":
       <Typography variant="h3" component="h2" style={{ fontWeight: "bold" }}>
-	${to_dollars(".24")}
+	$0.0024
       </Typography>,
       "description":
       <Typography sx={{ pt: 2 }}>
@@ -104,7 +104,7 @@ export default function Pricing({ user }) {
   );
 
   return (
-    <Page user={user}>
+    <Page>
       <RentaflopText title={title} body={body} />
     </Page>
   );
