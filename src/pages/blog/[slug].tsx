@@ -11,6 +11,7 @@ import markdownToHtml from '../../components/blog/lib/markdownToHtml'
 import type PostType from '../../components/blog/interfaces/post'
 import BlogPage from '../../components/blog_page'
 import SlideShow from '../../components/blog/components/slideshow'
+import "tailwindcss/tailwind.css";
 
 
 type Props = {
