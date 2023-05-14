@@ -3,7 +3,7 @@
   "name": "rentaflop home",
   "icons": [
     {
-      "src": "static/rentaflop_logo_single.png",
+      "src": "static/rentaflop_logo_single.svg",
       "purpose": "maskable any",
       "sizes": "any"
     }

@@ -6,7 +6,6 @@ import Layout from '../../components/blog/components/layout'
 import { getAllPosts } from '../../components/blog/lib/api'
 import Head from 'next/head'
 import Page from '../../components/page'
-import "tailwindcss/tailwind.css";
 
 
 export default function Index({ allPosts }) {

@@ -2,7 +2,6 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: './',
   async rewrites() {
     return [
       {
