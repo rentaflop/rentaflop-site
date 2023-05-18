@@ -106,7 +106,7 @@ export default function Pricing() {
   );
 
   return (
-    <Page>
+    <Page title={"Pricing"}>
       <RentaflopText title={title} body={body} />
     </Page>
   );

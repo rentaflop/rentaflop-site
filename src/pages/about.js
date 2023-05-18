@@ -68,7 +68,7 @@ export default function About() {
   );
   
   return (
-    <Page>
+    <Page title={"About Us"}>
       <RentaflopText title={title} body={body} />
     </Page>
   );

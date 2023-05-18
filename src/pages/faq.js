@@ -103,7 +103,7 @@ export default function Faq() {
   );
   
   return (
-    <Page>
+    <Page title={"FAQ"}>
       <RentaflopText title={title} body={body} />
     </Page>
   );

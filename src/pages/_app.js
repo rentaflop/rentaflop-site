@@ -16,8 +16,8 @@ export default function MyApp({ Component, pageProps }) {
 	/>
 	<meta name="theme-color" content="#000000" />
 	{/* if modified, update portal _app.js and blog/[slug].js */}
-	<title>rentaflop</title>
-	<meta property="og:title" content="rentaflop" key="og:title" />
+	<title>rentaflop | Cloud Render Farm</title>
+	<meta property="og:title" content="rentaflop | Cloud Render Farm" key="og:title" />
 	{/* intentionally omitted since it's tough to get url from here
 	    <meta property="og:url" content={"https://portal.rentaflop.com/blog/"+post.slug.replace(/\.md$/, '')} /> 
 	 */}

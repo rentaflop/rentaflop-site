@@ -6,6 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
 import Router from 'next/router'
 import { https_log } from './utils'
+import Head from 'next/head'
 
 
 export default function Page(props) {
@@ -18,13 +19,22 @@ export default function Page(props) {
   }, []);
   
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App" style={{backgroundColor:"#FBFBFB"}}>
-	<CssBaseline />
-	<Header />
-	{props.children}
-	<Footer />
-      </div>
-    </ThemeProvider>
+    <>
+      {props.title &&
+       <Head>
+	 <title>
+	   {props.title + " | rentaflop | Cloud Render Farm"}
+	 </title>
+       </Head>
+      }
+      <ThemeProvider theme={theme}>
+	<div className="App" style={{backgroundColor:"#FBFBFB"}}>
+	  <CssBaseline />
+	  <Header />
+	  {props.children}
+	  <Footer />
+	</div>
+      </ThemeProvider>
+    </>
   )
 }

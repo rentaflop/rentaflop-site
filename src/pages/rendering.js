@@ -77,7 +77,7 @@ export default function Rendering() {
   );
 
   return (
-    <Page>
+    <Page title={"How Rendering Works"}>
       <RentaflopText title={title} body={body} />
     </Page>
   );
