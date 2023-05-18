@@ -28,7 +28,7 @@ export default function Post({ post, morePosts, preview }: Props) {
   <>
   <Head>
     <title>
-    {post.title + " | rentaflop | Cloud Render Farm"}
+    {post.title + " | rentaflop | Blender Render Farm"}
     </title>
     {/* if modified, update rentaflop-site and _app.js */}
     <meta property="og:title" content={post.title} key="og:title" />

@@ -68,7 +68,7 @@ export default function About() {
   );
   
   return (
-    <Page title={"About Us"}>
+    <Page title={"About Us"} description={"Why is rentaflop unique? Learn more about how our new technology utilizes hardware around the world for your render."}>
       <RentaflopText title={title} body={body} />
     </Page>
   );

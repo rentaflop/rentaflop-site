@@ -106,7 +106,7 @@ export default function Pricing() {
   );
 
   return (
-    <Page title={"Pricing"}>
+    <Page title={"Pricing"} description={"Render your work for a fraction of the price of other render farms. Click to get a free price quote!"}>
       <RentaflopText title={title} body={body} />
     </Page>
   );

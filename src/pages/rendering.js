@@ -77,7 +77,7 @@ export default function Rendering() {
   );
 
   return (
-    <Page title={"How Rendering Works"}>
+    <Page title={"How Rendering Works"} description={"How does rentaflop render farm work? Read about how we provide fast and affordable rendering."}>
       <RentaflopText title={title} body={body} />
     </Page>
   );

@@ -25,6 +25,8 @@ export default function Page(props) {
 	 <title>
 	   {props.title + " | rentaflop | Cloud Render Farm"}
 	 </title>
+	 <meta property="og:description" content={props.description} key="og:description" />
+	 <meta name="description" content={props.description} key="description" />
        </Head>
       }
       <ThemeProvider theme={theme}>

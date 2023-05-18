@@ -103,7 +103,7 @@ export default function Faq() {
   );
   
   return (
-    <Page title={"FAQ"}>
+    <Page title={"FAQ"} description={"Want to know how our Blender render farm can help with your rendering? Visit us to learn more!"}>
       <RentaflopText title={title} body={body} />
     </Page>
   );
