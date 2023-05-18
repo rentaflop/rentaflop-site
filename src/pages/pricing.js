@@ -79,17 +79,19 @@ export default function Pricing() {
       <Typography align="left" paragraph>
 	To know exactly how much your render will cost ahead of
 	time, <RentaflopLink href={portal_url+"/register"} color="info.main">create an account</RentaflopLink> and use our
-	free <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink>! Simply upload your project, and we'll quickly render a few
-	frames to give you the exact price for the full render. You can even download sample frames to make sure the render is exactly how you'd expect. No credit card
-	required.
+	free <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink>! Simply upload your project, and we'll quickly render
+	a few frames to give you the exact price for the full render. Plus, we'll provide a full render time estimate so you'll know when you can expect your render
+	to finish. You can even download sample frames to make sure the render is exactly how you'd expect. No credit card required until you're ready to render
+	the full project.
       </Typography>      
       <Typography align="left" paragraph>
 	We're able to maintain fast rendering while charging as low as 1/10th the price of other render farms by crowdsourcing. We leverage
-	underutilized graphics cards from hardware owners across the globe to keep rentaflop fast and affordable. If you need strict security, then our pro tier will
-	meet your needs with its enhanced privacy.
+	underutilized graphics cards from hardware owners across the globe to keep rentaflop fast and affordable. This gives us the ability to provide most competitive
+	render speeds and pricing compared to other rendering services. In addition, if you're a studio working under an NDA or you otherwise need strict security,
+	then our pro tier will meet your needs with its enhanced privacy offering.
       </Typography>
       <Typography align="left" paragraph>
-	*Prices start at specified level.
+	*Prices start at specified level, use our free price calculator to get the exact price for your render.
       </Typography>
       <Stack
         sx={{ pt: 4 }}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { RentaflopLink } from "../components/utils";
+import { RentaflopLink, RentaflopText } from "../components/utils";
 import Page from '../components/page'
 
 
@@ -45,8 +45,15 @@ const faqs = [
   {
     question: `How can I learn more about rentaflop and our products?`,
     answer: <>
-	      If you want to read about rentaflop, find our latest news, or learn a variety of things about software development and startups,
+	      If you want to read about rentaflop render farm, find our latest news, or learn a variety of things about software development and startups,
 	      read our <RentaflopLink href="/blog" color="info.main">blog</RentaflopLink>.
+	    </>
+  },
+  {
+    question: `Do you have a rendering API for programmatic usage?`,
+    answer: <>
+	      Yes, our API is used by some of our customers and even other render farms to automate their rendering. To gain access to our API,
+	      please <RentaflopLink href={portal_url+"/contact"} color="info.main">contact us</RentaflopLink>.
 	    </>
   },
   {
@@ -77,16 +84,9 @@ const faqs = [
 
 
 export default function Faq() {
-  return (
-    <Page>
-      <Typography
-        component="h1"
-        variant="h2"
-        gutterBottom
-      >
-        FAQ
-      </Typography>
-      
+  const title = <Typography component="h1" variant="h4" align="center" fontWeight="600" gutterBottom>Frequently Asked Questions</Typography>
+  const body = (
+    <>
       {faqs.map((faq) => (
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -99,6 +99,12 @@ export default function Faq() {
         </AccordionDetails>
       </Accordion>
       ))}
+    </>
+  );
+  
+  return (
+    <Page>
+      <RentaflopText title={title} body={body} />
     </Page>
   );
 }
