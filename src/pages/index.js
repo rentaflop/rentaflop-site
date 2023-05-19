@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, Typography, Card, CardMedia, CardContent, CssBaseline, Grid, Stack, Container, Paper,
 	 TableCell, TableRow, Link as MuiLink } from '@material-ui/core';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import Graphic from '../../public/static/rocket_graphic.svg';
-import GraphicMobile from '../../public/static/rocket_graphic_mobile.svg';
+import Graphic from '../../public/static/rocket_graphic.avif';
+import GraphicMobile from '../../public/static/rocket_graphic_mobile.avif';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { RentaflopText, RentaflopTable, RentaflopButton } from '../components/utils';
 import theme from '../components/theme';
@@ -396,222 +396,220 @@ export default function Home() {
   return (
     <Page>
       <CssBaseline />
-      <main>
-	<Paper style={make_graphic_styles(is_large_screen)["paperContainer"]}>
-          <Box
-            sx={{
-              pt: "7%", // 12
-	      pl: "5%",
-	      pr: "33%", // 40
-	      float: "left",
-	      width: "100%",
-            }}
-          >
-	    {/* landing screen */}
-            <Container maxWidth="xl">
-              <Typography
-		component="h1"
-		variant={params.primary}
-		align="left"
-		color="textPrimary"
-		gutterBottom
-              >
-		Fast and affordable 3D rendering
-              </Typography>
-              <Typography variant={params.secondary} align="left" color="textPrimary">
-		Don't settle for lower quality work because of high rendering costs.
-              </Typography>
-              <Typography variant={params.secondary} align="left" color="textPrimary">
-		Render your animated creations with rentaflop farm and save thousands.
-              </Typography>
-	      <form onSubmit={(e) => {
-		      e.preventDefault();
-		      window.location.href=portal_url+"/register?email="+e.target.email1.value;
-		    }}>
-		<Grid container paddingTop="12px">
-		  <Grid item>
-		    <TextField variant="outlined" autoFocus={autofocus} label="Email address" name="email1" size="small" type="email" sx={{ width: { sm: 100, md: 150 } }}/>
-		  </Grid>
-		  <Grid item alignItems="stretch" style={{ display: "flex", paddingLeft: 15 }}>
-		    <RentaflopButton button_class="cta_button" submit text="Start rendering" />
-		  </Grid>
+      <Paper style={make_graphic_styles(is_large_screen)["paperContainer"]}>
+        <Box
+          sx={{
+            pt: "7%", // 12
+	    pl: "5%",
+	    pr: "33%", // 40
+	    float: "left",
+	    width: "100%",
+          }}
+        >
+	  {/* landing screen */}
+          <Container maxWidth="xl">
+            <Typography
+	      component="h1"
+	      variant={params.primary}
+	      align="left"
+	      color="textPrimary"
+	      gutterBottom
+            >
+	      Fast and affordable 3D rendering
+            </Typography>
+            <Typography variant={params.secondary} align="left" color="textPrimary">
+	      Don't settle for lower quality work because of high rendering costs.
+            </Typography>
+            <Typography variant={params.secondary} align="left" color="textPrimary">
+	      Render your animated creations with rentaflop farm and save thousands.
+            </Typography>
+	    <form onSubmit={(e) => {
+		    e.preventDefault();
+		    window.location.href=portal_url+"/register?email="+e.target.email1.value;
+		  }}>
+	      <Grid container paddingTop="12px">
+		<Grid item>
+		  <TextField variant="outlined" autoFocus={autofocus} label="Email address" name="email1" size="small" type="email" sx={{ width: { sm: 100, md: 150 } }}/>
 		</Grid>
-	      </form>
-            </Container>
-          </Box>
-	  { is_large_screen &&
+		<Grid item alignItems="stretch" style={{ display: "flex", paddingLeft: 15 }}>
+		  <RentaflopButton button_class="cta_button" submit text="Start rendering" />
+		</Grid>
+	      </Grid>
+	    </form>
+          </Container>
+        </Box>
+	{ is_large_screen &&
 	  <Link href="/#learn" scroll={false}>
 	    <ArrowDownwardIcon style={{ color: textColorDark, fontSize: 225, marginTop: "-35px" }} />
 	  </Link>
-	  }
-	</Paper>
-	
-	{/* meet rentaflop, what it is */}
-        <Container sx={{ pt: 4, pb: 4 }} maxWidth="md" id="learn">
-	  <RentaflopText title={intro_title} body={intro_body}/>
-             <Grid container spacing={2}>
-               <Grid item xs={12} sm={6} md={4}>
-		 <Card
-                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-		 >
-                  <CardContent sx={{ flexGrow: 1 }}>
-		    <Typography align="left" paragraph paddingTop="24px">
-		      Rentaflop helps 3D artists render animations faster and cheaper. Simply upload your project, launch your render, and download the completed
-		      result.
-		    </Typography>
-		    <Typography align="left" paddingTop="12px">
-		      Join now and render your work!
-		    </Typography>
-		    <form onSubmit={(e) => {
-			    e.preventDefault();
-			    window.location.href=portal_url+"/register?email="+e.target.email2.value;
-			  }}>
-		      <Grid container paddingTop="12px">
-			<Grid item>
-			  <TextField variant="outlined" label="Email address" name="email2" type="email" size="small" sx={{ width: { sm: 100, md: 150 } }}/>
-			</Grid>
-			<Grid item alignItems="stretch" style={{ display: "flex", paddingLeft: 15 }}>
-			  <RentaflopButton button_class="cta_button" submit text="Join" />
-			</Grid>
-		      </Grid>
-		    </form>
-                  </CardContent>
-		 </Card>
-               </Grid>
-               <Grid item xs={12} sm={6} md={8}>
-		 <Card
-                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-		 >
-		   <CardMedia>
-		     <div style={{ position: 'relative', width: 563, height: 324 }}>
-		       <Image alt="Blender application home screen" src="./static/blender_application.avif" fill
-			      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-		     </div>
-		   </CardMedia>
-		 </Card>
-               </Grid>
-             </Grid>
-	</Container>
-		
-	{/* supported software */}
-        <Container sx={{ pt: 4 }} maxWidth="lg">
-          <Grid container spacing={3} id="software-cards" justifyContent="center">
-            {software_cards.map((card) => (
-              <Grid item key={card.id} xs={12} sm={6} md={2}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardContentNoPadding sx={{ flexGrow: 1 }}>
-		    {card.logo}
-		    {card.name}
-		    {card.engines}
-                  </CardContentNoPadding>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-	</Container>
-
-	{/* primary benefits */}
-        <Container sx={{ pt: 4 }} maxWidth="md">
-	  <RentaflopText title={benefits_title} body={benefits_body}/>
-          <Grid container spacing={3} id="intro-cards">
-            {intro_cards.map((card) => (
-              <Grid item key={card.id} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardContentNoPadding sx={{ flexGrow: 1 }}>
-		    {card.primary}
-		    {card.secondary}
-		    {card.icon}
-                  </CardContentNoPadding>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-	</Container>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-	      <RentaflopButton button_class="cta_button" text="Try it now" dest={portal_url+"/register"} />
-	      <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
-            </Stack>
-
-	{/* how rentaflop compares to alternatives table */}
-	{ is_large_screen &&
-	  <>
-	    <RentaflopTable title={table_title} cols={table_cols} body={table_body} footer={table_footer} />
-            <Stack
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-	      <RentaflopButton button_class="cta_button" text="Render now" dest={portal_url+"/register"} />
-	      <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
-            </Stack>
-	  </>
 	}
-
-	{/* how it works */}
-        <Container maxWidth="md">
- 	  <RentaflopText title={tutorial_title} padding={"64px"} />
-             <Grid container spacing={4} id="tutorial">
-               {tutorial_cards.map((card) => (
-		 <Grid item key={card.id} xs={12} sm={6} md={4}>
-                   <Card
-                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                   >
-                     <CardContentNoPadding sx={{ flexGrow: 1 }}>
-		       {card.step}
-		       {card.instruction}
-		       {card.icon}
-		     </CardContentNoPadding>
-		   </Card>
-		 </Grid>
-	       ))}
-	     </Grid>
-        </Container>
-
-	{/* social proof */}
-        <Container maxWidth="md">
-	  <RentaflopText title={business_title} padding={"64px"} />
-             <Grid container spacing={4} id="business">
-               {business_cards.map((card) => (
-		 <Grid item key={card.id} xs={12} sm={6} md={4}>
-		   <Link href={card.url} sx={{pt: 20}}>
-		     {card.img}
-		   </Link>
-		 </Grid>
-	       ))}
-	     </Grid>
-	  <RentaflopText title={social_title} padding={"64px"} />
-	  <Carousel interval={10000} navButtonsAlwaysInvisible={true}>
-            {social_cards.map((card) => (
-              <Card key={card.id}
+      </Paper>
+      
+      {/* meet rentaflop, what it is */}
+      <Container sx={{ pt: 4, pb: 4 }} maxWidth="md" id="learn">
+	<RentaflopText title={intro_title} body={intro_body}/>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={4}>
+	    <Card
+              sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+	    >
+              <CardContent sx={{ flexGrow: 1 }}>
+		<Typography align="left" paragraph paddingTop="24px">
+		  Rentaflop helps 3D artists render animations faster and cheaper. Simply upload your project, launch your render, and download the completed
+		  result.
+		</Typography>
+		<Typography align="left" paddingTop="12px">
+		  Join now and render your work!
+		</Typography>
+		<form onSubmit={(e) => {
+			e.preventDefault();
+			window.location.href=portal_url+"/register?email="+e.target.email2.value;
+		      }}>
+		  <Grid container paddingTop="12px">
+		    <Grid item>
+		      <TextField variant="outlined" label="Email address" name="email2" type="email" size="small" sx={{ width: { sm: 100, md: 150 } }}/>
+		    </Grid>
+		    <Grid item alignItems="stretch" style={{ display: "flex", paddingLeft: 15 }}>
+		      <RentaflopButton button_class="cta_button" submit text="Join" />
+		    </Grid>
+		  </Grid>
+		</form>
+              </CardContent>
+	    </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={8}>
+	    <Card
+              sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+	    >
+	      <CardMedia>
+		<div style={{ position: 'relative', width: 563, height: 324 }}>
+		  <Image alt="Blender application home screen" src="./static/blender_application.avif" fill
+			 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+		</div>
+	      </CardMedia>
+	    </Card>
+          </Grid>
+        </Grid>
+      </Container>
+      
+      {/* supported software */}
+      <Container sx={{ pt: 4 }} maxWidth="lg">
+        <Grid container spacing={3} id="software-cards" justifyContent="center">
+          {software_cards.map((card) => (
+            <Grid item key={card.id} xs={12} sm={6} md={2}>
+              <Card
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
               >
                 <CardContentNoPadding sx={{ flexGrow: 1 }}>
-		  {card.author}
-		  {card.quote}
-		</CardContentNoPadding>
-	      </Card>
-	    ))}
-	  </Carousel>
+		  {card.logo}
+		  {card.name}
+		  {card.engines}
+                </CardContentNoPadding>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+
+      {/* primary benefits */}
+      <Container sx={{ pt: 4 }} maxWidth="md">
+	<RentaflopText title={benefits_title} body={benefits_body}/>
+        <Grid container spacing={3} id="intro-cards">
+          {intro_cards.map((card) => (
+            <Grid item key={card.id} xs={12} sm={6} md={4}>
+              <Card
+                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+              >
+                <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		  {card.primary}
+		  {card.secondary}
+		  {card.icon}
+                </CardContentNoPadding>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+      <Stack
+        sx={{ pt: 4 }}
+        direction="row"
+        spacing={2}
+        justifyContent="center"
+      >
+	<RentaflopButton button_class="cta_button" text="Try it now" dest={portal_url+"/register"} />
+	<RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
+      </Stack>
+
+      {/* how rentaflop compares to alternatives table */}
+      { is_large_screen &&
+	<>
+	  <RentaflopTable title={table_title} cols={table_cols} body={table_body} footer={table_footer} />
           <Stack
-            sx={{ pt: 4, pb: 3 }}
             direction="row"
             spacing={2}
             justifyContent="center"
           >
-	    <RentaflopButton button_class="cta_button" text="Render your work" dest={portal_url+"/register"} />
+	    <RentaflopButton button_class="cta_button" text="Render now" dest={portal_url+"/register"} />
 	    <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
           </Stack>
-        </Container>
-      </main>
+	</>
+      }
+
+      {/* how it works */}
+      <Container maxWidth="md">
+ 	<RentaflopText title={tutorial_title} padding={"64px"} />
+        <Grid container spacing={4} id="tutorial">
+          {tutorial_cards.map((card) => (
+	    <Grid item key={card.id} xs={12} sm={6} md={4}>
+              <Card
+                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+              >
+                <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		  {card.step}
+		  {card.instruction}
+		  {card.icon}
+		</CardContentNoPadding>
+	      </Card>
+	    </Grid>
+	  ))}
+	</Grid>
+      </Container>
+
+      {/* social proof */}
+      <Container maxWidth="md">
+	<RentaflopText title={business_title} padding={"64px"} />
+        <Grid container spacing={4} id="business">
+          {business_cards.map((card) => (
+	    <Grid item key={card.id} xs={12} sm={6} md={4}>
+	      <Link href={card.url} sx={{pt: 20}}>
+		{card.img}
+	      </Link>
+	    </Grid>
+	  ))}
+	</Grid>
+	<RentaflopText title={social_title} padding={"64px"} />
+	<Carousel interval={10000} navButtonsAlwaysInvisible={true}>
+          {social_cards.map((card) => (
+            <Card key={card.id}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+            >
+              <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		{card.author}
+		{card.quote}
+	      </CardContentNoPadding>
+	    </Card>
+	  ))}
+	</Carousel>
+        <Stack
+          sx={{ pt: 4, pb: 3 }}
+          direction="row"
+          spacing={2}
+          justifyContent="center"
+        >
+	  <RentaflopButton button_class="cta_button" text="Render your work" dest={portal_url+"/register"} />
+	  <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
+        </Stack>
+      </Container>
     </Page>
   );
 }
