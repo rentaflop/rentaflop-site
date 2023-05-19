@@ -2,6 +2,9 @@ import React from 'react';
 import { Box, Typography, Card, CardMedia, CardContent, CssBaseline, Grid, Stack, Container, Paper,
 	 TableCell, TableRow, Link as MuiLink } from '@material-ui/core';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+// const Graphic = React.lazy(() => import('../../public/static/rocket_graphic.avif'));
+// const GraphicMobile = React.lazy(() => import('../../public/static/rocket_graphic_mobile.avif'));
+// converted by https://cdkm.com/svg-to-avif; TODO this loads both images on page load, see if we can do better
 import Graphic from '../../public/static/rocket_graphic.avif';
 import GraphicMobile from '../../public/static/rocket_graphic_mobile.avif';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -29,6 +32,7 @@ import { orange } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
 import { lightBlue } from '@mui/material/colors'
 import Carousel from 'react-material-ui-carousel'
+import Head from 'next/head'
 
 
 const CardContentNoPadding = styled(CardContent)(`
@@ -39,6 +43,7 @@ const CardContentNoPadding = styled(CardContent)(`
 
 function make_graphic_styles(is_large_screen) {
   const url = is_large_screen ? `url(${Graphic.src})` : `url(${GraphicMobile.src})`
+  const dest = is_large_screen ? Graphic.src : GraphicMobile.src
   const height = is_large_screen ? "110vh" : "90vh"
   const styles = {
     paperContainer: {
@@ -52,7 +57,7 @@ function make_graphic_styles(is_large_screen) {
     }
   };
 
-  return styles;
+  return [styles, dest];
 }
 
 const portal_url = "https://portal.rentaflop.com";
@@ -392,11 +397,15 @@ export default function Home() {
   const business_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Trusted for business by</Typography>
   const social_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>What our customers say</Typography>
   const textColorDark = theme.palette.text.dark;
+  const [graphic_style, graphic_url] = make_graphic_styles(is_large_screen);
   
   return (
     <Page>
+      <Head> 
+	<link rel="preload" href={graphic_url} as="image" />
+      </Head>
       <CssBaseline />
-      <Paper style={make_graphic_styles(is_large_screen)["paperContainer"]}>
+      <Paper style={graphic_style["paperContainer"]}>
         <Box
           sx={{
             pt: "7%", // 12
