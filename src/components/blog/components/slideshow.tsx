@@ -14,7 +14,7 @@ export default function SlideShow() {
         }
       }}>
 	{
-          images.map((image) => <Image key={image} alt="Abstract AI Art" src={`/static/art/art${image}.jpg`}
+          images.map((image) => <Image key={image} alt="Abstract AI Art" src={`/static/art/art${image}.avif`}
 	  height={600} width={600} style={{"display": "block", "marginLeft": "auto", "marginRight": "auto"}} /> )
 	}
       </Carousel>

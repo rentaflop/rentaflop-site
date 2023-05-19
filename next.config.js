@@ -9,5 +9,5 @@ module.exports = {
 	destination: '/static/_next/static'
       }
     ]
-  }
+  },
 }

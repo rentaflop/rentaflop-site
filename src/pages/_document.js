@@ -6,7 +6,7 @@ import { ServerStyleSheets } from '@material-ui/styles';
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html style={{scrollBehavior:'smooth'}}>
+      <Html style={{scrollBehavior:'smooth'}} lang="en">
 	<Head>
 	  <link rel="icon" href="https://rentaflop.com/static/rentaflop_logo.svg" />
 	  <link rel="apple-touch-icon" href="https://rentaflop.com/static/rentaflop_logo.png" />

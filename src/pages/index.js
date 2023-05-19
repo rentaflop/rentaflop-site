@@ -484,7 +484,7 @@ export default function Home() {
 		 >
 		   <CardMedia>
 		     <div style={{ position: 'relative', width: 563, height: 324 }}>
-		       <Image alt="Blender application home screen" src="./static/blender_application.png" fill
+		       <Image alt="Blender application home screen" src="./static/blender_application.avif" fill
 			      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 		     </div>
 		   </CardMedia>
@@ -538,7 +538,7 @@ export default function Home() {
               justifyContent="center"
             >
 	      <RentaflopButton button_class="cta_button" text="Try it now" dest={portal_url+"/register"} />
-	      <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
+	      <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
             </Stack>
 
 	{/* how rentaflop compares to alternatives table */}
@@ -551,7 +551,7 @@ export default function Home() {
               justifyContent="center"
             >
 	      <RentaflopButton button_class="cta_button" text="Render now" dest={portal_url+"/register"} />
-	      <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
+	      <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
             </Stack>
 	  </>
 	}
@@ -608,7 +608,7 @@ export default function Home() {
             justifyContent="center"
           >
 	    <RentaflopButton button_class="cta_button" text="Render your work" dest={portal_url+"/register"} />
-	    <RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
+	    <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
           </Stack>
         </Container>
       </main>

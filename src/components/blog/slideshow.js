@@ -1,14 +1,15 @@
+// deprecated, real file in ./components/slideshow.tsx
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
-import art1 from './../../static/art/art1.jpg';
-import art2 from './../../static/art/art2.jpg';
-import art3 from './../../static/art/art3.jpg';
-import art4 from './../../static/art/art4.jpg';
-import art5 from './../../static/art/art5.jpg';
-import art6 from './../../static/art/art6.jpg';
-import art7 from './../../static/art/art7.jpg';
-import art8 from './../../static/art/art8.jpg';
-import art9 from './../../static/art/art9.jpg';
+import art1 from './../../static/art/art1.avif';
+import art2 from './../../static/art/art2.avif';
+import art3 from './../../static/art/art3.avif';
+import art4 from './../../static/art/art4.avif';
+import art5 from './../../static/art/art5.avif';
+import art6 from './../../static/art/art6.avif';
+import art7 from './../../static/art/art7.avif';
+import art8 from './../../static/art/art8.avif';
+import art9 from './../../static/art/art9.avif';
 
 
 export default function SlideShow(props) {
@@ -18,7 +19,7 @@ export default function SlideShow(props) {
     <>
       <Carousel autoPlay={false} sx={{pt: 3}}>
 	{
-          images.map((image) => <img alt="" src={image} style={{"height": "600px", "width": "600px", "display": "block", "margin-left": "auto",
+          images.map((image) => <img alt="Abstract AI Art" src={image} style={{"height": "600px", "width": "600px", "display": "block", "margin-left": "auto",
 							 "margin-right": "auto"}} /> )
 	}
       </Carousel>

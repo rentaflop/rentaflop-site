@@ -4,7 +4,6 @@ import HeroPost from '../../components/blog/components/hero-post'
 import Intro from '../../components/blog/components/intro'
 import Layout from '../../components/blog/components/layout'
 import { getAllPosts } from '../../components/blog/lib/api'
-import Head from 'next/head'
 import Page from '../../components/page'
 
 
