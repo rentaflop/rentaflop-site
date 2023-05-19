@@ -36,7 +36,7 @@ export default function Post({ post, morePosts, preview }: Props) {
     <meta property="og:image" content={"https://portal.rentaflop.com"+post.ogImage.url} key="og:image" />
     <meta property="og:type" content="article" key="og:type" />
     <meta property="og:description" content={post.excerpt} key="og:description" />
-    <meta property="description" content={post.excerpt} key="description" />
+    <meta name="description" content={post.excerpt} key="description" />
     {/* only used here since images not displayed properly from blog in twitter */}
     <meta name="twitter:site" content="@rentaflop" />
     <meta name="twitter:image" content={"https://portal.rentaflop.com"+post.ogImage.url} />

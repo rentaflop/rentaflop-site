@@ -270,7 +270,7 @@ const business_cards = [
   {
     "id": 2,
     "img": <Image src={"./static/vliani_logo_cropped.png"} alt={"Vliani had an excellent experience with rentaflop"} width={250} height={100} />,
-    "url": "https://rentaflop.com?https://vliani.com",
+    "url": "https://rentaflop.com",
   },
 ];
 

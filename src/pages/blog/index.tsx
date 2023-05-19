@@ -12,11 +12,8 @@ export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
   return (
-    <Page>
+    <Page title={"Blog"} description={"Read the latest rentaflop news. Learn about new features, partnerships, and all things 3D animation."}>
       <Layout>
-        <Head>
-          <title>rentaflop blog</title>
-        </Head>
         <Container>
           <Intro />
           {heroPost && (
