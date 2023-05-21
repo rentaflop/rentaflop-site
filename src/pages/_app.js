@@ -30,12 +30,12 @@ export default function MyApp({ Component, pageProps }) {
 
       <Component {...pageProps} />
 	{/* hubspot messaging */}
-	<Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/23808232.js" strategy="afterInteractive"></Script>
+	<Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/23808232.js" strategy="lazyOnload"></Script>
 	{/*
 	   Google tag (gtag.js)
 	 */}
-	<Script src="https://www.googletagmanager.com/gtag/js?id=G-FKBK6XSRHB" strategy="afterInteractive" />
-	<Script id="google-analytics" strategy="afterInteractive">
+	<Script src="https://www.googletagmanager.com/gtag/js?id=G-FKBK6XSRHB" strategy="lazyOnload" />
+	<Script id="google-analytics" strategy="lazyOnload">
 	  {`
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -47,7 +47,7 @@ export default function MyApp({ Component, pageProps }) {
 	  gtag('config', 'G-FKBK6XSRHB');
         `}
 	</Script>
-	<Script id="gh-pages" type="text/javascript" strategy="afterInteractive">
+	<Script id="gh-pages" type="text/javascript" strategy="lazyOnload">
 	  {`
 	// Single Page Apps for GitHub Pages
 	// MIT License
@@ -72,7 +72,7 @@ export default function MyApp({ Component, pageProps }) {
         `}
 	</Script>
 	{/* leadfeeder */}
-	{/* <Script id="ldfdr-script-loader" type="text/javascript" strategy="afterInteractive">
+	{/* <Script id="ldfdr-script-loader" type="text/javascript" strategy="lazyOnload">
 	  {`
 (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('kn9Eq4Ry2pr7RlvP');
 `}
