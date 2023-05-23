@@ -64,7 +64,7 @@ export default function Rendering() {
 	the frames to .png format so you can more easily create a video animation after you download your rendering output. 
 	Currently, we support rendering with Blender versions 2.83.14, 2.93.4, 3.0.1, 3.1.2, 3.2.2, 3.3.1, 3.4.1. 
 	We support scripting, so we'll run Python scripts automatically during rendering if you've configured them to run in your .blend file.
-	The maximum upload size for your files is 1 GB.
+	The maximum upload size for your files is 3 GB.
 	We support all built-in addons. If you're using 3rd party addons, or have additional
 	questions (or need different versions, larger file size, etc.) about rendering, please <RentaflopLink href={portal_url+"/contact"} color="info.main">contact us</RentaflopLink>.
 	</Typography>

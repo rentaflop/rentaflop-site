@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
 	{/* intentionally omitted since it's tough to get url from here
 	    <meta property="og:url" content={"https://portal.rentaflop.com/blog/"+post.slug.replace(/\.md$/, '')} /> 
 	 */}
-	<meta property="og:image" content="https://rentaflop.com/static/rentaflop_logo.png" key="og:image" />
+	<meta property="og:image" content="./static/rentaflop_logo.png" key="og:image" />
 	<meta property="og:type" content="website" key="og:type" />
 	<meta property="og:description" content="Need to render your project? Rentaflop helps 3D artists render their animations faster and cheaper. Click to render now!" key="og:description" />
 	<meta name="description" content="Need to render your project? Rentaflop helps 3D artists render their animations faster and cheaper. Click to render now!" key="description" />
@@ -29,6 +29,21 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
+	{/* page logging; placed here for SEO */}
+	<Script id="page-logger" strategy="lazyOnload">
+	  {`
+            if (typeof window !== "undefined") {
+              var log = "User hit "+(new URL(window.location.href).pathname);
+              log = (window.innerWidth > 768) ? log : log+" from mobile device";
+              var logApiUrl = 'https://portal.rentaflop.com/api/log'
+              fetch(logApiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ "message": log, "level": "INFO" })
+              });
+            }
+          `}
+	</Script>
 	{/* hubspot messaging */}
 	<Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/23808232.js" strategy="lazyOnload"></Script>
 	{/*

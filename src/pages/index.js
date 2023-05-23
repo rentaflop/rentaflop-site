@@ -37,6 +37,7 @@ const CardContentNoPadding = styled(CardContent)(`
 `);
 
 function make_graphic_styles(is_large_screen) {
+  // converted by https://cdkm.com/svg-to-avif; https://mconverter.eu/convert/svg/avif/ also seems to work well for some files
   const url = `url(${"../../static/rocket_graphic.avif"})`;
   // TODO see if we can still static serve mobile graphic so it loads only one of these and looks good on smaller devices
   // const url = is_large_screen ? `url(${"../../static/rocket_graphic.avif"})` : `url(${"../../static/rocket_graphic_mobile.avif"})`;
@@ -168,7 +169,7 @@ const software_cards = [
       </Typography>
     </>,
     "logo":
-    <Image src="./static/max_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+    <Image src="./static/max_logo.avif" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
 									}} alt="3DS Max logo" />
   },
   {
@@ -193,7 +194,7 @@ const software_cards = [
       </Typography>
     </>,
     "logo":
-    <Image src="./static/maya_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+    <Image src="./static/maya_logo.avif" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
 									}} alt="Maya logo" />
   },
   {
@@ -218,7 +219,7 @@ const software_cards = [
       </Typography>
     </>,
     "logo":
-    <Image src="./static/c4d_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+    <Image src="./static/c4d_logo.avif" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
 									}} alt="Cinema 4D logo" />
   },
   {
@@ -266,7 +267,7 @@ const business_cards = [
   },
   {
     "id": 1,
-    "img": <Image src={"./static/cgc_logo.svg"} alt={"Rentaflop partners with CG Cookie"} width={250} height={100} />,
+    "img": <Image src={"./static/cgc_logo.avif"} alt={"Rentaflop partners with CG Cookie"} width={250} height={100} />,
     "url": "https://www.cgcookie.com/?ref=rentaflop",
   },
   {
