@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Typography, Card, CardMedia, CardContent, CssBaseline, Grid, Stack, Container, Paper,
 	 TableCell, TableRow, Link as MuiLink } from '@material-ui/core';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { RentaflopText, RentaflopTable, RentaflopButton } from '../components/utils';
 import theme from '../components/theme';
 import TextField from '@mui/material/TextField';
@@ -10,6 +9,7 @@ import Page from '../components/page'
 import Image from 'next/image'
 import Link from 'next/link'
 import { styled } from "@mui/material/styles";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import BoltIcon from '@mui/icons-material/Bolt';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
@@ -38,9 +38,9 @@ const CardContentNoPadding = styled(CardContent)(`
 
 function make_graphic_styles(is_large_screen) {
   // converted by https://cdkm.com/svg-to-avif; https://mconverter.eu/convert/svg/avif/ also seems to work well for some files
-  const url = `url(${"../../static/rocket_graphic.avif"})`;
-  // TODO see if we can still static serve mobile graphic so it loads only one of these and looks good on smaller devices
-  // const url = is_large_screen ? `url(${"../../static/rocket_graphic.avif"})` : `url(${"../../static/rocket_graphic_mobile.avif"})`;
+  // const url = `url(${"../../static/rocket_graphic.avif"})`;
+  // TODO see if we can only load one of these (they both load on mobile because of use media query double exec)
+  const url = is_large_screen ? `url(${"../../static/rocket_graphic.avif"})` : `url(${"../../static/rocket_graphic_mobile.avif"})`;
   // const url = `url(${Graphic.src})`
   const height = is_large_screen ? "110vh" : "90vh"
   const styles = {
@@ -169,7 +169,7 @@ const software_cards = [
       </Typography>
     </>,
     "logo":
-    <Image src="./static/max_logo.avif" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+    <Image src="./static/max_logo.avif" height={100} width={100} style={{ display: "inline", verticalAlign: "baseline", height: 100,
 									}} alt="3DS Max logo" />
   },
   {
@@ -194,7 +194,7 @@ const software_cards = [
       </Typography>
     </>,
     "logo":
-    <Image src="./static/maya_logo.avif" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+    <Image src="./static/maya_logo.avif" height={100} width={100} style={{ display: "inline", verticalAlign: "baseline", height: 100,
 									}} alt="Maya logo" />
   },
   {
@@ -219,7 +219,7 @@ const software_cards = [
       </Typography>
     </>,
     "logo":
-    <Image src="./static/c4d_logo.avif" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+    <Image src="./static/c4d_logo.avif" height={100} width={100} style={{ display: "inline", verticalAlign: "baseline", height: 100,
 									}} alt="Cinema 4D logo" />
   },
   {
@@ -241,7 +241,7 @@ const software_cards = [
       </Typography>
     </>,
     "logo":
-    <Image src="./static/blender_logo.svg" height={100} width={100} style={{ paddingTop: 8, display: "inline", verticalAlign: "baseline", height: 100,
+    <Image src="./static/blender_logo.svg" height={100} width={100} style={{ display: "inline", verticalAlign: "baseline", height: 100,
 									}} alt="Blender logo" />
   },
   {
@@ -348,7 +348,8 @@ const tutorial_cards = [
 
 
 export default function Home() {
-  const is_large_screen = useMediaQuery('(min-width:600px)');
+  // runs once on server (returns default value of true) and then again on client; return true so desktop only loads one rocket graphic
+  const is_large_screen = useMediaQuery('(min-width:600px)', { defaultMatches: true });
   const params_large = {
     "primary": "h1",
     "secondary": "h4"
@@ -367,9 +368,9 @@ export default function Home() {
   if (typeof window !== "undefined") {
     // don't autofocus if they've clicked arrow since it brings screen back up on chrome
     autofocus = !window.location.href.includes("learn");
-    if (!is_large_screen) {
-      autofocus = false;
-    }
+  }
+  if (!is_large_screen) {
+    autofocus = false;
   }
 
   const table_title_text = <Typography component="h1" variant="h2" align="left" fontWeight="600" gutterBottom>How rentaflop compares</Typography>

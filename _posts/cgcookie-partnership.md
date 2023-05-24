@@ -1,10 +1,10 @@
 ---
 title: 'Rentaflop Partners with CG Cookie to Help You Learn Blender'
 excerpt: 'The partnership gives you 15% off a CG Cookie membership!'
-coverImage: '/static/cgc_character.jpg'
+coverImage: '/static/blog/cgcookie_partnership/cgc_character.jpg'
 date: '2022-12-28T'
 ogImage:
-  url: '/static/cgc_character.jpg'
+  url: '/static/blog/cgcookie_partnership/cgc_character.jpg'
 ---
 
 # Rentaflop Partners with CG Cookie to Help You Learn Blender
@@ -14,7 +14,7 @@ _December 28, 2022_
 Rentaflop render farm is excited to announce our partnership with [CG Cookie](https://cgcookie.com/?ref=rentaflop), one of the world's largest communities for learning Blender!
 The partnership gives you 15% off a CG Cookie membership!
 
-![CG Cookie Logo](./../static/cgc_logo.png "CG Cookie Logo")
+![CG Cookie Logo](./../static/cgc_logo.avif "CG Cookie Logo")
 
 ## Why Sign Up for CG Cookie?
 
@@ -25,7 +25,7 @@ The partnership gives you 15% off a CG Cookie membership!
 1. 4\. **Leverage a library of** [free downloads](https://cgcookie.com/downloads/?ref=rentaflop), giving you access to many addons, assets, brushes, etc.
 1. 5\. **Many other perks and discounts!**
 
-![CG Cookie Character](./../static/cgc_character.jpg "CG Cookie Character")
+![CG Cookie Character](./../static/blog/cgcookie_partnership/cgc_character.jpg "CG Cookie Character")
 
 ## How to Save 15%?
 

@@ -100,7 +100,7 @@ export default function Pricing() {
         justifyContent="center"
       >
 	<RentaflopButton button_class="cta_button" text="Render now" dest={portal_url+"/register"} />
-	<RentaflopButton button_class="button_style" text="Learn more" dest={"/about"} />
+	<RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
       </Stack>
     </>
   );

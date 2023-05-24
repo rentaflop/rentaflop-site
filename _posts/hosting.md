@@ -1,10 +1,10 @@
 ---
 title: 'Becoming a Rentaflop Host'
 excerpt: 'Instructions for how you can add your graphics cards to our crowdsourced cloud rendering network and earn money without lifting a finger.'
-coverImage: '/static/crypto_rig.avif'
+coverImage: '/static/blog/hosting/crypto_rig.avif'
 date: '2022-04-28T'
 ogImage:
-  url: '/static/crypto_rig.avif'
+  url: '/static/blog/hosting/crypto_rig.avif'
 ---
 
 # Becoming a Rentaflop Host

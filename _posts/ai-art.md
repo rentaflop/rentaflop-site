@@ -1,10 +1,10 @@
 ---
 title: 'Building a 17-Megapixel AI Artist'
 excerpt: 'Learn how we trained an AI artist to make abstract art and how you can make one too!'
-coverImage: '/static/kandinsky.jpg'
+coverImage: '/static/blog/ai_art/kandinsky.jpg'
 date: '2022-03-06T'
 ogImage:
-  url: '/static/kandinsky.jpg'
+  url: '/static/blog/ai_art/kandinsky.jpg'
 ---
 
 # Building a 17-Megapixel AI Artist
@@ -16,7 +16,7 @@ _March 6, 2022_
 Living in the Washington, DC area has its perks. One of my favorites is the Smithsonian. Many people know of the Museums of Natural History, Air and Space, and American History, but fewer tend to visit the wonderful art museums offered by the Smithsonian. During a visit to one, being the nerd I am, I started thinking about what it'd take to build an AI artist. As I strolled
 through the seemingly-endless halls of art, the idea for my next hobby project came to fruition.
 
-![Smithsonian American Art Museum](./../static/american_art.jpeg "Smithsonian American Art Museum")
+![Smithsonian American Art Museum](./../static/blog/ai_art/american_art.jpeg "Smithsonian American Art Museum")
 *Smithsonian American Art Museum, Washington, DC*
 
 ## What Kind of Art?
@@ -29,14 +29,14 @@ images are [quite convincing](https://generated.photos/face-generator/new), thou
 human faces is that we're keenly aware of the tiniest defects in faces. The human brain contains a region called the [fusiform face area](https://en.wikipedia.org/wiki/Fusiform_face_area), which is highly specialized at facial recognition. Because of this, human portraits are perhaps the hardest kind of art for an AI to do well.
 Any mistake will stick out like a sore thumb – and make mistakes AI does.
 
-![An AI mixes up a puppy and a tennis ball](./../static/puppy_ball.png "An AI mixes up a puppy and a tennis ball")
+![An AI mixes up a puppy and a tennis ball](./../static/blog/ai_art/puppy_ball.png "An AI mixes up a puppy and a tennis ball")
 *An AI mixes up a puppy and a tennis ball*
 
 It's well known that generative Deep Learning models often struggle to create logical representations of the world. For instance, AI models will
 create people with dichromatic eyes (there are real dichromatic people, but AI does it much more frequently) and even such monstrocities as tennis ball puppies. Granted, some human artists also struggle with this sort of thing.
 Given that AI is prone to creating things that don't make sense, is there a kind of art with no logical bearing on the real world?
 
-![Wassily Kandinsky, Composition VIII](./../static/kandinsky.jpg "Wassily Kandinsky, Composition VIII")
+![Wassily Kandinsky, Composition VIII](./../static/blog/ai_art/kandinsky.jpg "Wassily Kandinsky, Composition VIII")
 *Wassily Kandinsky, Composition VIII*
 
 While beautiful, abstract art typically exists independently from reality. This makes it ideal for Deep Learning art. Whatever color swaps, counting errors, distortions, etc. the AI artist makes are unlikely to be prominent.

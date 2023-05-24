@@ -1,10 +1,10 @@
 ---
 title: 'Launching Rentaflop'
 excerpt: "We're excited to announce we've concluded our beta and have officially launched to the public!"
-coverImage: '/static/rocket_graphic.svg'
+coverImage: '/static/rocket_graphic.avif'
 date: '2022-10-26T'
 ogImage:
-  url: 'static/rocket_graphic.svg'
+  url: 'static/rocket_graphic.avif'
 ---
 
 # Launching Rentaflop
