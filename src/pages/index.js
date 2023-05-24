@@ -367,6 +367,9 @@ export default function Home() {
   if (typeof window !== "undefined") {
     // don't autofocus if they've clicked arrow since it brings screen back up on chrome
     autofocus = !window.location.href.includes("learn");
+    if (!is_large_screen) {
+      autofocus = false;
+    }
   }
 
   const table_title_text = <Typography component="h1" variant="h2" align="left" fontWeight="600" gutterBottom>How rentaflop compares</Typography>
