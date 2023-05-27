@@ -8,8 +8,8 @@ export default class MyDocument extends Document {
     return (
       <Html style={{scrollBehavior:'smooth'}} lang="en">
 	<Head>
-	  <link rel="icon" href="./static/rentaflop_logo_single.svg" />
-	  <link rel="apple-touch-icon" href="./static/rentaflop_logo_single.svg" />
+	  <link rel="icon" href="/static/rentaflop_logo_single.svg" />
+	  <link rel="apple-touch-icon" href="/static/rentaflop_logo_single.svg" />
 	  {/*
 	     manifest.json provides metadata used when your web app is installed on a
 	     user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/

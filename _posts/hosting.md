@@ -53,7 +53,7 @@ Here are the minimum basic system requirements:
 1. 3\. HiveOS
 
 If you're not currently running HiveOS, we recommend getting a reliable
-16+GB flash drive with at least 100MB/s write speed (typically under $10) and following the GPU instructions [here](https://hiveon.com/install/) to create a bootable USB. We like this route because
+16+GB flash drive with at least 100MB/s write speed (typically under $10) and following the GPU instructions for [HiveOS installation](https://hiveon.com/install/) to create a bootable USB. We like this route because
 it allows you to separate mining from personal business. You can boot the USB when you want to mine and boot your other drive when you want
 to do gaming or use your graphics card(s) otherwise.
 We currently support all Nvidia 40, 30, 20, and most 10 series (1060 and above) GPUs.
@@ -67,8 +67,8 @@ You can add us by going to [https://the.hiveos.farm](https://the.hiveos.farm) an
 Next, give "support@rentaflop.com" access level "advanced" and select "user must have 2FA enabled".
 
 We use Coinbase to conduct payouts, so if you want to maximize your earnings and reduce transaction costs make sure to use a Coinbase wallet address
-for the following step and opt in to "instant sends"
-[here](https://www.coinbase.com/settings/privacy-rights). If you decide against this, then a small transaction fee we must pay to Coinbase will slightly reduce your
+for the following step and opt in to "instant sends" on
+[the Coinbase website](https://www.coinbase.com/settings/privacy-rights). If you decide against this, then a small transaction fee we must pay to Coinbase will slightly reduce your
 payout amounts.
 
 To complete the set up, email us at [support@rentaflop.com](mailto:support@rentaflop.com) with the following information:
@@ -79,7 +79,7 @@ To complete the set up, email us at [support@rentaflop.com](mailto:support@renta
 If you answered "no" to running the traditional crypto miner, no additional information is needed. If "yes", please also provide the following, ensuring it's
 compatible with t-rex miner as well as the wallet address (--user) you've configured:
 
-1. 4\. Configuration parameters you'd like to pass to t-rex miner. You may specify any of the t-rex configuration options found [here](https://github.com/trexminer/T-Rex) (and if you're unsure, then we can get you started with some good defaults).
+1. 4\. Configuration parameters you'd like to pass to t-rex miner. You may specify any [t-rex configuration options](https://github.com/trexminer/T-Rex) (and if you're unsure, then we can get you started with some good defaults).
 Notably, you may select a separate currency/wallet to use for t-rex than the one you specified above for the rentaflop task miner payouts. To do so, set the --user
 parameter. Here's an example that sets the --user parameter to use an ETC wallet (for t-rex traditional crypto mining)
 and configures an optional rig name and network timout limit:

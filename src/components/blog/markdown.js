@@ -7,6 +7,10 @@ function MarkdownListItem(props) {
   return <Box component="li" sx={{ mt: 1, typography: 'body1' }} {...props} />;
 }
 
+function NewPageLink(props) {
+  return <Link target="_blank" rel="noopener" {...props} />;
+}
+
 const options = {
   overrides: {
     h1: {
@@ -38,7 +42,7 @@ const options = {
       component: Typography,
       props: { paragraph: true },
     },
-    a: { component: Link },
+    a: { component: NewPageLink },
     li: {
       component: MarkdownListItem,
     },

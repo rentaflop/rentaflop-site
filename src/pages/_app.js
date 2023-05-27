@@ -35,6 +35,9 @@ export default function MyApp({ Component, pageProps }) {
             if (typeof window !== "undefined") {
               var log = "User hit "+(new URL(window.location.href).pathname);
               log = (window.innerWidth > 768) ? log : log+" from mobile device";
+              if (document.referrer && !document.referrer.includes("rentaflop.com")) {
+                log = log+", referred by: "+document.referrer;
+              }
               var logApiUrl = 'https://portal.rentaflop.com/api/log'
               fetch(logApiUrl, {
                 method: 'POST',
