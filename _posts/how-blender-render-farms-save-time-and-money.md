@@ -2,10 +2,10 @@
 title: 'How a Blender Render Farm Can Save You Time and Money on Your Next Project'
 excerpt: "By harnessing the power of hundreds of computers, a render farm can significantly reduce rendering times and help you deliver your project on time and within
 budget. In this article, we'll explore the benefits of using a Blender render farm and how it can save you both time and money on your next project."
-coverImage: '/static/rentaflop_logo.png'
+coverImage: '/static/blog/how_blender_render_farms_save_time_and_money/blender_35_splash.avif'
 date: '2023-05-26T'
 ogImage:
-  url: 'static/rentaflop_logo.png'
+  url: '/static/blog/how_blender_render_farms_save_time_and_money/blender_35_splash.avif'
 ---
 
 # How a Blender Render Farm Can Save You Time and Money on Your Next Project
@@ -29,11 +29,18 @@ significantly reduce the time it takes to render a scene. Render farms are used 
 the animation, architecture, and film industries to create high-quality, photo-realistic images and
 animations.
 
+![A server farm plugs away at calculations](./../static/blog/how_blender_render_farms_save_time_and_money/server_racks.avif "A server farm plugs away at calculations")
+*A server farm plugs away at calculations*
+
+
 In case you're not already familiar, [Blender](https://www.blender.org) is an open source 3D creation software that is widely used in the industry. It is free to download
 and use, making it an affordable option for small studios or freelance designers. Blender has a few built-in
 render engines, including [Cycles](https://docs.blender.org/manual/en/latest/render/cycles/introduction.html) and [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/introduction.html), that allow you to render your scenes locally on your computer. However, for larger
 projects, the rendering process can take a long time, and you might need to render multiple scenes
 simultaneously. Enter the Blender render farm.
+
+![The Blender logo](./../static/blog/how_blender_render_farms_save_time_and_money/blender_name_logo.svg "The Blender logo")
+*The Blender logo*
 
 ## Blender Render Farm vs. Local Rendering
 
@@ -69,6 +76,9 @@ Most importantly, a Blender render farm allows you to improve the quality of you
 your computer running out of memory. You'll have time to render your scenes with more samples, too, which means
 your images will have less noise and look more realistic. This is made possible because the rendering process is distributed across
 a network of many machines, so each machine only has to render a small part of the animation.
+
+![The Blender 3.5 splash screen](./../static/blog/how_blender_render_farms_save_time_and_money/blender_35_splash.avif "The Blender 3.5 splash screen")
+*The Blender 3.5 splash screen*
 
 ## Factors to Consider When Choosing a Blender Render Farm
 
@@ -119,6 +129,9 @@ resource-intensive work.
 Rentaflop (whose blog you're currently reading 😊) is a fast and affordable Blender render farm. We're the newest and smallest farm on the list, which gives us the
 ability to offer you exceptional customer support via email, live chat, or even video call, and 24/7 rendering at great prices. In fact, we're the cheapest on-demand
 render farm on our list, and possibly in the world.
+
+![The rentaflop logo](./../static/rentaflop_logo.svg "The rentaflop logo")
+*The rentaflop logo*
 
 What makes rentaflop so fast and affordable? We're unique because of how we source our hardware. We're the only render farm that pays hardware providers around
 the world to render your work. Millions of underutilized graphics cards represent untapped potential for helping animators render their work faster and
