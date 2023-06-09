@@ -61,8 +61,9 @@ export default function Rendering() {
 	  We support the most recent version of Autodesk 3DS Max, Maya, and Maxon Cinema 4D with V-Ray and Arnold rendering engines.
 	We support rendering with both Cycles and Eevee, as well as most settings that come out-of-the-box with Blender. 
 	We use the settings in your project file to render the first scene found. If you've selected a video output format for rendering, we'll automatically render
-	the frames to .png format so you can more easily create a video animation after you download your rendering output. 
-	Currently, we support rendering with Blender versions 2.83.14, 2.93.4, 3.0.1, 3.1.2, 3.2.2, 3.3.1, 3.4.1. 
+	  the frames to .png format so you can more easily create a video animation after you download your rendering output. We also allow you to output
+	  frames to multi-layer EXR.
+	We support rendering with all Blender versions upon request.
 	We support scripting, so we'll run Python scripts automatically during rendering if you've configured them to run in your .blend file.
 	The maximum upload size for your files is 3 GB.
 	We support all built-in addons. If you're using 3rd party addons, or have additional
