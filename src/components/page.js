@@ -13,7 +13,7 @@ export default function Page(props) {
       {props.title &&
        <Head>
 	 <title>
-	   {props.title + " | rentaflop | Blender Render Farm"}
+	   {props.title + " | rentaflop | Online Cloud Render Farm"}
 	 </title>
 	 <meta property="og:description" content={props.description} key="og:description" />
 	 <meta name="description" content={props.description} key="description" />
