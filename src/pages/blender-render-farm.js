@@ -292,7 +292,7 @@ export default function Home() {
   );
   
   return (
-    <Page>
+    <Page title={"Blender Render Farm"} description={"Learn what a Blender render farm is and how rentaflop render farm helps you save time and money."}>
       <Head> 
 	<link rel="preload" href="../../static/rocket_graphic.avif" as="image" />
       </Head>
