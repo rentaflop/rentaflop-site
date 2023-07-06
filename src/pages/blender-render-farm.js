@@ -181,6 +181,17 @@ const social_cards = [
       "The experience was brilliant. Overall amazing & saved me a bunch of time, definitely will recommend you guys & I'll be using you again in the future."
     </Typography>,
   },
+  {
+    "id": 2,
+    "author":
+    <Typography gutterBottom variant="h6" component="h2">
+      <span style={{ fontWeight: "bold" }} >David Adam Ettedgui</span> - Producer at Ettedgui Films
+    </Typography>,
+    "quote":
+    <Typography align="left" gutterBottom>
+      "Time is money, and I saved both with rentaflop. This service is terrific."
+    </Typography>,
+  },
 ];
 
 const tutorial_cards = [
@@ -316,7 +327,7 @@ export default function Home() {
 	      color="textPrimary"
 	      gutterBottom
             >
-	      Fast and affordable Blender rendering
+	      Fast and affordable Blender render farm
             </Typography>
             <Typography variant={params.secondary} align="left" color="textPrimary">
 	      Don't settle for lower quality work because of high rendering costs.

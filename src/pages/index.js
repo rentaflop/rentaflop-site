@@ -259,6 +259,7 @@ const software_cards = [
   },
 ]
 
+// if edited, change blender-render-farm.js too
 const business_cards = [
   {
     "id": 0,
@@ -277,6 +278,7 @@ const business_cards = [
   },
 ];
 
+// if edited, change blender-render-farm.js too
 const social_cards = [
   {
     "id": 0,
@@ -437,7 +439,7 @@ export default function Home() {
 	      color="textPrimary"
 	      gutterBottom
             >
-	      Fast and affordable 3D rendering
+	      Fast and affordable 3D render farm
             </Typography>
             <Typography variant={params.secondary} align="left" color="textPrimary">
 	      Don't settle for lower quality work because of high rendering costs.

@@ -32,7 +32,6 @@ animations.
 ![A server farm plugs away at calculations](./../static/blog/how_blender_render_farms_save_time_and_money/server_racks.avif "A server farm plugs away at calculations")
 *A server farm plugs away at calculations*
 
-
 In case you're not already familiar, [Blender](https://www.blender.org) is an open source 3D creation software that is widely used in the industry. It is free to download
 and use, making it an affordable option for small studios or freelance designers. Blender has a few built-in
 render engines, including [Cycles](https://docs.blender.org/manual/en/latest/render/cycles/introduction.html) and [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/introduction.html), that allow you to render your scenes locally on your computer. However, for larger
@@ -62,7 +61,8 @@ Using an online cloud render farm can save you both time and money on your next 
 
 The most apparent benefit is that it can
 significantly reduce the time it takes to render a scene. With a render farm, you can distribute the
-rendering process across multiple machines, which means you can render your scenes faster. For example, say you need to render a 1000-frame animation, in which
+rendering process across multiple machines, which means you can [render your scenes faster](https://rentaflop.com/blog/how-to-speed-up-blender-render-times).
+For example, say you need to render a 1000-frame animation, in which
 each frame takes an hour to render via local rendering. Your animation would take over a month to render locally! If you use a render farm with 100 comparable
 machines instead, each machine can handle 10 frames simultaneously and your render will be ready in just 10 hours! This can
 help you deliver your project on time and meet your deadlines.
