@@ -3,14 +3,14 @@ title: 'How to Speed Up Your Blender Render Times: A Comprehensive Guide'
 excerpt: "Tired of waiting hours for your Blender renders to finish? This guide provides tips and tricks to speed up your render times and get your
 projects done faster."
 coverImage: '/static/blog/how_to_speed_up_blender_render_times/fast_porsche.avif'
-date: '2023-07-24T'
+date: '2023-08-10T'
 ogImage:
   url: '/static/blog/how_to_speed_up_blender_render_times/fast_porsche.avif'
 ---
 
 # How to Speed Up Your Blender Render Times: A Comprehensive Guide
 
-_July 5, 2023_
+_August 10, 2023_
 
 For 3D artists and animators, Blender is a powerful and versatile tool that enables the creation of stunning visual content. If you're a Blender user,
 you know that rendering can be a time-consuming process. Long render times can be frustrating and hinder creativity. In this comprehensive guide, we'll share
@@ -82,7 +82,7 @@ of times Blender calculates the lighting and shading in your scene. While more s
 increase render times. Consider using adaptive sampling or denoising techniques to reduce the required number of samples efficiently. Denoising is a technique that
 can significantly reduce render times while maintaining the quality of your image. It works by removing noise or grain from
 your render, which is often caused by low sample rates or other factors. Blender has a built-in
-[denoising feature](https://docs.blender.org/manual/en/2.79/render/cycles/settings/scene/render_layers/denoising.html) that can be accessed in the Render
+[denoising feature](https://docs.blender.org/manual/en/3.6/render/cycles/render_settings/sampling.html#render-cycles-settings-viewport-denoising) that can be accessed in the Render
 Layers tab. Simply enable the Denoising checkbox and adjust the settings to your liking. Keep in mind that denoising can sometimes result in a loss of detail,
 so it’s important to experiment with different settings to find the right balance between speed and quality.
 * **Optimize Animations**: Unlike a still image, not every frame in an animation needs to be high resolution with many samples. This is because the viewer only
@@ -146,7 +146,7 @@ time, bringing your creative visions to life more efficiently.
 
 We hope you found this guide on how to speed up your Blender render times to be useful. We've covered everything from render settings, lighting, and
 object complexity to hardware and useful products like CrowdRender and rentaflop. Our goal is to create the most comprehensive guide to reducing Blender render times
-on the internet, so if you feel we've left something out, please contact us at [info@rentaflop.com](mailto:info@rentaflop.com). Happy rendering!
+on the Internet, so if you feel we've left something out, please contact us at [info@rentaflop.com](mailto:info@rentaflop.com). Happy rendering!
 
 If you liked this article, let us know on our social media at the bottom of the page! Need to render your project? [Try us](https://portal.rentaflop.com/register)
 free!
