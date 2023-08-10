@@ -315,6 +315,17 @@ const social_cards = [
       "Time is money, and I saved both with rentaflop. This service is terrific."
     </Typography>,
   },
+  {
+    "id": 3,
+    "author":
+    <Typography gutterBottom variant="h6" component="h2">
+      <span style={{ fontWeight: "bold" }} >Parker Warner Wright</span> - Producer at Wright Times Productions
+    </Typography>,
+    "quote":
+    <Typography align="left" gutterBottom>
+      "Great service you're offering. I look forward to doing more rendering with rentaflop."
+    </Typography>,
+  },
 ];
 
 const tutorial_cards = [

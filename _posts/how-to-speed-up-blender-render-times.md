@@ -3,7 +3,7 @@ title: 'How to Speed Up Your Blender Render Times: A Comprehensive Guide'
 excerpt: "Tired of waiting hours for your Blender renders to finish? This guide provides tips and tricks to speed up your render times and get your
 projects done faster."
 coverImage: '/static/blog/how_to_speed_up_blender_render_times/fast_porsche.avif'
-date: '2023-07-05T'
+date: '2023-07-24T'
 ogImage:
   url: '/static/blog/how_to_speed_up_blender_render_times/fast_porsche.avif'
 ---
@@ -87,7 +87,9 @@ Layers tab. Simply enable the Denoising checkbox and adjust the settings to your
 so it’s important to experiment with different settings to find the right balance between speed and quality.
 * **Optimize Animations**: Unlike a still image, not every frame in an animation needs to be high resolution with many samples. This is because the viewer only
 sees each frame for a fraction of a second, which isn't enough time to notice the small loss of detail associated with lower resolution and noisier images.
-Lower these settings in animations to see a significant speed boost in rendering.
+In some cases, you can even reduce the number of frames per second to limit the amount of rendering to be done. For instance, if you're using 30 fps, try lowering
+to the standard (for many things) 24 fps.
+Lowering these settings in animations can result in a significant speed boost in rendering.
 * **Adjust Tile Size**: Experiment with different tile sizes to find the optimal balance between performance and memory usage. Larger tile sizes generally
 perform better, especially when using GPU rendering.
 * **Use GPU Rendering**: One of the most effective ways to speed up Blender render times is to use GPU rendering instead of CPU rendering.
@@ -118,7 +120,7 @@ local network to create your own render farm. Check out this excellent tutorial 
 multiple machines. Similar to using personally-owned GPUs, utilizing hundreds of GPUs at a render farm can speed up render times greatly. Blender render farms such
 as rentaflop complete weeks-long projects in a matter of hours. Using a cloud rendering service is one of the easiest and most effective ways to reduce your render
 times. In fact, it's so effective at speeding up rendering that we wrote an entire blog post about
-(https://rentaflop.com/blog/how-blender-render-farms-save-time-and-money)[how blender render farms save you time].
+[how blender render farms save you time](https://rentaflop.com/blog/how-blender-render-farms-save-time-and-money).
 
 Rentaflop is a cloud-based render farm service specifically designed for 3D artists and animators. It allows users to render their animations faster and more
 cost-effectively by utilizing the power of multiple high-performance servers. With rentaflop, artists can say goodbye to long rendering times, expensive

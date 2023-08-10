@@ -36,8 +36,8 @@ export default function Rendering() {
 	The first step to rendering your project is to <RentaflopLink href={portal_url+"/register"} color="info.main">create an account</RentaflopLink>, if you haven't already.
 	You must also <RentaflopLink href={portal_url+"/payment"} color="info.main">add a payment method</RentaflopLink> prior to rendering. If you're not ready to add a payment
 	yet, you can check the exact amount you'd pay prior to rendering by using
-	the <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink>. After you've added payment, you can render your
-	whole project and you'll be charged monthly,
+	our free <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink>. After you've added payment, you can render your
+	whole project and you'll be charged monthly based on your usage,
 	according to our <RentaflopLink href="/pricing" color="info.main">pricing</RentaflopLink>.
 	Next, upload your file(s) on the <RentaflopLink href={portal_url+"/launchpad"} color="info.main">launchpad</RentaflopLink> and start the render, or if you've already
 	uploaded the file and ran a price calculation you can start the full render from
@@ -47,20 +47,22 @@ export default function Rendering() {
 	the <RentaflopLink href={portal_url+"/ground-control"} color="info.main">ground control</RentaflopLink> page.
       </Typography>
 
-      <Typography component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How do I prepare my file for rendering?</Typography>
+      <Typography component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How can I ensure my textures and other external files are included?</Typography>
       <Typography align="left" paragraph>
-	We believe it's easiest for artists to configure their projects straight from your profect file itself, so we do very little rendering configuration on our end.
-	Please configure your rendering settings (such as sample sizes, file output types, frames, etc.) to your liking from within your 3D application. Also, make sure
-	to pack all necessary textures and external files into your file. For larger projects, we recommend running
-	our <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink> and downloading the sample output provided in order to make sure
-      the result meets your expectations. In addition, we support .zip file uploads, so you may include assets and caches from baking by zipping those with your file.
+	Make sure to pack all necessary textures and external files into your file. In addition, we support .zip file uploads, so you may include assets, videos,
+	and caches from baking by zipping those with your file. For larger projects, we recommend running
+	our <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink> and downloading the sample output provided in order to
+	make sure the result meets your expectations. We believe it's easiest for artists to configure their projects straight from your profect file itself, so we
+	do very little rendering configuration on our end.
+	Please configure your rendering settings (such as sample sizes, file output types, frames, etc.) to your liking from within your 3D application.
       </Typography>
 
       <Typography component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>What rendering settings do you support?</Typography>
 	<Typography align="left" paragraph>
 	  We support the most recent version of Autodesk 3DS Max, Maya, and Maxon Cinema 4D with V-Ray and Arnold rendering engines.
 	We support rendering with both Cycles and Eevee, as well as most settings that come out-of-the-box with Blender. 
-	We use the settings in your project file to render the first scene found. If you've selected a video output format for rendering, we'll automatically render
+	  We use the settings in your project file to render the first scene found. For video outputs, we support AVI JPEG, AVI Raw, and FFmpeg Video.
+	  If you've selected a different video output format for rendering, we'll automatically render
 	  the frames to .png format so you can more easily create a video animation after you download your rendering output. We also allow you to output
 	  frames to multi-layer EXR.
 	We support rendering with all Blender versions upon request.
