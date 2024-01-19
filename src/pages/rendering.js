@@ -67,7 +67,7 @@ export default function Rendering() {
 	  frames to multi-layer EXR.
 	We support rendering with all Blender versions upon request.
 	We support scripting, so we'll run Python scripts automatically during rendering if you've configured them to run in your .blend file.
-	The maximum upload size for your files is 3 GB.
+	The maximum upload size for your files is 10 GB.
 	We support all built-in addons. If you're using 3rd party addons, or have additional
 	questions (or need different versions, larger file size, etc.) about rendering, please <RentaflopLink href={portal_url+"/contact"} color="info.main">contact us</RentaflopLink>.
 	</Typography>
