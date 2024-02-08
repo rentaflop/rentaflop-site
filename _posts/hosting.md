@@ -9,7 +9,7 @@ ogImage:
 
 # Becoming a Rentaflop Host
 
-_April 28, 2022 (updated February 17, 2023)_
+_April 28, 2022 (updated February 8, 2024)_
 
 Members of our global network of hardware owners are called hosts. In this post, we'll describe how you can add your graphics cards to our crowdsourced
 cloud rendering network and earn money without lifting a finger.
@@ -17,6 +17,15 @@ cloud rendering network and earn money without lifting a finger.
 Do you want to continue mining Ethereum, even though it's now proof of stake? Did you know GPU rendering is worth 10-100x as much as crypto mining?
 Read on to learn how to double your mining rig's crypto earnings, even though Ethereum is PoS, and put your hardware to work helping people.
 If you want a quickstart, please skip to the System Requirements section.
+
+UPDATE: Due to high volume of interest, we've created a waitlist for new hosts. If you're interested in joining our waitlist, please email us the
+following information at [support@rentaflop.com](mailto:support@rentaflop.com):
+1. 1\. Number of Nvidia graphics cards you own, along with the model numbers (ie 6 RTX 3090s, 3 RTX 4080s, 12 RTX 3070s, etc.)
+1. 2\. System specs for RAM, storage, and CPU (ie 8GB RAM, 32GB storage, intel i9-12900 CPU)
+1. 3\. OS you're currently running and version (ie HiveOS 0.6-222 or Linux Ubuntu 23.10)
+
+Please be as specific as you can, but if you have a lot of machines it's fine to just provide a quick summary with estimates. We'll email you once
+you've been selected from the waitlist.
 
 ## Why We're Different
 
