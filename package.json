@@ -49,6 +49,7 @@
     "remark": "^14.0.2",
     "remark-external-links": "^9.0.1",
     "remark-html": "^15.0.2",
+    "remark-slug": "^7.0.1",
     "scheduler": "^0.23.0",
     "serve": "^13.0.2",
     "sharp": "^0.31.3",

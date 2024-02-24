@@ -6,6 +6,8 @@ type Props = {
 }
 
 const PostBody = ({ content }: Props) => {
+  content = content.replaceAll("user-content-", "");
+  
   return (
     <div className="max-w-2xl mx-auto">
       <div
