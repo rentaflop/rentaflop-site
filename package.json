@@ -28,7 +28,6 @@
     "gray-matter": "^4.0.3",
     "highlightjs": "^9.16.2",
     "is-svg": "4.3.1",
-    "markdown-to-jsx": "^7.2.0",
     "material-ui": "^1.0.0-beta.47",
     "material-ui-popup-state": "^2.0.0",
     "next": "^13.1.1",
