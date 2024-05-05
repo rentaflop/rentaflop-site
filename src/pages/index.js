@@ -243,7 +243,7 @@ const software_cards = [
     "logo":
     <Image src="./static/blender_logo.svg" height={100} width={100} style={{ display: "inline", verticalAlign: "baseline", height: 100,
 									   }} alt="Blender logo" />,
-    "link": "https://rentaflop.com/blender-render-farm"
+    "link": "/blender-render-farm"
   },
   {
     "id": 4,

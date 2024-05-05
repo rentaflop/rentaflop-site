@@ -45,6 +45,12 @@ export default function About() {
 	to outperform your competitors.
       </Typography>
       <Typography component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>
+	Who are we?
+      </Typography>
+      <Typography align="left" paragraph>
+	Rentaflop is a small business built and owned by our team in the United States. We're registered as a C Corporation in the state of Delaware.
+      </Typography>
+      <Typography component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>
 	Learn more
       </Typography>
       <Typography align="left" paragraph>

@@ -192,6 +192,17 @@ const social_cards = [
       "Time is money, and I saved both with rentaflop. This service is terrific."
     </Typography>,
   },
+  {
+    "id": 3,
+    "author":
+    <Typography gutterBottom variant="h6" component="h2">
+      <span style={{ fontWeight: "bold" }} >Parker Warner Wright</span> - Producer at Wright Times Productions
+    </Typography>,
+    "quote":
+    <Typography align="left" gutterBottom>
+      "Great service you're offering. I look forward to doing more rendering with rentaflop."
+    </Typography>,
+  },
 ];
 
 const tutorial_cards = [
@@ -249,7 +260,7 @@ export default function Home() {
     "secondary": "h6"
   }
   const params = is_large_screen ? params_large : params_small;
-  const intro_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Meet rentaflop</Typography>
+  const intro_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Meet rentaflop, Earth's most innovative Blender render farm</Typography>
   const intro_body = <Typography align="left" paragraph paddingTop="24px" />
   const benefits_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Why render with us?</Typography>
   const benefits_body = <Typography align="left" paragraph paddingTop="24px" />
@@ -291,10 +302,10 @@ export default function Home() {
   const social_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>What our customers say</Typography>
   const textColorDark = theme.palette.text.dark;
   const graphic_style = make_graphic_styles(is_large_screen)["paperContainer"]
-  const what_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>What is a render farm?</Typography>
+  const what_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>What is a Blender render farm?</Typography>
   const what_body = (
     <Typography align="left" paddingTop="24px">
-      A render farm is a collection of computers that work together to render your 3D graphics or animations.
+      A Blender render farm is a collection of computers that work together to render your 3D graphics or animations.
       It allows you to distribute the rendering process across multiple machines, which can significantly reduce the time it takes to render a scene.
       Render farms are used by professionals in the animation, architecture, and film industries to create high-quality, photo-realistic images and animations.
       Read more about <RentaflopLink href="/blog/how-blender-render-farms-save-time-and-money" color="info.main">how a Blender render farm can save
@@ -311,9 +322,9 @@ export default function Home() {
       <Paper style={graphic_style}>
         <Box
           sx={{
-            pt: "7%", // 12
+            pt: "7%", // 7
 	    pl: "5%",
-	    pr: "33%", // 40
+	    pr: "33%",
 	    float: "left",
 	    width: "100%",
           }}
@@ -333,7 +344,7 @@ export default function Home() {
 	      Don't settle for lower quality work because of high rendering costs.
             </Typography>
             <Typography variant={params.secondary} align="left" color="textPrimary">
-	      Render your Blender 3D creations with rentaflop farm and save thousands.
+	      Render your 3D creations with our high-speed Blender render farm and save thousands.
             </Typography>
 	    <form onSubmit={(e) => {
 		    e.preventDefault();
@@ -358,7 +369,7 @@ export default function Home() {
       </Paper>
       
       {/* meet rentaflop, what it is */}
-      <Container sx={{ pt: 4, pb: 4 }} maxWidth="md" id="learn">
+	      <Container sx={{ pt: 4 }} maxWidth="md" id="learn">
 	<RentaflopText title={intro_title} body={intro_body}/>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={4}>
@@ -366,8 +377,11 @@ export default function Home() {
               sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
 	    >
               <CardContent sx={{ flexGrow: 1 }}>
-		<Typography align="left" paragraph paddingTop="24px">
-		  Rentaflop helps Blender artists render animations faster and cheaper. Simply upload your project, launch your render, and download the completed
+		<Typography align="left" paddingTop="24px">
+		  Get an exact price quote, render time estimate, and sample frames for free!
+		</Typography>
+		<Typography align="left" paragraph>
+		  Simply upload your project, launch your render, and download the completed
 		  result.
 		</Typography>
 		<Typography align="left" paddingTop="12px">
@@ -401,11 +415,10 @@ export default function Home() {
 	      </CardMedia>
 	    </Card>
           </Grid>
-        </Grid>
+	</Grid>
       </Container>
-      
-      {/* supported software */}
-      <Container sx={{ pt: 4 }} maxWidth="md">
+
+	      <Container sx={{ pt: 4 }} maxWidth="md">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={8}>
 	    <Card
@@ -413,12 +426,32 @@ export default function Home() {
 	    >
 	      <CardMedia>
 		<div style={{ position: 'relative', width: 563, height: 324 }}>
-		  <Image alt="Blender application home screen" src="./static/blog/how_blender_render_farms_save_time_and_money/blender_35_splash.avif" fill
+		  <Image alt="Blender Suzanne" src="./static/suzanne.avif" fill
 			 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 		</div>
 	      </CardMedia>
 	    </Card>
           </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+	    <Card
+              sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+	    >
+              <CardContent sx={{ flexGrow: 1 }}>
+		<Typography align="left" paragraph paddingTop="24px">
+		  Rentaflop sources its hardware from across the globe, tapping into a supply of millions of graphics cards, rather than centralized data centers.
+		</Typography>
+		<Typography align="left" paddingTop="12px">
+		  The result: rentaflop helps Blender artists render animations faster and cheaper than anyone else in the world.
+		</Typography>
+              </CardContent>
+	    </Card>
+          </Grid>
+        </Grid>
+      </Container>
+      
+      {/* supported software */}
+      <Container sx={{ pt: 4 }} maxWidth="md">
+        <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={4}>
 	    <Card
               sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
@@ -442,6 +475,18 @@ export default function Home() {
 		  All Blender versions available upon request
 		</Typography>
               </CardContent>
+	    </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={8}>
+	    <Card
+              sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+	    >
+	      <CardMedia>
+		<div style={{ position: 'relative', width: 563, height: 324 }}>
+		  <Image alt="Blender application home screen" src="./static/blog/how_blender_render_farms_save_time_and_money/blender_35_splash.avif" fill
+			 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+		</div>
+	      </CardMedia>
 	    </Card>
           </Grid>
         </Grid>

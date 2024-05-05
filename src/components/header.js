@@ -55,7 +55,7 @@ class Header extends Component {
     if (typeof window !== "undefined") {
       is_large_screen = window.innerWidth > 768;
     }
-    var button_text = {"rendering": "Rendering", "hosting": "Become a host", "pricing": "Pricing", "blog": "Blog", "login": "Sign in",
+    var button_text = {"rendering": "Rendering", "about": "About us", "pricing": "Pricing", "blog": "Blog", "login": "Sign in",
 		       "register": "Start rendering"};
     if (!is_large_screen) {
       button_text["register"] = "Register";
@@ -80,13 +80,13 @@ class Header extends Component {
 	  { is_large_screen &&
 	    <>
 	      <Box marginRight='10px'>
-		<Button href="/blog/hosting" className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
-		  {button_text["hosting"]}
+		<Button href="/pricing" className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
+		  {button_text["pricing"]}
 		</Button>
 	      </Box>
 	      <Box marginRight='10px'>
-		<Button href="/pricing" className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
-		  {button_text["pricing"]}
+		<Button href="/about" className={classes.secondary_button_style} variant="text" linkcomponent={Link}>
+		  {button_text["about"]}
 		</Button>
 	      </Box>
 	      <Box marginRight='10px'>
