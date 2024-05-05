@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Card, CardMedia, CardContent, CssBaseline, Grid, Stack, Container, Paper,
-	 TableCell, TableRow, Link as MuiLink } from '@material-ui/core';
+	 TableCell, TableRow, Link as MuiLink, CardActionArea } from '@material-ui/core';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { RentaflopText, RentaflopTable, RentaflopButton } from '../components/utils';
 import theme from '../components/theme';
@@ -242,7 +242,8 @@ const software_cards = [
     </>,
     "logo":
     <Image src="./static/blender_logo.svg" height={100} width={100} style={{ display: "inline", verticalAlign: "baseline", height: 100,
-									}} alt="Blender logo" />
+									   }} alt="Blender logo" />,
+    "link": "https://rentaflop.com/blender-render-farm"
   },
   {
     "id": 4,
@@ -255,7 +256,8 @@ const software_cards = [
 	<FooterLink href="mailto:support@rentaflop.com" color={lightBlue[600]} >Contact us</FooterLink> so we can add it!
     </Typography>,
     "logo":
-    <QuestionMarkIcon style={{ color: grey[500], fontSize: 100 }} />
+    <QuestionMarkIcon style={{ color: grey[500], fontSize: 100 }} />,
+    "link": "mailto:support@rentaflop.com"
   },
 ]
 
@@ -535,11 +537,13 @@ export default function Home() {
               <Card
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
               >
-                <CardContentNoPadding sx={{ flexGrow: 1 }}>
-		  {card.logo}
-		  {card.name}
-		  {card.engines}
-                </CardContentNoPadding>
+		<CardActionArea href={(card.link !== undefined) ? card.link : portal_url+"/register"} target="_blank" sx={{ flexGrow: 1 }}>
+                  <CardContentNoPadding sx={{ flexGrow: 1 }}>
+		    {card.logo}
+		    {card.name}
+		    {card.engines}
+                  </CardContentNoPadding>
+		</CardActionArea>
               </Card>
             </Grid>
           ))}
