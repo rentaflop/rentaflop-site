@@ -203,6 +203,17 @@ const social_cards = [
       "Great service you're offering. I look forward to doing more rendering with rentaflop."
     </Typography>,
   },
+  {
+    "id": 4,
+    "author":
+    <Typography gutterBottom variant="h6" component="h2">
+      <span style={{ fontWeight: "bold" }} >Gustaf Markblad</span> - 3D Animator at Zynk
+    </Typography>,
+    "quote":
+    <Typography align="left" gutterBottom>
+      "Great service, by the way! I will be back."
+    </Typography>,
+  },
 ];
 
 const tutorial_cards = [
