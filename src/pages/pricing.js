@@ -23,8 +23,8 @@ export default function Pricing() {
       </Typography>,
       "description":
       <Typography sx={{ pt: 2 }}>
-	Hardware owners across the globe participate in the render to maximize speed and savings. Your work is encrypted upon upload and when
-	placed on rendering machines for added security.
+	Hardware owners across the globe participate in the render to maximize savings. Renders run on fast GPU hardware. Your work is encrypted upon upload and when
+	placed on rendering machines for added security. Same fast customer service as pro tier.
       </Typography>,
       "icon":
       <GroupsIcon style={{ color: orange[800], fontSize: 50 }} />
@@ -41,7 +41,8 @@ export default function Pricing() {
       </Typography>,
       "description":
       <Typography sx={{ pt: 2 }}>
-	Designed for professionals with Non-Disclosure Agreement (NDA) contracts governing their work. Limits rendering to only machines owned by rentaflop
+	Renders prioritized for maximum speed. Designed for professionals with Non-Disclosure Agreement (NDA) contracts governing their work.
+	Limits rendering to only machines owned by rentaflop
 	and trusted partners, so your data is kept private at all times.
       </Typography>,
       "icon":
@@ -91,7 +92,7 @@ export default function Pricing() {
 	then our pro tier will meet your needs with its enhanced privacy offering.
       </Typography>
       <Typography align="left" paragraph>
-	*Prices start at specified level, use our free price calculator to get the exact price for your render.
+	*OBh means Octanebench hour, a measure of GPU processing power. Prices start at the specified OBh level, use our free price calculator to get the exact price for your render.
       </Typography>
       <Stack
         sx={{ pt: 4 }}

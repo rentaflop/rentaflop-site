@@ -271,7 +271,7 @@ export default function Home() {
     "secondary": "h6"
   }
   const params = is_large_screen ? params_large : params_small;
-  const intro_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Meet rentaflop, Earth's most innovative Blender render farm</Typography>
+  const intro_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Meet rentaflop, Earth's largest Blender render farm</Typography>
   const intro_body = <Typography align="left" paragraph paddingTop="24px" />
   const benefits_title = <Typography component="h1" variant="h4" align="left" fontWeight="600" gutterBottom>Why render with us?</Typography>
   const benefits_body = <Typography align="left" paragraph paddingTop="24px" />
@@ -349,13 +349,13 @@ export default function Home() {
 	      color="textPrimary"
 	      gutterBottom
             >
-	      Fast and affordable Blender render farm
+	      The World's Largest Blender render farm
             </Typography>
             <Typography variant={params.secondary} align="left" color="textPrimary">
-	      Don't settle for lower quality work because of high rendering costs.
+	      Never miss a rendering deadline again.
             </Typography>
             <Typography variant={params.secondary} align="left" color="textPrimary">
-	      Render your 3D creations with our high-speed Blender render farm and save thousands.
+	      Render your 3D creations with our high-speed Blender render farm and save countless hours.
             </Typography>
 	    <form onSubmit={(e) => {
 		    e.preventDefault();
