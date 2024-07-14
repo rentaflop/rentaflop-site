@@ -30,7 +30,7 @@ const faqs = [
     question: `How can I become a rentaflop host?`,
     answer: <>
 	      With rentaflop miner, your hardware can pay for itself while helping 3D artists render their projects. If you have a recent Nvidia discrete graphics card,
-	      you can run rentaflop miner. Please follow the <RentaflopLink href="/blog/hosting" color="info.main">hosting instructions</RentaflopLink> to
+	      you can run rentaflop miner. Please follow the <RentaflopLink href="/blog/hosting" color="info.main" target="_blank">hosting instructions</RentaflopLink> to
 	      start making money without lifting a finger!
 	    </>
   },
@@ -39,27 +39,27 @@ const faqs = [
     answer: <>
 	      Rentaflop’s mission is to increase the computational wealth of the world. We connect 3D artists with hardware owners to make
 	      rendering more affordable and to put the world's GPUs to work. If you'd like to learn more, 
-	      please read the <RentaflopLink href="/blog/mission-statement" color="info.main">rentaflop mission statement</RentaflopLink>.
+	      please read the <RentaflopLink href="/blog/mission-statement" color="info.main" target="_blank">rentaflop mission statement</RentaflopLink>.
 	    </>
   },
   {
     question: `How can I learn more about rentaflop and our products?`,
     answer: <>
 	      If you want to read about rentaflop render farm, find our latest news, or learn a variety of things about software development and startups,
-	      read our <RentaflopLink href="/blog" color="info.main">blog</RentaflopLink>.
+	      read our <RentaflopLink href="/blog" color="info.main" target="_blank">blog</RentaflopLink>.
 	    </>
   },
   {
     question: `Do you have a rendering API for programmatic usage?`,
     answer: <>
 	      Yes, our API is used by some of our customers and even other render farms to automate their rendering. To gain access to our API,
-	      please <RentaflopLink href={portal_url+"/contact"} color="info.main">contact us</RentaflopLink>.
+	      please <RentaflopLink href={portal_url+"/contact"} color="info.main" target="_blank">contact us</RentaflopLink>.
 	    </>
   },
   {
     question: `How does billing work?`,
     answer: <>
-	      To use rentaflop rendering, you must first create an account and add <RentaflopLink href={portal_url+"/payment"} color="info.main">add payment info</RentaflopLink>.
+	      To use rentaflop rendering, you must first create an account and add <RentaflopLink href={portal_url+"/payment"} color="info.main" target="_blank">add payment info</RentaflopLink>.
 	      When you submit a rendering, you'll be charged according to the amount of computing power used to complete the rendering.
 	      We use Octane benchmarking to calculate a score for each graphics card on the rentaflop network and bill in minute increments
 	      on each device used to render your workload. At the end of each month, your payment method will be charged for the entire month's
@@ -70,7 +70,7 @@ const faqs = [
     question: `What is your refund policy?`,
     answer: <>
 	      We hope you'll love rentaflop and won't need a refund, but if it comes to it, we're there for you.
-              Just go to the <RentaflopLink href={portal_url+"/billing"} color="info.main">billing</RentaflopLink> page, click the refund button on the relevant
+              Just go to the <RentaflopLink href={portal_url+"/billing"} color="info.main" target="_blank">billing</RentaflopLink> page, click the refund button on the relevant
 	      transaction, and give some quick feedback. A member of our team will review the request, and it will generally be
 	      approved within 48 hours. You may request a refund for any transaction within the past week.
 	    </>

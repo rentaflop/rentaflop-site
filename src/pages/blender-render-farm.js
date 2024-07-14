@@ -319,7 +319,7 @@ export default function Home() {
       A Blender render farm is a collection of computers that work together to render your 3D graphics or animations.
       It allows you to distribute the rendering process across multiple machines, which can significantly reduce the time it takes to render a scene.
       Render farms are used by professionals in the animation, architecture, and film industries to create high-quality, photo-realistic images and animations.
-      Read more about <RentaflopLink href="/blog/how-blender-render-farms-save-time-and-money" color="info.main">how a Blender render farm can save
+      Read more about <RentaflopLink href="/blog/how-blender-render-farms-save-time-and-money" color="info.main" target="_blank">how a Blender render farm can save
 		      you time and money on your next project</RentaflopLink>.
     </Typography>
   );

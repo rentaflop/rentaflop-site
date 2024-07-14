@@ -79,8 +79,8 @@ export default function Pricing() {
       </Typography>
       <Typography align="left" paragraph>
 	To know exactly how much your render will cost ahead of
-	time, <RentaflopLink href={portal_url+"/register"} color="info.main">create an account</RentaflopLink> and use our
-	free <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink>! Simply upload your project, and we'll quickly render
+	time, <RentaflopLink href={portal_url+"/register"} color="info.main" target="_blank">create an account</RentaflopLink> and use our
+	free <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>! Simply upload your project, and we'll quickly render
 	a few frames to give you the exact price for the full render. Plus, we'll provide a full render time estimate so you'll know when you can expect your render
 	to finish. You can even download sample frames to make sure the render is exactly how you'd expect. No credit card required until you're ready to render
 	the full project.

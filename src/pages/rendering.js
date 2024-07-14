@@ -20,38 +20,38 @@ export default function Rendering() {
       <Typography id="security-and-privacy" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>Is it secure?</Typography>
       <Typography align="left" paragraph>
 	Yes. Your work is encrypted upon upload and when placed on rendering machines. For customers with the most strict security and privacy requirements,
-	our <RentaflopLink href="/pricing" color="info.main">pro tier</RentaflopLink> limits rendering to only machines owned by rentaflop and trusted partners.
+	our <RentaflopLink href="/pricing" color="info.main" target="_blank">pro tier</RentaflopLink> limits rendering to only machines owned by rentaflop and trusted partners.
       </Typography>
 
       <Typography id="pricing" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How much will it cost to render my project?</Typography>
       <Typography align="left" paragraph>
-	You can see exactly how much it'll cost ahead of time by <RentaflopLink href={portal_url+"/register"} color="info.main">creating an account</RentaflopLink> and
-	running our <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink>. Render your work for as low as 1/10th the price of other
+	You can see exactly how much it'll cost ahead of time by <RentaflopLink href={portal_url+"/register"} color="info.main" target="_blank">creating an account</RentaflopLink> and
+	running our <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>. Render your work for as low as 1/10th the price of other
 	render farms through our crowdsourced standard tier. If you need absolute security, we offer an affordable pro tier for enhanced privacy during rendering.
-	See our <RentaflopLink href="/pricing" color="info.main">pricing</RentaflopLink> for more info.
+	See our <RentaflopLink href="/pricing" color="info.main" target="_blank">pricing</RentaflopLink> for more info.
       </Typography>
 
       <Typography id="how-to-render" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How do I render my project?</Typography>
       <Typography align="left" paragraph>
-	The first step to rendering your project is to <RentaflopLink href={portal_url+"/register"} color="info.main">create an account</RentaflopLink>, if you haven't already.
-	You must also <RentaflopLink href={portal_url+"/payment"} color="info.main">add a payment method</RentaflopLink> prior to rendering. If you're not ready to add a payment
+	The first step to rendering your project is to <RentaflopLink href={portal_url+"/register"} color="info.main" target="_blank">create an account</RentaflopLink>, if you haven't already.
+	You must also <RentaflopLink href={portal_url+"/payment"} color="info.main" target="_blank">add a payment method</RentaflopLink> prior to rendering. If you're not ready to add a payment
 	yet, you can check the exact amount you'd pay prior to rendering by using
-	our free <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink>. After you've added payment, you can render your
+	our free <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>. After you've added payment, you can render your
 	whole project and you'll be charged monthly based on your usage,
-	according to our <RentaflopLink href="/pricing" color="info.main">pricing</RentaflopLink>.
-	Next, upload your file(s) on the <RentaflopLink href={portal_url+"/launchpad"} color="info.main">launchpad</RentaflopLink> and start the render, or if you've already
+	according to our <RentaflopLink href="/pricing" color="info.main" target="_blank">pricing</RentaflopLink>.
+	Next, upload your file(s) on the <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">launchpad</RentaflopLink> and start the render, or if you've already
 	uploaded the file and ran a price calculation you can start the full render from
-	the <RentaflopLink href={portal_url+"/price-calculator"} color="info.main">price calculator</RentaflopLink> page to ensure you get the exact quoted price (note: you
+	the <RentaflopLink href={portal_url+"/price-calculator"} color="info.main" target="_blank">price calculator</RentaflopLink> page to ensure you get the exact quoted price (note: you
 	may be charged a different amount if you re-upload and render the file instead of running the render from the price calculator page). Your file will be
 	rendered in parallel on many graphics cards around the world! You can watch the progress of your render jobs, as well as download results or stop jobs, on
-	the <RentaflopLink href={portal_url+"/ground-control"} color="info.main">ground control</RentaflopLink> page.
+	the <RentaflopLink href={portal_url+"/ground-control"} color="info.main" target="_blank">ground control</RentaflopLink> page.
       </Typography>
 
       <Typography id="including-external-files" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How can I ensure my textures and other external files are included?</Typography>
       <Typography align="left" paragraph>
 	Make sure to pack all necessary textures and external files into your file. In addition, we support .zip file uploads, so you may include assets, videos,
 	and caches from baking by zipping those with your file. For larger projects, we recommend running
-	our <RentaflopLink href={portal_url+"/launchpad"} color="info.main">price calculator</RentaflopLink> and downloading the sample output provided in order to
+	our <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink> and downloading the sample output provided in order to
 	make sure the result meets your expectations. We believe it's easiest for artists to configure their projects straight from your profect file itself, so we
 	do very little rendering configuration on our end.
 	Please configure your rendering settings (such as sample sizes, file output types, frames, etc.) to your liking from within your 3D application.
@@ -69,7 +69,7 @@ export default function Rendering() {
 	We support scripting, so we'll run Python scripts automatically during rendering if you've configured them to run in your .blend file.
 	The maximum upload size for your files is 10 GB.
 	We support all built-in addons. If you're using 3rd party addons, or have additional
-	questions (or need different versions, larger file size, etc.) about rendering, please <RentaflopLink href={portal_url+"/contact"} color="info.main">contact us</RentaflopLink>.
+	questions (or need different versions, larger file size, etc.) about rendering, please <RentaflopLink href={portal_url+"/contact"} color="info.main" target="_blank">contact us</RentaflopLink>.
 	</Typography>
       <Typography id="nsfw-projects" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>Can I render NSFW projects?</Typography>
       <Typography align="left" paragraph>
