@@ -118,7 +118,7 @@ const intro_cards = [
     </Typography>,
     "secondary":
     <Typography>
-      We take the risk and uncertainty out of rendering. We think you'll love rentaflop, but if you're not satisfied for any reason, we'll refund you.
+      We take the risk and uncertainty out of rendering. We think you'll love rentaflop, but if you're not satisfied because of an incorrect render, we'll refund you.
     </Typography>,
     "icon":
     <VolunteerActivismIcon style={{ color: green[300], fontSize: 50 }} />
