@@ -98,28 +98,69 @@ export default function MyApp({ Component, pageProps }) {
 `}
 </Script> */}
 	
-	{/* axeptio cookie consent management; not setting lazy onload because it has built-in delay */}
+	{/* axeptio cookie consent management; not setting lazy onload because it has built-in delay; google needs default consent set early */}
 	<Script id="axeptio-script" type="text/javascript">
 	  {`
-	  window.axeptioSettings = {
-	    clientId: "66e5dfc2531f207e12627027",
-	    cookiesVersion: "rentaflop-en-EU",
-	    googleConsentMode: {
-	      default: {
-	        analytics_storage: "denied",
-	        ad_storage: "denied",
-	        ad_user_data: "denied",
-	        ad_personalization: "denied",
-	        wait_for_update: 500
-	      }
+	  if (typeof window !== "undefined") {
+	    // only show banner if in EU https://stackoverflow.com/a/68653845
+	    const EU_TIMEZONES = [
+	      'Europe/Vienna',
+	      'Europe/Brussels',
+	      'Europe/Sofia',
+	      'Europe/Zagreb',
+	      'Asia/Famagusta',
+	      'Asia/Nicosia',
+	      'Europe/Prague',
+	      'Europe/Copenhagen',
+	      'Europe/Tallinn',
+	      'Europe/Helsinki',
+	      'Europe/Paris',
+	      'Europe/Berlin',
+	      'Europe/Busingen',
+	      'Europe/Athens',
+	      'Europe/Budapest',
+	      'Europe/Dublin',
+	      'Europe/Rome',
+	      'Europe/Riga',
+	      'Europe/Vilnius',
+	      'Europe/Luxembourg',
+	      'Europe/Malta',
+	      'Europe/Amsterdam',
+	      'Europe/Warsaw',
+	      'Atlantic/Azores',
+	      'Atlantic/Madeira',
+	      'Europe/Lisbon',
+	      'Europe/Bucharest',
+	      'Europe/Bratislava',
+	      'Europe/Ljubljana',
+	      'Africa/Ceuta',
+	      'Atlantic/Canary',
+	      'Europe/Madrid',
+	      'Europe/Stockholm'
+	    ];
+
+	    if (EU_TIMEZONES.includes(Intl.DateTimeFormat().resolvedOptions().timeZone)) {
+	      window.axeptioSettings = {
+		clientId: "66e5dfc2531f207e12627027",
+		cookiesVersion: "rentaflop-en-EU",
+		googleConsentMode: {
+		  default: {
+		    analytics_storage: "denied",
+		    ad_storage: "denied",
+		    ad_user_data: "denied",
+		    ad_personalization: "denied",
+		    wait_for_update: 500
+		  }
+		}
+	      };
+
+	      (function(d, s) {
+		var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+		e.async = true; e.src = "//static.axept.io/sdk.js";
+		t.parentNode.insertBefore(e, t);
+	      })(document, "script");
 	    }
-	  };
-	  
-	  (function(d, s) {
-	    var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-	    e.async = true; e.src = "//static.axept.io/sdk.js";
-	    t.parentNode.insertBefore(e, t);
-	  })(document, "script");
+	  }
 	  `}
 	</Script>
 	</>
