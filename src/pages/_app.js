@@ -52,6 +52,7 @@ export default function MyApp({ Component, pageProps }) {
 	{/*
 	   Google tag (gtag.js)
 	 */}
+	
 	<Script src="https://www.googletagmanager.com/gtag/js?id=G-FKBK6XSRHB" strategy="lazyOnload" />
 	<Script id="google-analytics" strategy="lazyOnload">
 	  {`
@@ -65,6 +66,7 @@ export default function MyApp({ Component, pageProps }) {
 	  gtag('config', 'G-FKBK6XSRHB');
         `}
 	</Script>
+	
 	<Script id="gh-pages" type="text/javascript" strategy="lazyOnload">
 	  {`
 	// Single Page Apps for GitHub Pages
@@ -95,6 +97,31 @@ export default function MyApp({ Component, pageProps }) {
 (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('kn9Eq4Ry2pr7RlvP');
 `}
 </Script> */}
+	
+	{/* axeptio cookie consent management; not setting lazy onload because it has built-in delay */}
+	<Script id="axeptio-script" type="text/javascript">
+	  {`
+	  window.axeptioSettings = {
+	    clientId: "66e5dfc2531f207e12627027",
+	    cookiesVersion: "rentaflop-en-EU",
+	    googleConsentMode: {
+	      default: {
+	        analytics_storage: "denied",
+	        ad_storage: "denied",
+	        ad_user_data: "denied",
+	        ad_personalization: "denied",
+	        wait_for_update: 500
+	      }
+	    }
+	  };
+	  
+	  (function(d, s) {
+	    var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+	    e.async = true; e.src = "//static.axept.io/sdk.js";
+	    t.parentNode.insertBefore(e, t);
+	  })(document, "script");
+	  `}
+	</Script>
 	</>
   );
 }
