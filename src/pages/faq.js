@@ -9,14 +9,12 @@ const portal_url = "https://portal.rentaflop.com"
 const faqs = [
   {
     question: `What is rentaflop?`,
-    answer: `Rentaflop is a crowdsourced cloud render farm offering Maya and Blender artists fast and affordable rendering from hardware owners across the globe. 
+    answer: `Rentaflop is a cloud render farm offering Blender artists fast and affordable rendering from hardware across the globe. 
              3D artists create without compromising on quality or overpaying on traditional render services, and graphics card owners earn money without lifting a finger.`
   },
   {
     question: `Is my data safe on rentaflop?`,
-    answer: `Yes, you have security and privacy when you render with rentaflop. Your work is encrypted upon upload and when placed on rendering machines. 
-             For customers with the most strict security and privacy requirements, our pro tier limits rendering to only machines owned by rentaflop 
-             and trusted partners.
+    answer: `Yes, you have security and privacy when you render with rentaflop. Your work is encrypted upon upload and when placed on private rendering machines. 
              `
   },
   {
@@ -25,14 +23,6 @@ const faqs = [
              their creations, rather than looking up Nvidia hardware specs. Our affordable prices allow you to render animations without breaking the bank, especially
              important for experimentation and meeting deadlines. With rentaflop rendering, you don't have to sacrifice on quality.
              `
-  },
-  {
-    question: `How can I become a rentaflop host?`,
-    answer: <>
-	      With rentaflop miner, your hardware can pay for itself while helping 3D artists render their projects. If you have a recent Nvidia discrete graphics card,
-	      you can run rentaflop miner. Please follow the <RentaflopLink href="/blog/hosting" color="info.main" target="_blank">hosting instructions</RentaflopLink> to
-	      start making money without lifting a finger!
-	    </>
   },
   {
     question: `Why rentaflop?`,
@@ -59,11 +49,12 @@ const faqs = [
   {
     question: `How does billing work?`,
     answer: <>
-	      To use rentaflop rendering, you must first create an account and add <RentaflopLink href={portal_url+"/payment"} color="info.main" target="_blank">add payment info</RentaflopLink>.
-	      When you submit a rendering, you'll be charged according to the amount of computing power used to complete the rendering.
+	      To use rentaflop rendering, you must first create an account and add <RentaflopLink href={portal_url+"/payment"} color="info.main" target="_blank">payment info</RentaflopLink>.
+	      When you submit a rendering, you'll be charged immediately based on the exact price quoted by our price calculator.
+	      Our price calculator estimates the amount of computing power it would take to complete the rendering and shows you the corresponding price.
 	      We use Octane benchmarking to calculate a score for each graphics card on the rentaflop network and bill in minute increments
-	      on each device used to render your workload. At the end of each month, your payment method will be charged for the entire month's
-	      usage.
+	      for each device used to render your workload.
+	      Once you initiate the render, we process your payment for the amount quoted by the price calculator, and then we fully render your project.
 	    </>
   },
   {

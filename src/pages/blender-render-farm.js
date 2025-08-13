@@ -92,7 +92,7 @@ const intro_cards = [
     </Typography>,
     "secondary":
     <Typography>
-      Your work is encrypted upon upload and when placed on rendering machines. Our security tiers provide added options for your privacy needs.
+      Your work is encrypted upon upload and when placed on rendering machines. Our security features provide enhanced privacy for your specific needs.
     </Typography>,
     "icon":
     <SecurityIcon style={{ color: blue[800], fontSize: 50 }} />

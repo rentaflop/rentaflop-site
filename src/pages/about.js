@@ -56,7 +56,7 @@ export default function About() {
       <Typography align="left" paragraph>
 	To learn more about how we render your work, check out
 	the <FooterLink href="/rendering" target="_blank">rendering</FooterLink> page.	
-	To read about our pricing tiers and security levels, please see <FooterLink href="/pricing" target="_blank">pricing</FooterLink>.
+	To read about our pricing and security features, please see <FooterLink href="/pricing" target="_blank">pricing</FooterLink>.
       </Typography>
       <Typography align="left" paragraph>
 	If you have an Nvidia graphics card and would like to make money without lifting a finger, please read
