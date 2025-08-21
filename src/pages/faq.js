@@ -10,16 +10,16 @@ const faqs = [
   {
     question: `What is rentaflop?`,
     answer: `Rentaflop is a cloud render farm offering Blender artists fast and affordable rendering from hardware across the globe. 
-             3D artists create without compromising on quality or overpaying on traditional render services, and graphics card owners earn money without lifting a finger.`
+             3D artists create without compromising on quality or overpaying on traditional render services.`
   },
   {
     question: `Is my data safe on rentaflop?`,
-    answer: `Yes, you have security and privacy when you render with rentaflop. Your work is encrypted upon upload and when placed on private rendering machines. 
+    answer: `Yes, you have security and privacy when you render with rentaflop. Your work is encrypted upon upload and when placed on our rendering machines. 
              `
   },
   {
     question: `Why should I use rentaflop?`,
-    answer: `You're an 3D animation hobbyist, professional, student, or just someone in general need of rendering computation. 3D artists can focus on improving
+    answer: `You're an 3D animation hobbyist, professional, student, or just someone in general need of Blender rendering. 3D artists can focus on improving
              their creations, rather than looking up Nvidia hardware specs. Our affordable prices allow you to render animations without breaking the bank, especially
              important for experimentation and meeting deadlines. With rentaflop rendering, you don't have to sacrifice on quality.
              `
@@ -27,8 +27,8 @@ const faqs = [
   {
     question: `Why rentaflop?`,
     answer: <>
-	      Rentaflop’s mission is to increase the computational wealth of the world. We connect 3D artists with hardware owners to make
-	      rendering more affordable and to put the world's GPUs to work. If you'd like to learn more, 
+	      Rentaflop’s mission is to increase the computational wealth of the world. We connect 3D artists with fast computers to make
+	      rendering more affordable and to put the world's hardware to work. If you'd like to learn more, 
 	      please read the <RentaflopLink href="/blog/mission-statement" color="info.main" target="_blank">rentaflop mission statement</RentaflopLink>.
 	    </>
   },

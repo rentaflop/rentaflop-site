@@ -39,7 +39,7 @@ export default function About() {
       </Typography>
       <Typography align="left" paragraph>
 	Like other render farms, but better. Simply upload your project, along with any assets. Our price calculator gives you the exact render price,
-	render time estimate,
+	choice of render speed,
 	and a few sample frames for free! When you're ready to run the full rendering, we quickly and affordably render your work, giving you the ability to rapidly
 	improve your 3D creations without high expenses. Whether you're a studio or freelance artist, rentaflop helps you meet deadlines and lower costs
 	to outperform your competitors.
@@ -57,17 +57,8 @@ export default function About() {
 	To learn more about how we render your work, check out
 	the <FooterLink href="/rendering" target="_blank">rendering</FooterLink> page.	
 	To read about our pricing and security features, please see <FooterLink href="/pricing" target="_blank">pricing</FooterLink>.
-      </Typography>
-      <Typography align="left" paragraph>
-	If you have an Nvidia graphics card and would like to make money without lifting a finger, please read
-	about <FooterLink href="/blog/hosting" target="_blank">becoming a host</FooterLink>.
-	Your hardware can pay for itself while helping 3D artists render their projects.
-      </Typography>
-      <Typography align="left" paragraph>
 	For the latest rentaflop news, or to read a variety of things about software development and startups, check out
 	our <FooterLink href="/blog" target="_blank">blog</FooterLink>.
-      </Typography>
-      <Typography align="left" paragraph>
 	What are your questions? Please see the <FooterLink href="/faq" target="_blank">faq</FooterLink>.
       </Typography>
     </>

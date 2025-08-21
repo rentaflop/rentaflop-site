@@ -65,7 +65,7 @@ const intro_cards = [
     </Typography>,
     "secondary":
     <Typography>
-      Meet all your deadlines with ease. Our many GPU machines across the globe render what would take days in a matter of hours.
+      Meet all your deadlines with ease. Our many render machines across the globe render what would take days in a matter of hours.
     </Typography>,
     "icon":
     <BoltIcon style={{ color: yellow[300], fontSize: 50 }} />
@@ -92,7 +92,7 @@ const intro_cards = [
     </Typography>,
     "secondary":
     <Typography>
-      Your work is encrypted upon upload and when placed on rendering machines. Our security features provide enhanced privacy for your specific needs.
+      Your work is encrypted upon upload and when placed on rendering machines. Our privacy features provide enhanced security for your specific needs.
     </Typography>,
     "icon":
     <SecurityIcon style={{ color: blue[800], fontSize: 50 }} />
@@ -131,7 +131,7 @@ const intro_cards = [
     </Typography>,
     "secondary":
     <Typography>
-      Know everything you need to about your render. Try our free price calculator to get a render time estimate, sample frames, and an exact price quote.
+      Know everything you need to about your render. Try our free price calculator to choose your render time, get sample frames, and an exact price quote.
     </Typography>,
     "icon":
     <SchoolIcon style={{ color: orange[800], fontSize: 50 }} />
@@ -238,7 +238,7 @@ const tutorial_cards = [
     </Typography>,
     "instruction":
     <Typography gutterBottom>
-      Calculate price (optional) and launch your render.
+      Calculate price and choose your render time.
     </Typography>,
     "icon":
     <RocketLaunchIcon style={{ color: orange[500], fontSize: 50 }} />
@@ -392,7 +392,7 @@ export default function Home() {
 		  Get an exact price quote, render time estimate, and sample frames for free!
 		</Typography>
 		<Typography align="left" paragraph>
-		  Simply upload your project, launch your render, and download the completed
+		  Simply upload your project, choose your render speed, and download the completed
 		  result.
 		</Typography>
 		<Typography align="left" paddingTop="12px">

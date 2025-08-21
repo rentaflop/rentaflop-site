@@ -23,7 +23,8 @@ export default function Pricing() {
       </Typography>,
       "description":
       <Typography sx={{ pt: 2 }}>
-	Designed for everyone! You choose your render time based on your deadline. Perfect for professionals rendering serious animations, with the option
+	Designed for everyone! You choose your render speed,
+	so you can pick a price and speed combination catered to your specific needs. Perfect for professionals rendering serious animations, with the option
 	to prioritize rendering for maximum speed. Ease of use for hobbyists who aren't in a rush, allowing artists to save money and meet their budgets.
       </Typography>,
       "icon":
@@ -53,26 +54,20 @@ export default function Pricing() {
         </Grid>
       </Container>
       <Typography align="left" paragraph>
-	You choose your desired price and render speed at render time. We calculate your render job's complexity by running Octane benchmarking, an industry standard for
-	comparing graphics card computation power, and multiplying
-	our price per OBh by the amount of time spent rendering. Our price calculator allows you to then select your desired render time base, quoting
-	the exact price you'll pay.
+	You choose your desired render speed at render time. We instantly calculate the price based on your chosen render time, with faster renders costing more.
+	The price calculator works by first analyzing your render job's complexity by running Octane benchmarking, an industry standard for
+	comparing rendering computational power, and multiplying
+	our price per OBh by the amount of time spent rendering. Our price calculator allows you to then select your desired render time, showing
+	the exact price you'll pay for the render.
       </Typography>
       <Typography align="left" paragraph>
 	To know exactly how much your render will cost ahead of
 	time, <RentaflopLink href={portal_url+"/register"} color="info.main" target="_blank">create an account</RentaflopLink> and use our
-	free <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>! Simply upload your project, and we'll quickly render
-	a few frames to give you the exact price for the full render. Plus, we allow you to select your rendering deadline so you'll know when you can expect
-	the results. You can even download sample frames to make sure the render is exactly how you'd expect. No credit card required until you're ready to render
+	free <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>! Simply upload your project, and we'll quickly benchmark it to give you the exact price of the render corresponding to your specified deadline. In many cases, you can also download sample frames to make sure the render looks exactly how you'd expect. No credit card required until you're ready to render
 	the full project.
       </Typography>      
       <Typography align="left" paragraph>
-	We're able to maintain fast rendering while charging as low as 1/10th the price of other render farms by crowdsourcing. We leverage
-	underutilized graphics cards from hardware owners across the globe to keep rentaflop fast and affordable. This gives us the ability to provide most competitive
-	render speeds and pricing compared to other rendering services.
-      </Typography>
-      <Typography align="left" paragraph>
-	*OBh means Octanebench hour, a measure of GPU processing power. Prices start at the specified OBh level, use our free price calculator to get the exact price for your render.
+	*OBh means Octanebench hour, a measure of processing power. Prices start at the specified OBh level, use our free price calculator to get the exact price for your render.
       </Typography>
       <Stack
         sx={{ pt: 4 }}

@@ -19,14 +19,15 @@ export default function Rendering() {
       
       <Typography id="security-and-privacy" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>Is it secure?</Typography>
       <Typography align="left" paragraph>
-	Yes. Your work is encrypted upon upload and when placed on private rendering machines.
+	Yes. Your work is encrypted upon upload and when placed on our machines.
       </Typography>
 
       <Typography id="pricing" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How much will it cost to render my project?</Typography>
       <Typography align="left" paragraph>
 	You can see exactly how much it'll cost ahead of time by <RentaflopLink href={portal_url+"/register"} color="info.main" target="_blank">creating an account</RentaflopLink> and
-	running our <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>. Render your work for as low as 1/10th the price of other
-	render farms through our crowdsourced network.
+	running our <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>. You get to choose your render time,
+	so you can pick a price and speed combination catered to your specific needs. Render your work for as low as 1/10th the price of other
+	render farms through our global rendering network.
 	See our <RentaflopLink href="/pricing" color="info.main" target="_blank">pricing</RentaflopLink> for more info.
       </Typography>
 
@@ -46,9 +47,8 @@ export default function Rendering() {
 	Make sure to pack all necessary textures and external files into your file. In addition, we support .zip file uploads, so you may include assets, videos,
 	and caches from baking by zipping those with your file. For larger projects, we recommend running
 	our <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink> and downloading the sample output provided in order to
-	make sure the result meets your expectations. We believe it's easiest for artists to configure their projects straight from your profect file itself, so we
-	do very little rendering configuration on our end.
-	Please configure your rendering settings (such as sample sizes, file output types, frames, etc.) to your liking from within your 3D application.
+	make sure the result meets your expectations. We also allow artists to configure their projects from our website, so you
+	can adjust your rendering settings (such as sample sizes, file output types, frames, etc.) straight from the price calculator.
       </Typography>
 
       <Typography id="render-settings" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>What rendering settings do you support?</Typography>
