@@ -1,6 +1,7 @@
-import React from 'react';
+import { React, useState, useRef, useEffect } from 'react';
 import { Container, CssBaseline, createTheme, ThemeProvider, Divider, Box, Grid, Paper,
-	 Typography, Table, TableHead, TableBody, TableRow, TableCell, styled, Button, Link } from '@mui/material';
+	 Typography, Table, TableHead, TableBody, TableRow, TableCell, styled, Button, Link,
+	 CircularProgress, Backdrop } from '@mui/material';
 import theme from './theme';
 import { Link as ButtonLink } from 'next/link'
 import { makeStyles } from '@material-ui/styles';
@@ -169,4 +170,31 @@ export function RentaflopButton(props) {
   }
   
   return button;
+}
+
+
+export function LoadingBackdrop(props) {
+  const [open, setOpen] = useState(true);
+  const backdrop_ref = useRef();
+  var text = props.text;
+
+  useEffect(() => {
+    backdrop_ref.current.focus();
+  }, []);
+  
+  return (
+    <Backdrop
+      sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      open={open}
+      tabIndex="-1"
+      ref={backdrop_ref}
+      onClick={() => { setOpen(false); }}
+      onKeyDown={() => { setOpen(false); }}
+    >
+      <Typography color="inherit" variant="h5" style={{position: 'fixed', top: '40%', left: '50%', transform: 'translate(-50%, -50%)'}} paragraph>
+	{text}
+      </Typography>
+      <CircularProgress color="inherit" />
+    </Backdrop>
+  );
 }
