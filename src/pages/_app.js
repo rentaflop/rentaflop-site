@@ -63,7 +63,8 @@ export default function MyApp({ Component, pageProps }) {
 	  });
 	  gtag('js', new Date());
 
-	  gtag('config', 'G-FKBK6XSRHB');
+	  gtag('config', 'G-FKBK6XSRHB', { 'allow_enhanced_conversions': true });
+	  gtag('config', 'AW-10996962766', { 'allow_enhanced_conversions': true });
         `}
 	</Script>
 	
