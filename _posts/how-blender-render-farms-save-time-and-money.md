@@ -151,11 +151,11 @@ and smarter rendering transparency make rentaflop the best Blender render farm o
 
 Don't take our word for it, though. See for yourself.
 
-When you [create an account](https://portal.rentaflop.com/register) and run
-our free [price calculator](https://portal.rentaflop.com) on your project, you'll see just how fast and affordable we are! Simply upload your project file(s), and
+When you [create an account](/founders-note) and run
+our free [price calculator](/founders-note) on your project, you'll see just how fast and affordable we are! Simply upload your project file(s), and
 we'll give you the exact price, full render time estimate, plus a few sample frames to download. You'll know everything you need to about your render before you
-even add a credit card. When you're ready to fully render your project, [add your payment info](https://portal.rentaflop.com/payment) and
-[start the render](https://portal.rentaflop.com/price-calculator).
+even add a credit card. When you're ready to fully render your project, [add your payment info](/founders-note) and
+[start the render](/founders-note).
 
 ## Conclusion
 
@@ -166,5 +166,5 @@ factors such as computing power, pricing, reliability, and customer support. Wit
 your Blender 3D graphics and animations to the next level and create high-quality, photo-realistic images and
 animations.
 
-If you liked this article, let us know on our social media at the bottom of the page! Need to render your project? [Try us](https://portal.rentaflop.com/register)
+If you liked this article, let us know on our social media at the bottom of the page! Need to render your project? [Try us](/founders-note)
 free!

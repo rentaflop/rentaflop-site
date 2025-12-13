@@ -87,7 +87,7 @@ Input:
 {
     "api_key": "your_api_key_here",
     "upload_id": upload_id_created_by_rentaflop,
-    "blender_version": "desired_version" (see https://portal.rentaflop.com/rendering for available versions),
+    "blender_version": "desired_version" (see /founders-note for available versions),
 }
 ```
 
@@ -226,4 +226,4 @@ print("Download complete.")
 ```
 
 We hope you find the rendering API to be useful! As always, if you run into issues or have questions feel free
-to [reach out](https://portal.rentaflop.com/contact).
+to [reach out](/founders-note).

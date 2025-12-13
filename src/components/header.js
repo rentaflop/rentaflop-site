@@ -49,7 +49,7 @@ class Header extends Component {
 
   render() {
     const { classes } = this.props;
-    const portal_url = "https://portal.rentaflop.com"
+    const portal_url = "/founders-note"
     let is_large_screen = true;
     // client-side-only code, so must check if window defined first
     if (typeof window !== "undefined") {
@@ -97,12 +97,12 @@ class Header extends Component {
 	    </>
 	  }
 	  <Box marginRight='10px'>
-	    <Button href={portal_url+"/login"} className={classes.button_style} variant="outlined" linkcomponent={Link}>
+	    <Button href={portal_url} className={classes.button_style} variant="outlined" linkcomponent={Link}>
 	      {button_text["login"]}
 	    </Button>
 	  </Box>
 	  <Box marginRight='10px'>
-	    <Button href={portal_url+"/register"} className={classes.cta_button} variant="outlined" linkcomponent={Link}>
+	    <Button href={portal_url} className={classes.cta_button} variant="outlined" linkcomponent={Link}>
 	      {button_text["register"]}
 	    </Button>
 	  </Box>

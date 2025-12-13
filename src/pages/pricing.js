@@ -9,7 +9,7 @@ import { orange } from '@mui/material/colors';
 
 
 export default function Pricing() {
-  const portal_url = "https://portal.rentaflop.com"
+  const portal_url = "/founders-note"
   const price_cards = [
     {
       "id": 0,
@@ -62,8 +62,8 @@ export default function Pricing() {
       </Typography>
       <Typography align="left" paragraph>
 	To know exactly how much your render will cost ahead of
-	time, <RentaflopLink href={portal_url+"/register"} color="info.main" target="_blank">create an account</RentaflopLink> and use our
-	free <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>! Simply upload your project, and we'll quickly benchmark it to give you the exact price of the render corresponding to your specified deadline. In many cases, you can also download sample frames to make sure the render looks exactly how you'd expect. No credit card required until you're ready to render
+	time, <RentaflopLink href={portal_url} color="info.main" target="_blank">create an account</RentaflopLink> and use our
+	free <RentaflopLink href={portal_url} color="info.main" target="_blank">price calculator</RentaflopLink>! Simply upload your project, and we'll quickly benchmark it to give you the exact price of the render corresponding to your specified deadline. In many cases, you can also download sample frames to make sure the render looks exactly how you'd expect. No credit card required until you're ready to render
 	the full project.
       </Typography>      
       <Typography align="left" paragraph>
@@ -75,7 +75,7 @@ export default function Pricing() {
         spacing={2}
         justifyContent="center"
       >
-	<RentaflopButton button_class="cta_button" text="Render now" dest={portal_url+"/register"} />
+	<RentaflopButton button_class="cta_button" text="Render now" dest={portal_url} />
 	<RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
       </Stack>
     </>

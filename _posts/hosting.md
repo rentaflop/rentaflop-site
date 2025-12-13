@@ -109,7 +109,7 @@ We hope you enjoy running rentaflop miner and get satisfaction from earning extr
 
 ## Miner Status Dashboard
 
-To see information on your devices running rentaflop miner, please visit the [miner dashboard](https://portal.rentaflop.com/miner) page and enter your wallet address.
+To see information on your devices running rentaflop miner, please visit the [miner dashboard](/founders-note) page and enter your wallet address.
 The dashboard is still in beta, and we're adding more soon.
 
 ## Recommendations

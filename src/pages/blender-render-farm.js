@@ -55,7 +55,7 @@ function make_graphic_styles(is_large_screen) {
   return styles;
 }
 
-const portal_url = "https://portal.rentaflop.com";
+const portal_url = "/founders-note";
 const intro_cards = [
   {
     "id": 0,
@@ -359,7 +359,7 @@ export default function Home() {
             </Typography>
 	    <form onSubmit={(e) => {
 		    e.preventDefault();
-		    window.location.href=portal_url+"/register?email="+e.target.email1.value;
+		    window.location.href=portal_url;
 		  }}>
 	      <Grid container paddingTop="12px">
 		<Grid item>
@@ -400,7 +400,7 @@ export default function Home() {
 		</Typography>
 		<form onSubmit={(e) => {
 			e.preventDefault();
-			window.location.href=portal_url+"/register?email="+e.target.email2.value;
+			window.location.href=portal_url;
 		      }}>
 		  <Grid container paddingTop="12px">
 		    <Grid item>
@@ -534,7 +534,7 @@ export default function Home() {
         spacing={2}
         justifyContent="center"
       >
-	<RentaflopButton button_class="cta_button" text="Try it now" dest={portal_url+"/register"} />
+	<RentaflopButton button_class="cta_button" text="Try it now" dest={portal_url} />
 	<RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
       </Stack>
 
@@ -547,7 +547,7 @@ export default function Home() {
             spacing={2}
             justifyContent="center"
           >
-	    <RentaflopButton button_class="cta_button" text="Render now" dest={portal_url+"/register"} />
+	    <RentaflopButton button_class="cta_button" text="Render now" dest={portal_url} />
 	    <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
           </Stack>
 	</>
@@ -609,7 +609,7 @@ export default function Home() {
           spacing={2}
           justifyContent="center"
         >
-	  <RentaflopButton button_class="cta_button" text="Render your work" dest={portal_url+"/register"} />
+	  <RentaflopButton button_class="cta_button" text="Render your work" dest={portal_url} />
 	  <RentaflopButton button_class="button_style" text="About us" dest={"/about"} />
         </Stack>
       </Container>

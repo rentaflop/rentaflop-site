@@ -44,7 +44,7 @@ export default function NotFound() {
 	    <Typography variant="h5" align="center" color="textPrimary" paragraph>
 	      Or...
 	    </Typography>
-	    <RentaflopButton button_class="cta_button" text="Rent some flops" dest={"https://portal.rentaflop.com/launchpad"} />
+	    <RentaflopButton button_class="cta_button" text="Rent some flops" dest={"/founders-note"} />
 	  </Container>
 	</Box>
       </Paper>

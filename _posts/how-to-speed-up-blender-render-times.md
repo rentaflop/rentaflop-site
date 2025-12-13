@@ -148,5 +148,5 @@ We hope you found this guide on how to speed up your Blender render times to be 
 object complexity to hardware and useful products like CrowdRender and rentaflop. Our goal is to create the most comprehensive guide to reducing Blender render times
 on the Internet, so if you feel we've left something out, please contact us at [info@rentaflop.com](mailto:info@rentaflop.com). Happy rendering!
 
-If you liked this article, let us know on our social media at the bottom of the page! Need to render your project? [Try us](https://portal.rentaflop.com/register)
+If you liked this article, let us know on our social media at the bottom of the page! Need to render your project? [Try us](/founders-note)
 free!

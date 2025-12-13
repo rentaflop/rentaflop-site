@@ -29,12 +29,12 @@ The partnership gives you 15% off a CG Cookie membership!
 
 ## How to Save 15%?
 
-First, [create a rentaflop account](https://portal.rentaflop.com/register), if you haven't already. Once you're signed in, navigate to
-[our partnerships page](https://portal.rentaflop.com/partnerships) and follow the instructions. Our discount code will give you 15% off your CG Cookie membership,
+First, [create a rentaflop account](/founders-note), if you haven't already. Once you're signed in, navigate to
+[our partnerships page](/founders-note) and follow the instructions. Our discount code will give you 15% off your CG Cookie membership,
 and you'll be able to get a discount code from CG Cookie's website that'll give you 15% on rentaflop. Enjoy your perks!
 
 ## Want to Render Your Project?
 
 We're growing fast and continuously adding new features to the farm. If you haven't been back for a while,
-[render your project](https://portal.rentaflop.com) and check out our latest features like support for Python scripting
+[render your project](/founders-note) and check out our latest features like support for Python scripting
 and multi-file drag-and-drop uploads!

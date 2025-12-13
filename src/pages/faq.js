@@ -5,7 +5,7 @@ import { RentaflopLink, RentaflopText } from "../components/utils";
 import Page from '../components/page'
 
 
-const portal_url = "https://portal.rentaflop.com"
+const portal_url = "/founders-note"
 const faqs = [
   {
     question: `What is rentaflop?`,
@@ -43,13 +43,13 @@ const faqs = [
     question: `Do you have a rendering API for programmatic usage?`,
     answer: <>
 	      Yes, our API is used by some of our customers and even other render farms to automate their rendering. To gain access to our API,
-	      please <RentaflopLink href={portal_url+"/contact"} color="info.main" target="_blank">contact us</RentaflopLink>.
+	      please <RentaflopLink href={portal_url} color="info.main" target="_blank">contact us</RentaflopLink>.
 	    </>
   },
   {
     question: `How does billing work?`,
     answer: <>
-	      To use rentaflop rendering, you must first create an account and add <RentaflopLink href={portal_url+"/payment"} color="info.main" target="_blank">payment info</RentaflopLink>.
+	      To use rentaflop rendering, you must first create an account and add <RentaflopLink href={portal_url} color="info.main" target="_blank">payment info</RentaflopLink>.
 	      When you submit a rendering, you'll be charged immediately based on the exact price quoted by our price calculator.
 	      Our price calculator estimates the amount of computing power it would take to complete the rendering and shows you the corresponding price.
 	      We use Octane benchmarking to calculate a score for each graphics card on the rentaflop network and bill in minute increments
@@ -61,7 +61,7 @@ const faqs = [
     question: `What is your refund policy?`,
     answer: <>
 	      We hope you'll love rentaflop and won't need a refund, but if it comes to it, we're there for you.
-              Just go to the <RentaflopLink href={portal_url+"/billing"} color="info.main" target="_blank">billing</RentaflopLink> page, click the refund button on the relevant
+              Just go to the <RentaflopLink href={portal_url} color="info.main" target="_blank">billing</RentaflopLink> page, click the refund button on the relevant
 	      transaction, and give some quick feedback. A member of our team will review the request, and it will generally be
 	      approved within 48 hours. You may request a refund for any transaction within the past week.
 	    </>

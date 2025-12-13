@@ -18,7 +18,7 @@ is gone!
 
 Today we're excited to announce we've concluded our beta and have officially launched to the public! If you've been using rentaflop to render your projects, thank
 you for being an early user. Your feedback has helped us shape the direction of our product. If you're new to rentaflop, welcome! We take delight in making our
-users happy and want to ensure you have a great experience, so feel free to [reach out](https://portal.rentaflop.com/contact) with questions and feedback.
+users happy and want to ensure you have a great experience, so feel free to [reach out](/founders-note) with questions and feedback.
 
 ## What's New?
 

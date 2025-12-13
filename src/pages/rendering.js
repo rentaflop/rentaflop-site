@@ -5,7 +5,7 @@ import Page from '../components/page'
 
 
 export default function Rendering() {
-  const portal_url = "https://portal.rentaflop.com"
+  const portal_url = "/founders-note"
   const title = <Typography component="h1" variant="h4" align="center" fontWeight="600" gutterBottom>Rendering</Typography>
   const body = (
     <>
@@ -24,8 +24,8 @@ export default function Rendering() {
 
       <Typography id="pricing" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How much will it cost to render my project?</Typography>
       <Typography align="left" paragraph>
-	You can see exactly how much it'll cost ahead of time by <RentaflopLink href={portal_url+"/register"} color="info.main" target="_blank">creating an account</RentaflopLink> and
-	running our <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>. You get to choose your render time,
+	You can see exactly how much it'll cost ahead of time by <RentaflopLink href={portal_url} color="info.main" target="_blank">creating an account</RentaflopLink> and
+	running our <RentaflopLink href={portal_url} color="info.main" target="_blank">price calculator</RentaflopLink>. You get to choose your render time,
 	so you can pick a price and speed combination catered to your specific needs. Render your work for as low as 1/10th the price of other
 	render farms through our global rendering network.
 	See our <RentaflopLink href="/pricing" color="info.main" target="_blank">pricing</RentaflopLink> for more info.
@@ -33,20 +33,20 @@ export default function Rendering() {
 
       <Typography id="how-to-render" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How do I render my project?</Typography>
       <Typography align="left" paragraph>
-	The first step to rendering your project is to <RentaflopLink href={portal_url+"/register"} color="info.main" target="_blank">create an account</RentaflopLink>, if you haven't already.
-	Upload your file(s) on the <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">launchpad</RentaflopLink>.
-	Next, use our free <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink>. We'll calculate
+	The first step to rendering your project is to <RentaflopLink href={portal_url} color="info.main" target="_blank">create an account</RentaflopLink>, if you haven't already.
+	Upload your file(s) on the <RentaflopLink href={portal_url} color="info.main" target="_blank">launchpad</RentaflopLink>.
+	Next, use our free <RentaflopLink href={portal_url} color="info.main" target="_blank">price calculator</RentaflopLink>. We'll calculate
 	the complexity of your render, and then you'll be able to choose your desired render time while getting an instant price quote.
-	After you <RentaflopLink href={portal_url+"/payment"} color="info.main" target="_blank">add a payment method</RentaflopLink>, you can render your project.
+	After you <RentaflopLink href={portal_url} color="info.main" target="_blank">add a payment method</RentaflopLink>, you can render your project.
 	Your file will be rendered in parallel on many computers around the world! You can watch the progress of your render jobs, as well as download results or
-	stop jobs, on the <RentaflopLink href={portal_url+"/ground-control"} color="info.main" target="_blank">ground control</RentaflopLink> page.
+	stop jobs, on the <RentaflopLink href={portal_url} color="info.main" target="_blank">ground control</RentaflopLink> page.
       </Typography>
 
       <Typography id="including-external-files" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>How can I ensure my textures and other external files are included?</Typography>
       <Typography align="left" paragraph>
 	Make sure to pack all necessary textures and external files into your file. In addition, we support .zip file uploads, so you may include assets, videos,
 	and caches from baking by zipping those with your file. For larger projects, we recommend running
-	our <RentaflopLink href={portal_url+"/launchpad"} color="info.main" target="_blank">price calculator</RentaflopLink> and downloading the sample output provided in order to
+	our <RentaflopLink href={portal_url} color="info.main" target="_blank">price calculator</RentaflopLink> and downloading the sample output provided in order to
 	make sure the result meets your expectations. We also allow artists to configure their projects from our website, so you
 	can adjust your rendering settings (such as sample sizes, file output types, frames, etc.) straight from the price calculator.
       </Typography>
@@ -62,7 +62,7 @@ export default function Rendering() {
 	  We support scripting, so we'll run Python scripts automatically during rendering if you've configured them to run in your .blend file.
 	  The maximum upload size for your files is 10 GB.
 	  We support all built-in addons. If you're using 3rd party addons, or have additional
-	  questions (or need different versions, larger file size, etc.) about rendering, please <RentaflopLink href={portal_url+"/contact"} color="info.main" target="_blank">contact us</RentaflopLink>.
+	  questions (or need different versions, larger file size, etc.) about rendering, please <RentaflopLink href={portal_url} color="info.main" target="_blank">contact us</RentaflopLink>.
 	</Typography>
       <Typography id="nsfw-projects" component="h2" variant="h6" align="left" fontWeight="600" gutterBottom>Can I render NSFW projects?</Typography>
       <Typography align="left" paragraph>

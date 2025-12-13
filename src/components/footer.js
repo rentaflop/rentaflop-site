@@ -34,22 +34,22 @@ function Copyright(props) {
 }
 
 
-const portal_url = "https://portal.rentaflop.com"
+const portal_url = "/founders-note"
 const footers = [
   {
     title: 'Company',
     description: ['Home', 'About', "Blog", 'Contact'],
-    route: ['/', '/about', '/blog', portal_url+'/contact'],
+    route: ['/', '/about', '/blog', portal_url],
   },
   {
     title: 'Product',
     description: ['Pricing', 'Rentaflop miner', 'FAQ', 'Support'],
-    route: ['/pricing', '/blog/hosting', '/faq', portal_url+'/support'],
+    route: ['/pricing', '/blog/hosting', '/faq', portal_url],
   },
   {
     title: 'Legal',
     description: ['Privacy policy', 'Terms of use'],
-    route: [portal_url+'/privacy', portal_url+'/terms'],
+    route: [portal_url, portal_url],
   },
 ];
 
